@@ -1,5 +1,5 @@
-`include "buffer.v"
-`include "rotatingPrioritizer.v"
+`include "buffer.sv"
+`include "rotating_prioritizer.sv"
 
 module gold_router #(
     parameter PACKET_SIZE = 64
@@ -35,7 +35,7 @@ module gold_router #(
     // Wires for polarity
     reg evenOdd;
     /*  Polarity logic
-        Every clock cycle not the polarity signal
+        Every clock cycle, not the polarity signal
     */
     always @(posedge clk) begin
         if (reset) begin
@@ -48,11 +48,11 @@ module gold_router #(
     assign polarity = evenOdd;
 
     // Create wires for input side
-    reg wrEnableCwiV0, wrEnableCwiV1, wrEnableCcwiV0, wrEnableCcwiV1, wrEnablePeiV0, wrEnablePeiV1;
-    reg rdEnableCwiV0, rdEnableCwiV1, rdEnableCcwiV0, rdEnableCcwiV1, rdEnablePeiV0, rdEnablePeiV1;
-    wire emptyCwiV0, emptyCwiV1, emptyCcwiV0, emptyCcwiV1, emptyPeiV0, emptyPeiV1;
-    wire fullCwiV0, fullCwiV1, fullCcwiV0, fullCcwiV1, fullPeiV0, fullPeiV1;
-    wire [PACKET_SIZE-1:0] dataCwiV0, dataCwiV1, dataCcwiV0, dataCcwiV1, dataPeiV0, dataPeiV1;
+    reg wrEnableCwi [0:1], wrEnableCcwi [0:1], wrEnablePei [0:1];
+    reg rdEnableCwi [0:1], rdEnableCcwi [0:1], rdEnablePei [0:1];
+    wire emptyCwi [0:1], emptyCcwi [0:1], emptyPei [0:1];
+    wire fullCwi [0:1], fullCcwi [0:1], fullPei [0:1];
+    wire [PACKET_SIZE-1:0] dataCwi [0:1], dataCcwi [0:1], dataPei [0:1];
 
 
     // Create 6 single-location input buffers (3 input channels each having 2 virtual channels each)  
@@ -60,143 +60,105 @@ module gold_router #(
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnableCwiV0),
-        .rdEnable(rdEnableCwiV0),
+        .wrEnable(wrEnableCwi[0]),
+        .rdEnable(rdEnableCwi[0]),
         .dataIn(cwdi),
-        .dataOut(dataCwiV0),
-        .full(fullCwiV0),
-        .empty(emptyCwiV0)
+        .dataOut(dataCwi[0]),
+        .full(fullCwi[0]),
+        .empty(emptyCwi[0])
     );
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufCwiV1
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnableCwiV1),
-        .rdEnable(rdEnableCwiV1),
+        .wrEnable(wrEnableCwi[1]),
+        .rdEnable(rdEnableCwi[1]),
         .dataIn(cwdi),
-        .dataOut(dataCwiV1),
-        .full(fullCwiV1),
-        .empty(emptyCwiV1)
+        .dataOut(dataCwi[1]),
+        .full(fullCwi[1]),
+        .empty(emptyCwi[1])
     );
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufCcwiV0
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnableCcwiV0),
-        .rdEnable(rdEnableCcwiV0),
+        .wrEnable(wrEnableCcwi[0]),
+        .rdEnable(rdEnableCcwi[0]),
         .dataIn(ccwdi),
-        .dataOut(dataCcwiV0),
-        .full(fullCcwiV0),
-        .empty(emptyCcwiV0)
+        .dataOut(dataCcwi[0]),
+        .full(fullCcwi[0]),
+        .empty(emptyCcwi[0])
     );
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufCcwiV1
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnableCcwiV1),
-        .rdEnable(rdEnableCwiV1),
+        .wrEnable(wrEnableCcwi[1]),
+        .rdEnable(rdEnableCcwi[1]),
         .dataIn(ccwdi),
-        .dataOut(dataCcwiV1),
-        .full(fullCcwiV1),
-        .empty(emptyCcwiV1)
+        .dataOut(dataCcwi[1]),
+        .full(fullCcwi[1]),
+        .empty(emptyCcwi[1])
     );
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufPeiV0
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnablePeiV0),
-        .rdEnable(rdEnablePeiV0),
+        .wrEnable(wrEnablePei[0]),
+        .rdEnable(rdEnablePei[0]),
         .dataIn(pedi),
-        .dataOut(dataPeiV0),
-        .full(fullPeiV0),
-        .empty(emptyPeiV0)
+        .dataOut(dataPei[0]),
+        .full(fullPei[0]),
+        .empty(emptyPei[0])
     );
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufPeiV1
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnablePeiV1),
-        .rdEnable(rdEnablePeiV1),
+        .wrEnable(wrEnablePei[1]),
+        .rdEnable(rdEnablePei[1]),
         .dataIn(pedi),
-        .dataOut(dataPeiV1),
-        .full(fullPeiV1),
-        .empty(emptyPeiV1)
+        .dataOut(dataPei[1]),
+        .full(fullPei[1]),
+        .empty(emptyPei[1])
     );
     
     // Decode header information
     // Virtual Channel -- 1 bit
-    wire vcCwi, vcCCwi, vcPei;
-    assign vcCwi = cwdi[PACKET_SIZE-1];
-    assign vcCCwi = ccwdi[PACKET_SIZE-1];
-    assign vcPei = pedi[PACKET_SIZE-1];
-    // Direction -- 1 bit
-    wire dirCwi, dirCcwi, dirPei;
-    assign dirCwi = cwdi[PACKET_SIZE-2];
-    assign dirCcwi = ccwdi[PACKET_SIZE-2];
-    assign dirPei = pedi[PACKET_SIZE-2];
-    // Hop Value -- 8 bits
-    wire [7:0] hopCwi, hopCcwi, hopPei;
-    assign hopCwi = cwdi[PACKET_SIZE-9:PACKET_SIZE-16];
-    assign hopCcwi = ccwdi[PACKET_SIZE-9:PACKET_SIZE-16];
-    assign hopPei = pedi[PACKET_SIZE-9:PACKET_SIZE-16];
+    // wire vcCwi, vcCCwi, vcPei;
+    // assign vcCwi = cwdi[63];
+    // assign vcCCwi = ccwdi[63];
+    // assign vcPei = pedi[63];
+    // // Direction -- 1 bit
+    // wire dirCwi, dirCcwi, dirPei;
+    // assign dirCwi = cwdi[62];
+    // assign dirCcwi = ccwdi[62];
+    // assign dirPei = pedi[62];
+    // // Hop Value -- 8 bits
+    // wire [7:0] hopCwi, hopCcwi, hopPei;
+    // assign hopCwi = cwdi[55:48];
+    // assign hopCcwi = ccwdi[55:48];
+    // assign hopPei = pedi[55:48];
 
     /*  Write enable logic
         Only enable write once handshaking is complete
     */
     always @(*) begin
-        if (!evenOdd) begin
-            wrEnableCwiV0 = 0;
-            wrEnableCcwiV0 = 0;
-            wrEnablePeiV0 = 0;
+        wrEnableCwi = '{default:0};
+        wrEnableCcwi = '{default:0};
+        wrEnablePei = '{default:0};
 
-            // Clockwise
-            if (cwsi && cwri) begin
-                wrEnableCwiV1 = 1;
-            end
-            else begin
-                wrEnableCwiV1 = 0;
-            end
-            // Counter-clockwise
-            if (ccwsi && ccwri) begin
-                wrEnableCcwiV1 = 1;
-            end
-            else begin
-                wrEnableCcwiV1 = 0;
-            end
-            // Processing Element
-            if (pesi && peri) begin
-                wrEnablePeiV1 = 1;
-            end
-            else begin
-                wrEnablePeiV1 = 0;
-            end
+        // Clockwise
+        if (cwsi && cwri) begin
+            wrEnableCwi[evenOdd] = 1;
         end
-        else begin // if polarity == 1
-            wrEnableCwiV1 = 0;
-            wrEnableCcwiV1 = 0;
-            wrEnablePeiV1 = 0;
-
-            // Clockwise
-            if (cwsi && cwri) begin
-                wrEnableCwiV0 = 1;
-            end
-            else begin
-                wrEnableCwiV0 = 0;
-            end
-            // Counter-clockwise
-            if (ccwsi && ccwri) begin
-                wrEnableCcwiV0 = 1;
-            end
-            else begin
-                wrEnableCcwiV0 = 0;
-            end
-            // Processing Element
-            if (pesi && peri) begin
-                wrEnablePeiV0 = 1;
-            end
-            else begin
-                wrEnablePeiV0 = 0;
-            end
+        // Counter-clockwise
+        if (ccwsi && ccwri) begin
+            wrEnableCcwi[evenOdd] = 1;
+        end
+        // Processing element
+        if (pesi && peri) begin
+            wrEnablePei[evenOdd] = 1;
         end
     end
 
@@ -204,60 +166,36 @@ module gold_router #(
         When empty signal is asserted, buffer is ready
     */ 
     always @(*) begin
-        if (!evenOdd) begin
-            // Clockwise
-            if (emptyCwiV1) begin
-                cwri = 1;
-            end
-            else begin
-                cwri = 0;
-            end
-            // Counter-clockwise
-            if (emptyCcwiV1) begin
-                ccwri = 1;
-            end
-            else begin
-                ccwri = 0;
-            end
-            // Processing Element
-            if (emptyPeiV1) begin
-                peri = 1;
-            end
-            else begin
-                peri = 0;
-            end
+        // Clockwise
+        if (emptyCwi[evenOdd]) begin
+            cwri = 1;
         end
-        else begin // polarity == 1
-            // Clockwise
-            if (emptyCwiV0) begin
-                cwri = 1;
-            end
-            else begin
-                cwri = 0;
-            end
-            // Counter-clockwise
-            if (emptyCcwiV0) begin
-                ccwri = 1;
-            end
-            else begin
-                ccwri = 0;
-            end
-            // Processing Element
-            if (emptyPeiV0) begin
-                peri = 1;
-            end
-            else begin
-                peri = 0;
-            end
+        else begin
+            cwri = 0;
+        end
+        // Counter-clockwise
+        if (emptyCcwi[evenOdd]) begin
+            ccwri = 1;
+        end
+        else begin
+            ccwri = 0;
+        end
+        // Processing element
+        if (emptyPei[evenOdd]) begin
+            peri = 1;
+        end
+        else begin
+            peri = 0;
         end
     end
+    
     // Create wires for output side
-    reg wrEnableCwoV0, wrEnableCwoV1, wrEnableCcwoV0, wrEnableCcwoV1, wrEnablePeoV0, wrEnablePeoV1;
-    wire rdEnableCwoV0, rdEnableCwoV1, rdEnableCcwoV0, rdEnableCcwoV1, rdEnablePeoV0, rdEnablePeoV1;
-    wire emptyCwoV0, emptyCwoV1, emptyCcwoV0, emptyCcwoV1, emptyPeoV0, emptyPeoV1;
-    wire fullCwoV0, fullCwoV1, fullCcwoV0, fullCcwoV1, fullPeoV0, fullPeoV1;
-    reg [PACKET_SIZE-1:0] dataInCwoV0, dataInCwoV1, dataInCcwoV0, dataInCcwoV1, dataInPeoV0, dataInPeoV1;
-    wire [PACKET_SIZE-1:0] dataOutCwoV0, dataOutCwoV1, dataOutCcwoV0, dataOutCcwoV1, dataOutPeoV0, dataOutPeoV1;
+    reg wrEnableCwo [0:1], wrEnableCcwo [0:1], wrEnablePeo [0:1];
+    wire rdEnableCwo [0:1], rdEnableCcwo [0:1], rdEnablePeo [0:1];
+    wire emptyCwo [0:1], emptyCcwo [0:1], emptyPeo [0:1];
+    wire fullCwo [0:1], fullCcwo [0:1], fullPeo [0:1];    
+    reg [PACKET_SIZE-1:0] dataInCwo [0:1], dataInCcwo [0:1], dataInPeo [0:1];
+    wire [PACKET_SIZE-1:0] dataOutCwo [0:1], dataOutCcwo [0:1], dataOutPeo [0:1];
 
     // Create 6 single-location output buffers (3 output channels each having 2 virtual channels each)
 
@@ -265,71 +203,71 @@ module gold_router #(
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnableCwoV0),
-        .rdEnable(rdEnableCwoV0),
-        .dataIn(dataInCwoV0),
-        .dataOut(dataOutCwoV0),
-        .full(fullCwoV0),
-        .empty(emptyCwoV0)
+        .wrEnable(wrEnableCwo[0]),
+        .rdEnable(rdEnableCwo[0]),
+        .dataIn(dataInCwo[0]),
+        .dataOut(dataOutCwo[0]),
+        .full(fullCwo[0]),
+        .empty(emptyCwo[0])
     );
 
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufCwoV1
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnableCwoV1),
-        .rdEnable(rdEnableCwoV1),
-        .dataIn(dataInCwoV1),
-        .dataOut(dataOutCwoV1),
-        .full(fullCwoV1),
-        .empty(emptyCwoV1)
+        .wrEnable(wrEnableCwo[1]),
+        .rdEnable(rdEnableCwo[1]),
+        .dataIn(dataInCwo[1]),
+        .dataOut(dataOutCwo[1]),
+        .full(fullCwo[1]),
+        .empty(emptyCwo[1])
     );
 
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufCcwoV0
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnableCcwoV0),
-        .rdEnable(rdEnableCcwoV0),
-        .dataIn(dataInCcwoV0),
-        .dataOut(dataOutCcwoV0),
-        .full(fullCcwoV0),
-        .empty(emptyCcwoV0)
+        .wrEnable(wrEnableCcwo[0]),
+        .rdEnable(rdEnableCcwo[0]),
+        .dataIn(dataInCcwo[0]),
+        .dataOut(dataOutCcwo[0]),
+        .full(fullCcwo[0]),
+        .empty(emptyCcwo[0])
     );
 
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufCcwoV1
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnableCcwoV1),
-        .rdEnable(rdEnableCcwoV1),
-        .dataIn(dataInCcwoV1),
-        .dataOut(dataOutCcwoV1),
-        .full(fullCcwoV1),
-        .empty(emptyCcwoV1)
+        .wrEnable(wrEnableCcwo[1]),
+        .rdEnable(rdEnableCcwo[1]),
+        .dataIn(dataInCcwo[1]),
+        .dataOut(dataOutCcwo[1]),
+        .full(fullCcwo[1]),
+        .empty(emptyCcwo[1])
     );
 
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufPeoV0
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnablePeoV0),
-        .rdEnable(rdEnablePeoV0),
-        .dataIn(dataInPeoV0),
-        .dataOut(dataOutPeoV0),
-        .full(fullPeoV0),
-        .empty(emptyPeoV0)
+        .wrEnable(wrEnablePeo[0]),
+        .rdEnable(rdEnablePeo[0]),
+        .dataIn(dataInPeo[0]),
+        .dataOut(dataOutPeo[0]),
+        .full(fullPeo[0]),
+        .empty(emptyPeo[0])
     );
     bufferDepth1 #(.WIDTH(PACKET_SIZE)) bufPeoV1
     (
         .clk(clk),
         .reset(reset),
-        .wrEnable(wrEnablePeoV1),
-        .rdEnable(rdEnablePeoV1),
-        .dataIn(dataInPeoV1),
-        .dataOut(dataOutPeoV1),
-        .full(fullPeoV1),
-        .empty(emptyPeoV1)
+        .wrEnable(wrEnablePeo[1]),
+        .rdEnable(rdEnablePeo[1]),
+        .dataIn(dataInPeo[1]),
+        .dataOut(dataOutPeo[1]),
+        .full(fullPeo[1]),
+        .empty(emptyPeo[1])
     );
 
     //Wires for sending requests from input buffer to output buffer
@@ -344,52 +282,26 @@ module gold_router #(
     */
     always @(*) begin
         {reqCwiCwo, reqCwiPeo, reqCcwiCcwo, reqCcwiPeo, reqPeiCwo, reqPeiCcwo} = 6'b0;
-        
-        if (evenOdd) begin // Internally service channel 0
-            if (fullCwiV0 && dataCwiV0[48] && emptyCwoV0) begin // Bit 48 is the LSB of hop-value
-                reqCwiCwo = 1;
-            end
-            if (fullCwiV0 && !dataCwiV0[48] && emptyPeoV0) begin
-                reqCwiPeo = 1;
-            end
 
-            if (fullCcwiV0 && dataCcwiV0[48] && emptyCcwoV0) begin
-                reqCcwiCcwo = 1;
-            end
-            if (fullCcwiV0 && !dataCcwiV0[48] && emptyPeoV0) begin
-                reqCcwiPeo = 1;
-            end
-
-            // Check dir bit for processing element
-            if (fullPeiV0 && dataPeiV0[62] && emptyCwoV0) begin // Bit 62 is dir
-                reqPeiCwo = 1;
-            end
-            if (fullPeiV0 && !dataCcwiV0[62] && emptyCcwoV0) begin
-                reqPeiCcwo = 1;
-            end
+        if (fullCwo[~evenOdd] && dataCwi[~evenOdd][48] && emptyCwo[~evenOdd]) begin // Bit 48 is the LSB of hop value, Internally service the other channel
+            reqCwiCwo = 1;
         end
-        else begin // Internally service channel 1
-            if (fullCwiV1 && dataCwiV1[48] && emptyCwoV1) begin // Bit 48 is the LSB of hop-value
-                reqCwiCwo = 1;
-            end
-            if (fullCwiV1 && !dataCwiV1[48] && emptyPeoV1) begin
-                reqCwiPeo = 1;
-            end
+        if (fullCwi[~evenOdd] && !dataCwi[~evenOdd][48] && emptyPeo[~evenOdd]) begin
+            reqCwiPeo = 1;
+        end
+        if (fullCcwi[~evenOdd] && dataCcwi[~evenOdd][48] && emptyCcwo[~evenOdd]) begin
+            reqCcwiCcwo = 1;
+        end
+        if (fullCcwi[~evenOdd] && !dataCcwi[~evenOdd][48] && emptyPeo[~evenOdd]) begin
+            reqCcwiPeo = 1;
+        end
 
-            if (fullCcwiV1 && dataCcwiV1[48] && emptyCcwoV1) begin
-                reqCcwiCcwo = 1;
-            end
-            if (fullCcwiV1 && !dataCcwiV1[48] && emptyPeoV1) begin
-                reqCcwiPeo = 1;
-            end
-
-            // Check dir bit for processing element
-            if (fullPeiV1 && dataPeiV1[62] && emptyCwoV1) begin // Bit 62 is dir
-                reqPeiCwo = 1;
-            end
-            if (fullPeiV1 && !dataCcwiV1[62] && emptyCcwoV1) begin
-                reqPeiCcwo = 1;
-            end
+        // Check dir bit for processing element
+        if (fullPei[~evenOdd] && dataPei[~evenOdd][62] && emptyCwo[~evenOdd]) begin // Bit 62 is dir
+            reqPeiCwo = 1;
+        end
+        if (fullPei[~evenOdd] && !dataCcwi[~evenOdd][62] && emptyCcwo[~evenOdd]) begin
+            reqPeiCcwo = 1;
         end
     end
 
@@ -398,7 +310,7 @@ module gold_router #(
     wire grantCcwiCcwo, grantCcwiPeo;
     wire grantPeiCwo, grantPeiCcwo;
 
-    rotatingPrioritizer arbiterCwo
+    rotating_prioritizer arbiterCwo
     (
         .clk(clk),
         .reset(reset),
@@ -409,7 +321,7 @@ module gold_router #(
         .grant1(grantCwiPeo)
     );
 
-    rotatingPrioritizer arbiterCcwo
+    rotating_prioritizer arbiterCcwo
     (
         .clk(clk),
         .reset(reset),
@@ -420,7 +332,7 @@ module gold_router #(
         .grant1(grantCcwiPeo)
     );
 
-    rotatingPrioritizer arbiterPeo
+    rotating_prioritizer arbiterPeo
     (
         .clk(clk),
         .reset(reset),
@@ -431,9 +343,65 @@ module gold_router #(
         .grant1(grantPeiCcwo)
     );
 
-    
+    /* Data transfer logic
+        Once arbiter grants permission to any request, the data can be loaded into the subsequent output buffer
+    */
+    always @(*) begin
+        if (grantCwiCwo) begin
+            rdEnableCwi[evenOdd] = 1;
+            wrEnableCwo[evenOdd] = 1;
+            dataInCwo[evenOdd] = dataCwi[evenOdd]; // Pass data from input buffer to output buffer
+            dataInCwo[evenOdd][55:48] = dataCwi[evenOdd][55:48] >> 1; // Right shift hop counter by 1 
+        end
+        if (grantCwiPeo) begin
+            rdEnableCwi[evenOdd] = 1;
+            wrEnablePeo[evenOdd] = 1;
+            dataInPeo[evenOdd] = dataCwi[evenOdd];
+            dataInPeo[evenOdd][55:48] = dataCwi[evenOdd][55:48] >> 1;
+        end
+        if (grantCcwiCcwo) begin
+            rdEnableCcwi[evenOdd] = 1;
+            wrEnableCcwo[evenOdd] = 1;
+            dataInCcwo[evenOdd] = dataCcwi[evenOdd];
+            dataInCcwo[evenOdd][55:48] = dataCcwi[evenOdd][55:48] >> 1;
+        end
+        if (grantCcwiPeo) begin
+            rdEnableCcwi[evenOdd] = 1;
+            wrEnablePeo[evenOdd] = 1;
+            dataInPeo[evenOdd] = dataCcwi[evenOdd];
+            dataInPeo[evenOdd][55:48] = dataCcwi[evenOdd][55:48] >> 1;
+        end
+        if (grantPeiCwo) begin
+            rdEnablePei[evenOdd] = 1;
+            wrEnableCwo[evenOdd] = 1;
+            dataInCwo[evenOdd] = dataPei[evenOdd];
+            dataInCwo[evenOdd][55:48] = dataPei[evenOdd][55:48] >> 1;
+        end
+        if (grantPeiCcwo) begin
+            rdEnablePei[evenOdd] = 1;
+            wrEnableCcwo[evenOdd] = 1;
+            dataInCcwo[evenOdd] = dataPei[evenOdd];
+            dataInCcwo[evenOdd][55:48] = dataPei[evenOdd][55:48] >> 1;
+        end
+    end
 
+    /* Router output data port logic */
+    assign cwdo = dataOutCwo[~evenOdd];
+    assign ccwdo = dataOutCcwo[~evenOdd];
+    assign pedo = dataOutPeo[~evenOdd];
 
+    /* Router output send port logic 
+     * Need ready signal to also be asserted
+    */
+   assign cwso = fullCwo[~evenOdd] & cwro;
+   assign ccwso = fullCcwo[~evenOdd] & ccwro;
+   assign peso = fullPeo[~evenOdd] & pero;
 
-    
+   /* Router output read enable logic */
+   assign rdEnableCwo[0] = evenOdd ? cwso & cwro : 0;
+   assign rdEnableCwo[1] = ~evenOdd ? cwso & cwro : 0;
+   assign rdEnableCcwo[0] = evenOdd ? ccwso & ccwro : 0;
+   assign rdEnableCcwo[1] = ~evenOdd ? ccwso & ccwro : 0;
+   assign rdEnablePeo[0] = evenOdd ? peso & pero : 0;
+   assign rdEnablePeo[1] = ~evenOdd ? peso & pero : 0;
 endmodule
