@@ -1,4 +1,4 @@
-module rotatingPrioritizer (
+module rotating_prioritizer (
     input clk, reset,
     input polarity,
     input req0, req1,
