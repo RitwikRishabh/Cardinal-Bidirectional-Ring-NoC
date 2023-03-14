@@ -58,7 +58,7 @@ module rotating_prioritizer (
     // Registering the grant request
     always @(posedge clk) begin
         if (reset) begin
-            lastGrant0 <= 1;
+            lastGrant0 <= 1; // request 0 has the highest priority after reseting
             lastGrant1 <= 1;
         end
         else begin
