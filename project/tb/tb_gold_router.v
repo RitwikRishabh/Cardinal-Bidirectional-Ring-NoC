@@ -3,7 +3,7 @@
 module tb_gold_router;
 
     parameter PACKET_SIZE = 64;
-    parameter CLK_PERIOD = 5;
+    parameter CLK_PERIOD = 4; // 250MHz clock
 
     reg clk, reset;
     wire polarity;
@@ -40,45 +40,141 @@ module tb_gold_router;
         reset = 1;
         {cwsi, ccwsi, pesi} = 3'b0;
         {cwro, ccwro, pero} = 3'b111;
-        #(3.1 * CLK_PERIOD);
+        cwdi = 'h11111;
+        ccwdi = 'h22222;
+        pedi = 'h33333;
+        #(5.1 * CLK_PERIOD);
+        reset = 0;
     end
     endtask
 
-    // task test_sendCwiCwi();
-    //     reset = 0;
-    //     cwsi = 1;
-    //     cwdi = {1'b0, 1'b1, 6'b0, 8'b11111111, 48'b11111};
+    task send_Cwi(input sendValid, input dir, input [7:0] hop, input ready);
+    begin
+        cwsi = sendValid;
+        cwdi[62] = dir;
+        cwdi[55-:8] = hop;
+        cwro = ready;
+    end
+    endtask
 
-    // endtask
+    task send_Ccwi(input sendValid, input dir, input [7:0] hop, input ready);
+    begin
+        ccwsi = sendValid;
+        ccwdi[62] = dir;
+        ccwdi[55-:8] = hop;
+        ccwro = ready;
+    end
+    endtask
 
+    task send_Pei(input sendValid, input dir, input [7:0] hop, input ready);
+    begin
+        pesi = sendValid;
+        pedi[62] = dir;
+        pedi[55-:8] = hop;
+        pero = ready;
+    end
+    endtask
     
-    initial
-    begin : test 
+    initial begin : test 
         
         initialize();
 
-        for(i = 0; i < 20; i = i + 1)
-        begin
-            reset = 0;
-    
-            ccwsi = 1;
-            ccwdi = {1'b0, 1'b1, 6'b0, 8'b1111_1111, 48'b11111};
-            ccwdi[63] = i + 1;
-            ccwdi[55-:8] = 1;
-            ccwdi[62] = 0;
+        //Test for no contention
 
-            pesi = 1;
-            pedi = {1'b0, 1'b1, 6'b0, 8'b1111_1111, 48'b0};
-            pedi[63] = i + 1;
-            pedi[55-:8] = 0;
-            pedi[62] = 1;
+        # (1*1*CLK_PERIOD)
+        // even polarity
+        send_Cwi(1, 0, 8'hf, 1);
+        #CLK_PERIOD
+        cwsi = 0;
+        #(2*CLK_PERIOD)
+        // odd polarity
+        // cwdi = 'h44444;
+        // send_Cwi(1, 0, 8'h7, 1);
+        // #CLK_PERIOD
+        // cwsi = 0;
+        // # (4*CLK_PERIOD)
+        // cwro = 0; ccwro = 0;
+        // #CLK_PERIOD;
+        // // pe input channel for cwi
+        // send_Pei(1, 0, 8'h0, 0);
+        // cwro = 1;
+        // #CLK_PERIOD;
+        // pesi = 0;
+        // # (2*CLK_PERIOD)
+        // cwro = 0;
+        // // pe input channel for ccwi
+        // send_Pei(1, 1, 8'h0, 0);
+        // ccwro = 1;
+        // #CLK_PERIOD;
+        // pesi = 0;
+        // # (2*CLK_PERIOD)
+        // ccwro = 0;
+        // // pe output channel for cwi
+        // send_Cwi(1, 0, 8'h0, 0);
+        // pero = 1;
+        // #CLK_PERIOD;
+        // cwsi = 0;
+        // # (2*CLK_PERIOD)
+        // pero = 0;
+        // // pe output channel for ccwi
+        // send_Ccwi(1, 0, 8'h0, 0);
+        // pero = 1;
+        // #CLK_PERIOD;
+        // ccwsi = 0;
+        // # (2*CLK_PERIOD)
+        // pero = 0;
 
-            #(CLK_PERIOD);
-        end
+        // // Test for contention
+        // // clockwise contention
+        // # (3*CLK_PERIOD)
+        // send_Cwi(1, 0, 8'h4, 1);
+        // pesi = 1;
+        // pedi[62] = 0;
+        // #CLK_PERIOD;
+        // cwsi = 0;
+        // pesi = 0;
+        // # (2*CLK_PERIOD)
+        // cwro = 0;
+        // //grant to the other input buffer
+        // # (3*CLK_PERIOD)
+        // send_Cwi(1, 0, 8'h4, 1);
+        // pesi = 1;
+        // pedi[62] = 0;
+        // #CLK_PERIOD;
+        // cwsi = 0;
+        // pesi = 0;
+        // # (2*CLK_PERIOD)
+        // cwro = 0;
+        // // counter clockwise contention
+        // # (3*CLK_PERIOD)
+        // send_Ccwi(1, 0, 8'h4, 1);
+        // pesi = 1;
+        // pedi[62] = 1;
+        // #CLK_PERIOD;
+        // ccwsi = 0;
+        // pesi = 0;
+        // ccwro = 0;
+        // // grant to the other input buffer
+        // # (3*CLK_PERIOD)
+        // send_Ccwi(1, 0, 8'h4, 1);
+        // pesi = 1;
+        // pedi[62] = 1;
+        // #CLK_PERIOD;
+        // ccwsi = 0;
+        // pesi = 0;
+        // ccwro = 0;
+        // // processing element contention
+        // # (3*CLK_PERIOD)
+        // send_Ccwi(1, 0, 8'h0, 0);
+        // send_Cwi(1, 0, 8'h0, 0);
+        // pero = 1;
+        // #CLK_PERIOD;
+        // ccwsi = 0;
+        // cwsi = 0;
+        // pero = 0;
 
-        #(10 * CLK_PERIOD) 
-        $finish;
-
+        #(20 *CLK_PERIOD)
+        $stop;
     end
 
 endmodule

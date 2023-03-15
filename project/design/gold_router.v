@@ -32,7 +32,7 @@ module gold_router
 );
 
 //--------------------------------------------Sub-module Instatiations---------------------------------------------------
-    // Six input buffers (3 physical channels x 2 virtual channels)
+    // Six input buffers
     wire fullCwi0, fullCwi1, fullCcwi0, fullCcwi1, fullPei0, fullPei1;
     wire emptyCwi0, emptyCwi1, emptyCcwi0, emptyCcwi1, emptyPei0, emptyPei1;
     reg rdEnableCwi0, rdEnableCwi1, rdEnableCcwi0, rdEnableCcwi1, rdEnablePei0, rdEnablePei1;
@@ -111,7 +111,7 @@ module gold_router
         .dataOut(dataPei1)
     ); 
 
-    // Six output buffers (3 physical channels x 2 virtual channels)
+    // Six output buffers
     wire fullCwo0, fullCwo1, fullCcwo0, fullCcwo1, fullPeo0, fullPeo1;
     wire emptyCwo0, emptyCwo1, emptyCcwo0, emptyCcwo1, emptyPeo0, emptyPeo1;
     wire rdEnableCwo0, rdEnableCwo1, rdEnableCcwo0, rdEnableCcwo1, rdEnablePeo0, rdEnablePeo1;
@@ -250,7 +250,7 @@ module gold_router
     // Logic for dataOut port of router
     assign cwdo = (polarityReg == 0)   ? dataOutCwo1   : dataOutCwo0;
     assign ccwdo = (polarityReg == 0)  ? dataOutCcwo1  : dataOutCcwo0;  
-    assign pedo = (polarityReg == 0)   ? dataOutPeo1   : dataOutPeo0; 
+    assign pedo = (polarityReg == 0)   ? dataOutPeo1   : dataOutPeo0;
 
     // Logic for read enable of output buffer
     assign rdEnableCwo0     = (polarityReg == 1)   ? (cwsoReg & cwro)      : 0;
@@ -411,6 +411,7 @@ module gold_router
             if(fullCwi0 && (dataCwi0[48] == 0) && emptyPeo0) begin 
                 reqCwiPeo = 1;
             end
+            $display("pol=%d, request signal, %d, %d, %d, %d", polarityReg, fullCwi0, dataCwi0[48], emptyCwo0, reqCwiCwo);
             
             if(fullCcwi0 && (dataCcwi0[48] == 1) && emptyCcwo0) begin 
                 reqCcwiCcwo = 1;
@@ -435,6 +436,7 @@ module gold_router
             if(fullCwi1 && (dataCwi1[48] == 0) && emptyPeo1) begin 
                 reqCwiPeo = 1;
             end
+            $display("pol=%d, request signal, %d, %d, %d, %d", polarityReg, fullCwi1, dataCwi1[48], emptyCwo1, reqCwiCwo);
             
             if(fullCcwi1 && (dataCcwi1[48] == 1) && emptyCcwo1) begin 
                 reqCcwiCcwo = 1;
@@ -481,6 +483,7 @@ module gold_router
 
         if(polarityReg == 0) // polarityReg == 0
         begin
+            $display("pol=%d, data signal", polarityReg);
             if(grantCwiCwo) begin                           // if transfer from cwi to cwo was permitted
                 rdEnableCwi0 = 1;
                 wrEnableCwo0 = 1;
@@ -525,6 +528,7 @@ module gold_router
         end
         else // polarityReg == 1
         begin
+            $display("pol=%d, data signal", polarityReg);
             if(grantCwiCwo) begin
                 rdEnableCwi1 = 1;
                 wrEnableCwo1 = 1;
