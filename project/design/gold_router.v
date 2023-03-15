@@ -404,7 +404,6 @@ module gold_router
             if(fullCwi0 && (dataCwi0[48] == 0) && emptyPeo0) begin 
                 reqCwiPeo = 1;
             end
-            $display("pol=%d, request signal, %d, %d, %d, %d", polarity, fullCwi0, dataCwi0[48], emptyCwo0, reqCwiCwo);
             
             if(fullCcwi0 && (dataCcwi0[48] == 1) && emptyCcwo0) begin 
                 reqCcwiCcwo = 1;
@@ -429,7 +428,6 @@ module gold_router
             if(fullCwi1 && (dataCwi1[48] == 0) && emptyPeo1) begin 
                 reqCwiPeo = 1;
             end
-            $display("pol=%d, request signal, %d, %d, %d, %d", polarity, fullCwi1, dataCwi1[48], emptyCwo1, reqCwiCwo);
             
             if(fullCcwi1 && (dataCcwi1[48] == 1) && emptyCcwo1) begin 
                 reqCcwiCcwo = 1;
@@ -476,7 +474,6 @@ module gold_router
 
         if(polarity == 0) // polarity == 0
         begin
-            $display("pol=%d, data signal", polarity);
             if(grantCwiCwo) begin                           // if transfer from cwi to cwo was permitted
                 rdEnableCwi0 = 1;
                 wrEnableCwo0 = 1;
@@ -521,7 +518,6 @@ module gold_router
         end
         else // polarity == 1
         begin
-            $display("pol=%d, data signal", polarity);
             if(grantCwiCwo) begin
                 rdEnableCwi1 = 1;
                 wrEnableCwo1 = 1;
