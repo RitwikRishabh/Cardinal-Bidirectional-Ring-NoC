@@ -13,28 +13,25 @@ module bufferDepth1 #(
 
     reg [WIDTH-1:0] memory;                     // Memory to store the data
     reg fullFlag;                               // Flag indicating buffer is full (1) or empty (0)
-    reg [WIDTH-1:0] dataOutTemp;                // Temporary reg to store read data
     
     //----------------------------------------------------Continuous Assignment----------------------------------------------------//
     assign full = fullFlag;
     assign empty = ~fullFlag;
-    assign dataOut = dataOutTemp;
+    assign dataOut = memory;
     //------------------------------------------------------Procedural Block-------------------------------------------------------//
     
     always @(posedge clk) begin
         if (reset) begin
             memory <= 0;
             fullFlag <= 0;
-            dataOutTemp <= 0;
         end
         else begin
-            if (wrEnable & (!fullFlag)) begin
+            if (rdEnable && fullFlag) begin
+                fullFlag <= 0;
+            end
+            else if (wrEnable & (!fullFlag)) begin
                 memory <= dataIn;
                 fullFlag <= 1;
-            end
-            if (rdEnable & fullFlag) begin
-                dataOutTemp <= memory;
-                fullFlag <= 0;
             end
         end
     end

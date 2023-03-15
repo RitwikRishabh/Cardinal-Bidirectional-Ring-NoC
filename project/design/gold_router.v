@@ -4,18 +4,18 @@ module gold_router
 )
 (
     input clk, reset,                    // synchronous active high reset
-    output polarity,
+    output reg polarity,
 
     input cwsi,                         // clockwise input channel send signal
-    output cwri,                        // clockwise input ready signal
+    output reg cwri,                        // clockwise input ready signal
     input [PACKET_SIZE - 1:0] cwdi,     // clockwise input channel dataIn 
 
     input ccwsi,                        // counter clockwise input channel send signal
-    output ccwri,                       // counter clockwise input ready signal
+    output reg ccwri,                       // counter clockwise input ready signal
     input [PACKET_SIZE - 1:0] ccwdi,    // counter clockwise input channel dataIn
 
     input pesi,                         // processing element input channel send signal
-    output peri,                        // processing element input channel ready signal
+    output reg peri,                        // processing element input channel ready signal
     input [PACKET_SIZE - 1:0] pedi,     // processing element input channel dataIn 
 
     output cwso,                        // clockwise output channel send signal
@@ -234,33 +234,26 @@ module gold_router
 //--------------------------------------------End Sub-module Instatiations-----------------------------------------------
 
 //--------------------------------------------------Continuous statements------------------------------------------------
-    // Assign output ports to internal regs
-    reg cwriReg, ccwriReg, periReg;
-    reg cwsoReg, ccwsoReg, pesoReg;
-    reg polarityReg;
-
-    assign cwri     = cwriReg;
-    assign ccwri    = ccwriReg;
-    assign peri     = periReg;
-
-    assign cwso     = cwsoReg;
-    assign ccwso    = ccwsoReg;
-    assign peso     = pesoReg;
-
     // Logic for dataOut port of router
-    assign cwdo = (polarityReg == 0)   ? dataOutCwo1   : dataOutCwo0;
-    assign ccwdo = (polarityReg == 0)  ? dataOutCcwo1  : dataOutCcwo0;  
-    assign pedo = (polarityReg == 0)   ? dataOutPeo1   : dataOutPeo0;
+    assign cwdo     = (!polarity)   ? dataOutCwo1   : dataOutCwo0;
+    assign ccwdo    = (!polarity)   ? dataOutCcwo1  : dataOutCcwo0;  
+    assign pedo     = (!polarity)   ? dataOutPeo1   : dataOutPeo0;
+
+    /* 
+        Logic for send singal at output channel
+        The assertion of send signal depends on ready signal
+    */
+    assign cwso     = (!polarity) ? (fullCwo1 & cwro)   : (fullCwo0 & cwro);
+    assign ccwso    = (!polarity) ? (fullCcwo1 & ccwro) : (fullCcwo0 & ccwro);  
+    assign peso     = (!polarity) ? (fullPeo1 & pero)   : (fullPeo0 & pero);    
 
     // Logic for read enable of output buffer
-    assign rdEnableCwo0     = (polarityReg == 1)   ? (cwsoReg & cwro)      : 0;
-    assign rdEnableCwo1     = (polarityReg == 0)   ? (cwsoReg & cwro)      : 0;
-    assign rdEnableCcwo0    = (polarityReg == 1)   ? (ccwsoReg & ccwro)    : 0;  
-    assign rdEnableCcwo1    = (polarityReg == 0)   ? (ccwsoReg & ccwro)    : 0;  
-    assign rdEnablePeo0     = (polarityReg == 1)   ? (pesoReg & pero)      : 0;
-    assign rdEnablePeo1     = (polarityReg == 0)   ? (pesoReg & pero)      : 0;  
-
-    assign polarity = polarityReg;
+    assign rdEnableCwo0     = (polarity)       ? (cwso & cwro)      : 0;
+    assign rdEnableCwo1     = (!polarity)      ? (cwso & cwro)      : 0;
+    assign rdEnableCcwo0    = (polarity)       ? (ccwso & ccwro)    : 0;  
+    assign rdEnableCcwo1    = (!polarity)      ? (ccwso & ccwro)    : 0;  
+    assign rdEnablePeo0     = (polarity)       ? (peso & pero)      : 0;
+    assign rdEnablePeo1     = (!polarity)      ? (peso & pero)      : 0;
 //--------------------------------------------------End Continuous statements--------------------------------------------
 
 //--------------------------------------------------Procedural Blocks----------------------------------------------------
@@ -270,62 +263,62 @@ module gold_router
     */
     always @(posedge clk) begin
         if (reset) begin
-            polarityReg <= 0;
+            polarity <= 0;
         end
         else begin
-            polarityReg <= ~polarityReg;
+            polarity <= ~polarity;
         end
     end
 
     /*
         Logic for ready signal at input channel
         Once the input buffer is empty, ready is asserted at the corresponding channel
-        hop == 0 is ilegal when entering the router
+        hop = 0 is ilegal when entering the router
         wrEnable must assume the hop value must be greater than 1 when entering the router
     */
     always @(*) begin
-        if(polarityReg == 0) begin
+        if(polarity == 0) begin
             if(emptyCwi1) begin 
-                cwriReg = 1;
+                cwri = 1;
             end
             else begin 
-                cwriReg = 0;
+                cwri = 0;
             end
             
             if(emptyCcwi1) begin 
-                ccwriReg = 1;
+                ccwri = 1;
             end
             else begin 
-                ccwriReg = 0;
+                ccwri = 0;
             end
             
             if(emptyPei1) begin 
-                periReg = 1; 
+                peri = 1; 
             end
             else begin 
-                periReg = 0;
+                peri = 0;
             end
         end
-        else begin // if polarityReg == 1
+        else begin // if polarity == 1
             if(emptyCwi0) begin 
-                cwriReg = 1;
+                cwri = 1;
             end
             else begin 
-                cwriReg = 0;
+                cwri = 0;
             end
             
             if(emptyCcwi0) begin 
-                ccwriReg = 1;
+                ccwri = 1;
             end
             else begin 
-                ccwriReg = 0;
+                ccwri = 0;
             end
             
             if(emptyPei0) begin 
-                periReg = 1;
+                peri = 1;
             end
             else begin 
-                periReg = 0;
+                peri = 0;
             end
         end
     end
@@ -335,26 +328,26 @@ module gold_router
         only when both send and ready are asserted, data can be loaded into input buffer
     */
     always @(*) begin
-        if(polarityReg == 0) begin
+        if(polarity == 0) begin
             wrEnableCwi0 = 0;
             wrEnableCcwi0 = 0;
             wrEnablePei0 = 0;
 
-            if(cwsi && cwriReg) begin 
+            if(cwsi && cwri) begin 
                 wrEnableCwi1 = 1;
             end
             else begin 
                 wrEnableCwi1 = 0;
             end
 
-            if(ccwsi && ccwriReg) begin
+            if(ccwsi && ccwri) begin
                 wrEnableCcwi1 = 1;
             end
             else begin 
                 wrEnableCcwi1 = 0; 
             end
 
-            if(pesi && periReg) begin 
+            if(pesi && peri) begin 
                 wrEnablePei1 = 1;
             end
             else begin 
@@ -366,21 +359,21 @@ module gold_router
             wrEnableCcwi1 = 0;
             wrEnablePei1 = 0;
 
-            if(cwsi && cwriReg) begin 
+            if(cwsi && cwri) begin 
                 wrEnableCwi0 = 1;
             end
             else begin 
                 wrEnableCwi0 = 0;
             end
 
-            if(ccwsi && ccwriReg) begin 
+            if(ccwsi && ccwri) begin 
                 wrEnableCcwi0 = 1;
             end
             else begin 
                 wrEnableCcwi0 = 0; 
             end
 
-            if(pesi && periReg) begin 
+            if(pesi && peri) begin 
                 wrEnablePei0 = 1;
             end
             else begin 
@@ -403,7 +396,7 @@ module gold_router
         reqPeiCwo = 0;
         reqPeiCcwo = 0;
 
-        if(polarityReg == 0) begin // if polarityReg == 0, data in vitual channel 0 will be served internally
+        if(polarity == 0) begin // if polarity == 0, data in vitual channel 0 will be served internally
             // bit 48 is LSB of hop counter
             if(fullCwi0 && (dataCwi0[48] == 1) && emptyCwo0) begin 
                 reqCwiCwo = 1;
@@ -411,7 +404,7 @@ module gold_router
             if(fullCwi0 && (dataCwi0[48] == 0) && emptyPeo0) begin 
                 reqCwiPeo = 1;
             end
-            $display("pol=%d, request signal, %d, %d, %d, %d", polarityReg, fullCwi0, dataCwi0[48], emptyCwo0, reqCwiCwo);
+            $display("pol=%d, request signal, %d, %d, %d, %d", polarity, fullCwi0, dataCwi0[48], emptyCwo0, reqCwiCwo);
             
             if(fullCcwi0 && (dataCcwi0[48] == 1) && emptyCcwo0) begin 
                 reqCcwiCcwo = 1;
@@ -429,14 +422,14 @@ module gold_router
                 reqPeiCcwo = 1;
             end
         end
-        else begin // if polarityReg == 1, deal with virtual channel 1
+        else begin // if polarity == 1, deal with virtual channel 1
             if(fullCwi1 && (dataCwi1[48] == 1) && emptyCwo1) begin 
                 reqCwiCwo = 1;
             end
             if(fullCwi1 && (dataCwi1[48] == 0) && emptyPeo1) begin 
                 reqCwiPeo = 1;
             end
-            $display("pol=%d, request signal, %d, %d, %d, %d", polarityReg, fullCwi1, dataCwi1[48], emptyCwo1, reqCwiCwo);
+            $display("pol=%d, request signal, %d, %d, %d, %d", polarity, fullCwi1, dataCwi1[48], emptyCwo1, reqCwiCwo);
             
             if(fullCcwi1 && (dataCcwi1[48] == 1) && emptyCcwo1) begin 
                 reqCcwiCcwo = 1;
@@ -481,9 +474,9 @@ module gold_router
         dataInPeo0 = 64'bx;
         dataInPeo1 = 64'bx;
 
-        if(polarityReg == 0) // polarityReg == 0
+        if(polarity == 0) // polarity == 0
         begin
-            $display("pol=%d, data signal", polarityReg);
+            $display("pol=%d, data signal", polarity);
             if(grantCwiCwo) begin                           // if transfer from cwi to cwo was permitted
                 rdEnableCwi0 = 1;
                 wrEnableCwo0 = 1;
@@ -526,9 +519,9 @@ module gold_router
                 dataInCcwo0[55-:8] = dataPei0[55-:8] >> 1;
             end
         end
-        else // polarityReg == 1
+        else // polarity == 1
         begin
-            $display("pol=%d, data signal", polarityReg);
+            $display("pol=%d, data signal", polarity);
             if(grantCwiCwo) begin
                 rdEnableCwi1 = 1;
                 wrEnableCwo1 = 1;
@@ -571,16 +564,6 @@ module gold_router
                 dataInCcwo1[55-:8] = dataPei1[55-:8] >> 1;
             end
         end
-    end
-
-    /* 
-        Logic for send singal at output channel
-        The assertion of send signal depends on ready signal
-    */
-    always @(*) begin
-        cwsoReg     = (polarityReg == 0) ? (fullCwo1 & cwro)   : (fullCwo0 & cwro);
-        ccwsoReg    = (polarityReg == 0) ? (fullCcwo1 & ccwro) : (fullCcwo0 & ccwro);  
-        pesoReg     = (polarityReg == 0) ? (fullPeo1 & pero)   : (fullPeo0 & pero);    
     end 
 //------------------------------------------------End Procedural Blocks--------------------------------------------------
 endmodule 
