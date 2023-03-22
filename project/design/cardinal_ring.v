@@ -1,3 +1,4 @@
+`include "./design/cardinal_router.v"
 module cardinal_ring 
 #(
     parameter PACKET_SIZE = 64

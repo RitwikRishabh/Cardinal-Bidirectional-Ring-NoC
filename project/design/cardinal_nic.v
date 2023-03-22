@@ -1,4 +1,4 @@
-`include "cardinal_nic_buffer.v"
+`include "./design/cardinal_nic_buffer.v"
 module cardinal_nic #( 
 	parameter PACKET_SIZE = 64
 )(

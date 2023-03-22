@@ -99,21 +99,21 @@ module cpu #(
 
 //---------------------------------ID Stage--------------------------------//
     // Decode Instructions
-    wire [0:5] opcode, functionCode;
-    wire [0:4] rD, rA, rB;
-    wire [0:4] ww;
-    wire [0:15] immediateAddr;
+    wire [0:5] opcodeID, functionCodeID;
+    wire [0:4] rDid, rAid, rBid;
+    wire [0:4] wwID;
+    wire [0:15] immediateAddrID;
 
-    assign opcode           = regIF_ID[0:5];
-    assign rD               = regIF_ID[6:10];
-    assign rA               = regIF_ID[11:15];
-    assign rB               = regIF_ID[16:20];
-    assign ww               = regIF_ID[21:25];
-    assign functionCode     = regIF_ID[26:31];
-    assign immediateAddr    = regIF_ID[16:31];
+    assign opcodeID           = regIF_ID[0:5];
+    assign rDid               = regIF_ID[6:10];
+    assign rAid               = regIF_ID[11:15];
+    assign rBid               = regIF_ID[16:20];
+    assign wwID               = regIF_ID[21:25];
+    assign functionCodeID     = regIF_ID[26:31];
+    assign immediateAddrID    = regIF_ID[16:31];
 
     // Reg file
-    wire [0:$clog2(ADDR_WIDTH)-1] regFileRdAddr0, regFileRdAddr1;
+    reg [0:$clog2(ADDR_WIDTH)-1] regFileRdAddr0, regFileRdAddr1;
     wire [0:DATA_WIDTH-1] regFileRdDataOut0, regFileRdDataOut1;
     wire regFileWrEnWB; // Write Enable from WB stage
     wire [0:$clog2(ADDR_WIDTH)-1] regFileWrAddrWB;
@@ -131,21 +131,67 @@ module cpu #(
         .dataOut1(regFileRdDataOut1)
     );
 
+    always @(*) begin
+        if (opcodeID == MTYPE_SW || opcodeID == RTYPE_BEZ || opcodeID == RTYPE_BNEZ) begin
+            regFileRdAddr0 = rDid;
+        end
+        else begin
+            regFileRdAddr0 = rAid;
+        end
+        regFileRdAddr1 = rBid;
+    end
+
     // Control Unit
-    reg dmemEnReg, dmemWrEnReg, nicEnReg, nicWrEnReg, regFileWrEn;
+    reg dmemEnID, dmemWrEnID, nicEnID, nicWrEnID, regFileWrEnID;
     always @(*) begin       
-        case (opcode)
+        case (opcodeID)
             RTYPE_ALU : begin
-                regFileWrEn;
+                regFileWrEnID = 1;
             end
             MTYPE_LW: begin
-                regFileWrEn = 1;
-                dmemEnReg = 1;
+                regFileWrEnID = 1;
+                dmemEnID = 1;
             end
-            
+            MTYPE_SW: begin
+                dmemWrEnID = 1;
+                dmemEnID = 1;
+            end
             default: 
+            {dmemEnID, dmemWrEnID, nicEnID, nicWrEnID, regFileWrEnID} = 5'b00000;
         endcase
     end
+
+    // Stall signals destination register cannot be R0
+    // Stall due to LW and SW
+    wire stallLWSWid;
+    assign stallLWSWid = (opcodeID == MTYPE_SW) || (opcodeID == MTYPE_LW) && (rDid != 0);
+    // Stall due to DIV and SQRT 
+    wire stallDIVSQRTid;
+    assign stallDIVSQRTid = (opcodeID == RTYPE_ALU) && ((functionCodeID == VDIV) || (functionCodeID == VSQRT));
+    // Stall due to MULT, SQAURE
+    wire stallMULTSQid;
+    assign stallMULTSQid = (opcodeID == RTYPE_ALU) && ((functionCodeID == VMULEU) || (functionCodeID == VMULOU) || 
+                                (functionCodeID == VSQEU) || (functionCodeID == VSQOU)) && (rDid != 0);
+    // Stall due to ADD, SUB
+    wire stallADDSUBid;
+    assign stallADDSUBid = (opcodeID == RTYPE_ALU) && ((functionCodeID == VADD) && (functionCodeID == VSUB)) && (rDid != 0);
+    // Stall due to MOD
+    wire stallMODid;
+    assign stallMODid = (opcodeID == RTYPE_ALU) && (functionCodeID == VMOD) && (rDid != 0);
+    // Stall due to SLL, SRL, SRA
+    wire stallSLLSRLSRAid;
+    assign stallSLLSRLSRAid = (opcodeID == RTYPE_ALU) && ((functionCodeID == VSLL) || (functionCodeID == VSRL) ||
+                                (functionCodeID == VSRA)) && (rDid != 0);
+    
+    // HDU
+    reg hduRAid, hduRBid;
+    
+
+
+
+
+
+
 
 
 
