@@ -542,14 +542,12 @@ module cpu #(
 			end
 		end
     end
-//-------------------------------------End of EX_MEM Stage----------------------------------
-
-//---------------------------------------- WB Stage-----------------------------------------
 
 	assign regFileDataInWB = RegFileExMemWB[0:63];
 	assign regFileWrEnWB = RegFileExMemWB[64];
 	assign pppWB = RegFileExMemWB[65:67];
-    assign regFileWrAddrWB = RegFileExMemWB[68:72];        
+    assign regFileWrAddrWB = RegFileExMemWB[68:72];      
+	
 	
  //--------------------------------------------------------------------------------------------------------------------   
 endmodule
