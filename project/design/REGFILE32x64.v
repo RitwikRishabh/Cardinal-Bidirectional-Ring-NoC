@@ -6,13 +6,21 @@ module REGFILE32x64 #(
     input clk, reset, // synchronous active high reset
     input wrEn, // write enable
     // 1 write port 2 read ports
-    input [DATA_WIDTH-1:0] dataIn,
-    input [ADDR_WIDTH-1:0] wrAddr, rdAddr0, rdAddr1,
-    output reg [DATA_WIDTH-1:0] dataOut0, dataOut1
+    input [0:DATA_WIDTH-1] dataIn,
+    input [0:2] ppp,
+    input [0:ADDR_WIDTH-1] wrAddr, rdAddr0, rdAddr1,
+    output reg [0:DATA_WIDTH-1] dataOut0, dataOut1
 );
+
+    localparam aModePPP = 3'b000;
+    localparam uModePPP = 3'b001;
+    localparam dModePPP = 3'b010;
+    localparam eModePPP = 3'b011;
+    localparam oModePPP = 3'b100;
+
 //------------------------------------Instantiate Memory--------------------------//
-    reg [DATA_WIDTH-1:0] regFile [0:DEPTH-1];
-    reg [DEPTH:0] resetRegCount; // Variable to reset the regfile
+    reg [0:DATA_WIDTH-1] regFile [DEPTH-1:0];
+    reg [0:DEPTH] resetRegCount; // Variable to reset the regfile
 //----------------------------------End Instantiate Memory------------------------//
 
 //------------------------------------Read Data-----------------------------------//
