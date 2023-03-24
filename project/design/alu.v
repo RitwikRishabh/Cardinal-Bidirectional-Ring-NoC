@@ -38,134 +38,134 @@ module alu #(
     localparam wMode = 2'b10; // Word
     localparam dMode = 2'b11; // DWord
 
-//----------------------------------------------Adders----------------------------------------------//
-    /*  vaddx - Variable Width Add
-        vsubx - Variable Width Sub
-        Since both add and subtract use the same adder elements
-        we can use a single adder array for both operations
-        Because of WW field the maximum number of adders needed
-        are 8. So we instantiate 8 8-bit wide adders and combine then based on
-        the WW field
-    */
-    wire [0:7] carryIn, carryOut;
-    wire addSub;
-    wire [0:DATA_WIDTH-1] sumDiff;
+// //----------------------------------------------Adders----------------------------------------------//
+//     /*  vaddx - Variable Width Add
+//         vsubx - Variable Width Sub
+//         Since both add and subtract use the same adder elements
+//         we can use a single adder array for both operations
+//         Because of WW field the maximum number of adders needed
+//         are 8. So we instantiate 8 8-bit wide adders and combine then based on
+//         the WW field
+//     */
+//     wire [0:7] carryIn, carryOut;
+//     wire addSub;
+//     wire [0:DATA_WIDTH-1] sumDiff;
 
-    assign addSub = functionCodeEX == VADD ? 1'b1 : 1'b0; // 1==ADD, 0==SUB
+//     assign addSub = functionCodeEX == VADD ? 1'b1 : 1'b0; // 1==ADD, 0==SUB
 
-    DW01_addsub #(
-        .width(8)
-    )
-    addSub0
-    (
-        .A(rAex[0:7]),
-        .B(rBex[0:7]),
-        .CI(carryIn[0]),
-        .CO(carryOut[0]),
-        .ADD_SUB(addSub),
-        .SUM(sumDiff[0:7])
-    );
+//     DW01_addsub #(
+//         .width(8)
+//     )
+//     addSub0
+//     (
+//         .A(rAex[0:7]),
+//         .B(rBex[0:7]),
+//         .CI(carryIn[0]),
+//         .CO(carryOut[0]),
+//         .ADD_SUB(addSub),
+//         .SUM(sumDiff[0:7])
+//     );
 
-    DW01_addsub #(
-        .width(8)
-    )
-    addSub1
-    (
-        .A(rAex[8:15]),
-        .B(rBex[8:15]),
-        .CI(carryIn[1]),
-        .CO(carryOut[1]),
-        .ADD_SUB(addSub),
-        .SUM(sumDiff[8:15])
-    );
+//     DW01_addsub #(
+//         .width(8)
+//     )
+//     addSub1
+//     (
+//         .A(rAex[8:15]),
+//         .B(rBex[8:15]),
+//         .CI(carryIn[1]),
+//         .CO(carryOut[1]),
+//         .ADD_SUB(addSub),
+//         .SUM(sumDiff[8:15])
+//     );
 
-    DW01_addsub #(
-        .width(8)
-    )
-    addSub2
-    (
-        .A(rAex[16:23]),
-        .B(rBex[16:23]),
-        .CI(carryIn[2]),
-        .CO(carryOut[2]),
-        .ADD_SUB(addSub),
-        .SUM(sumDiff[16:23])
-    );
+//     DW01_addsub #(
+//         .width(8)
+//     )
+//     addSub2
+//     (
+//         .A(rAex[16:23]),
+//         .B(rBex[16:23]),
+//         .CI(carryIn[2]),
+//         .CO(carryOut[2]),
+//         .ADD_SUB(addSub),
+//         .SUM(sumDiff[16:23])
+//     );
 
-    DW01_addsub #(
-        .width(8)
-    )
-    addSub3
-    (
-        .A(rAex[24:31]),
-        .B(rBex[24:31]),
-        .CI(carryIn[3]),
-        .CO(carryOut[3]),
-        .ADD_SUB(addSub),
-        .SUM(sumDiff[24:31])
-    );
+//     DW01_addsub #(
+//         .width(8)
+//     )
+//     addSub3
+//     (
+//         .A(rAex[24:31]),
+//         .B(rBex[24:31]),
+//         .CI(carryIn[3]),
+//         .CO(carryOut[3]),
+//         .ADD_SUB(addSub),
+//         .SUM(sumDiff[24:31])
+//     );
 
-    DW01_addsub #(
-        .width(8)
-    )
-    addSub4
-    (
-        .A(rAex[32:39]),
-        .B(rBex[32:39]),
-        .CI(carryIn[4]),
-        .CO(carryOut[4]),
-        .ADD_SUB(addSub),
-        .SUM(sumDiff[32:39])
-    );
+//     DW01_addsub #(
+//         .width(8)
+//     )
+//     addSub4
+//     (
+//         .A(rAex[32:39]),
+//         .B(rBex[32:39]),
+//         .CI(carryIn[4]),
+//         .CO(carryOut[4]),
+//         .ADD_SUB(addSub),
+//         .SUM(sumDiff[32:39])
+//     );
 
-    DW01_addsub #(
-        .width(8)
-    )
-    addSub5
-    (
-        .A(rAex[40:47]),
-        .B(rBex[40:47]),
-        .CI(carryIn[5]),
-        .CO(carryOut[5]),
-        .ADD_SUB(addSub),
-        .SUM(sumDiff[40:47])
-    );
+//     DW01_addsub #(
+//         .width(8)
+//     )
+//     addSub5
+//     (
+//         .A(rAex[40:47]),
+//         .B(rBex[40:47]),
+//         .CI(carryIn[5]),
+//         .CO(carryOut[5]),
+//         .ADD_SUB(addSub),
+//         .SUM(sumDiff[40:47])
+//     );
 
-    DW01_addsub #(
-        .width(8)
-    )
-    addSub6
-    (
-        .A(rAex[48:55]),
-        .B(rBex[48:55]),
-        .CI(carryIn[6]),
-        .CO(carryOut[6]),
-        .ADD_SUB(addSub),
-        .SUM(sumDiff[48:55])
-    );
+//     DW01_addsub #(
+//         .width(8)
+//     )
+//     addSub6
+//     (
+//         .A(rAex[48:55]),
+//         .B(rBex[48:55]),
+//         .CI(carryIn[6]),
+//         .CO(carryOut[6]),
+//         .ADD_SUB(addSub),
+//         .SUM(sumDiff[48:55])
+//     );
 
-    DW01_addsub #(
-        .width(8)
-    )
-    addSub7
-    (
-        .A(rAex[56:63]),
-        .B(rBex[56:63]),
-        .CI(carryIn[7]),
-        .CO(carryOut[7]),
-        .ADD_SUB(addSub),
-        .SUM(sumDiff[56:63])
-    );
+//     DW01_addsub #(
+//         .width(8)
+//     )
+//     addSub7
+//     (
+//         .A(rAex[56:63]),
+//         .B(rBex[56:63]),
+//         .CI(carryIn[7]),
+//         .CO(carryOut[7]),
+//         .ADD_SUB(addSub),
+//         .SUM(sumDiff[56:63])
+//     );
 
-    //Check the WW field and connect the carry outs
-    assign carryOut[0] = (wwEX == bMode) ? 1'b0 : carryIn[1];
-    assign carryOut[1] = (wwEX == bMode) || (wwEX == hMode) ? 1'b0 : carryIn[2];
-    assign carryOut[2] = (wwEX == bMode) ? 1'b0 : carryIn[3];
-    assign carryOut[3] = (wwEX == bMode) || (wwEX == hMode) || (wwEX == wMode) ? 1'b0 : carryIn[4];
-    assign carryOut[4] = (wwEX == bMode) ? 1'b0 : carryIn[5];
-    assign carryOut[5] = (wwEX == bMode) || (wwEX == hMode) ? 1'b0 : carryIn[6];
-    assign carryOut[6] = (wwEX == bMode) ? 1'b0 : carryIn[7];
-    assign carryOut[7] = 1'b0;
+//     //Check the WW field and connect the carry outs
+//     assign carryOut[0] = (wwEX == bMode) ? 1'b0 : carryIn[1];
+//     assign carryOut[1] = (wwEX == bMode) || (wwEX == hMode) ? 1'b0 : carryIn[2];
+//     assign carryOut[2] = (wwEX == bMode) ? 1'b0 : carryIn[3];
+//     assign carryOut[3] = (wwEX == bMode) || (wwEX == hMode) || (wwEX == wMode) ? 1'b0 : carryIn[4];
+//     assign carryOut[4] = (wwEX == bMode) ? 1'b0 : carryIn[5];
+//     assign carryOut[5] = (wwEX == bMode) || (wwEX == hMode) ? 1'b0 : carryIn[6];
+//     assign carryOut[6] = (wwEX == bMode) ? 1'b0 : carryIn[7];
+//     assign carryOut[7] = 1'b0;
 //--------------------------------------------End Adders--------------------------------------------//
 
 //--------------------------------------------Multipliers-------------------------------------------//
@@ -772,8 +772,61 @@ module alu #(
             VMOV : begin
                 rDex = rAex;
             end
-            VADD, VSUB : begin
-                rDex = sumDiff;
+            VADD : begin
+                if (wwEX == bMode) begin
+                    rDex[0:7] = rAex[0:7] + rBex[0:7];
+                    rDex[8:15] = rAex[8:15] + rBex[8:15];
+                    rDex[16:23] = rAex[16:23] + rBex[16:23];
+                    rDex[24:31] = rAex[24:31] + rBex[24:31];
+                    rDex[32:39] = rAex[32:39] + rBex[32:39];
+                    rDex[40:47] = rAex[40:47] + rBex[40:47];
+                    rDex[48:55] = rAex[48:55] + rBex[48:55];
+                    rDex[56:63] = rAex[56:63] + rBex[56:63];
+                end
+                else if (wwEX == hMode) begin
+                    rDex[0:15] = rAex[0:15] + rBex[0:15];
+                    rDex[16:31] = rAex[16:31] + rBex[16:31];
+                    rDex[32:47] = rAex[32:47] + rBex[32:47];
+                    rDex[48:63] = rAex[48:63] + rBex[48:63];
+                end
+                else if (wwEX == wMode) begin
+                    rDex[0:31] = rAex[0:31] + rBex[0:31];
+                    rDex[32:63] = rAex[32:63] + rBex[32:63];
+                end
+                else if (wwEX == dMode) begin
+                    rDex = rAex + rBex;
+                end
+                else begin
+                    rDex = 64'bx;
+                end
+            end
+            VSUB : begin
+                if (wwEX == bMode) begin
+                    rDex[0:7] = rAex[0:7] - rBex[0:7];
+                    rDex[8:15] = rAex[8:15] - rBex[8:15];
+                    rDex[16:23] = rAex[16:23] - rBex[16:23];
+                    rDex[24:31] = rAex[24:31] - rBex[24:31];
+                    rDex[32:39] = rAex[32:39] - rBex[32:39];
+                    rDex[40:47] = rAex[40:47] - rBex[40:47];
+                    rDex[48:55] = rAex[48:55] - rBex[48:55];
+                    rDex[56:63] = rAex[56:63] - rBex[56:63];
+                end
+                else if (wwEX == hMode) begin
+                    rDex[0:15] = rAex[0:15] - rBex[0:15];
+                    rDex[16:31] = rAex[16:31] - rBex[16:31];
+                    rDex[32:47] = rAex[32:47] - rBex[32:47];
+                    rDex[48:63] = rAex[48:63] - rBex[48:63];
+                end
+                else if (wwEX == wMode) begin
+                    rDex[0:31] = rAex[0:31] - rBex[0:31];
+                    rDex[32:63] = rAex[32:63] - rBex[32:63];
+                end
+                else if (wwEX == dMode) begin
+                    rDex = rAex - rBex;
+                end
+                else begin
+                    rDex = 64'bx;
+                end
             end
             VMULEU, VMULOU, VSQEU, VSQOU : begin
                 if (wwEX == bMode) begin
