@@ -36,11 +36,6 @@ module cpu #(
     localparam MTYPE_SW      = 6'b100001; // Store Word
 
     //ALU function codes
-    localparam VAND     = 6'b000001;
-    localparam VOR      = 6'b000010;
-    localparam VXOR     = 6'b000011;
-    localparam VNOT     = 6'b000100;
-    localparam VMOV     = 6'b000101;
     localparam VADD     = 6'b000110;
     localparam VSUB     = 6'b000111;
     localparam VMULEU   = 6'b001000;
@@ -48,7 +43,6 @@ module cpu #(
     localparam VSLL     = 6'b001010;
     localparam VSRL     = 6'b001011;
     localparam VSRA     = 6'b001100;
-    localparam VRTTH    = 6'b001101;
     localparam VDIV     = 6'b001110;
     localparam VMOD     = 6'b001111;
     localparam VSQEU    = 6'b010000;
