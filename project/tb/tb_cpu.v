@@ -53,8 +53,8 @@ module tb_cpu;
     initial begin
         regFileFP = $fopen("regFileContents.out", "w");
         dmemFP = $fopen("dmemContens.out", "w");
-        $readmemh("dmem.fill", dmem0.MEM);
-        $readmemb("imem.fill", imem0.MEM);
+        $readmemh("./include/dmem.fill", dmem0.MEM);
+        $readmemh("./include/imem_1.fill", imem0.MEM);
 
         clk = 1;
         reset = 1;
