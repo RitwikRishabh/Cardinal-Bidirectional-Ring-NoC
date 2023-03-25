@@ -1,6 +1,4 @@
-`include "./include/DW01_addsub.v"
 `include "./include/DW02_mult.v"
-`include "./include/DW_shifter.v"
 `include "./include/DW_div.v"
 `include "./include/DW_sqrt.v"
 
@@ -189,7 +187,7 @@ module alu #(
     multByte0(
         .A(multInA[0:7]),
         .B(multInB[0:7]),
-        .TC(0), //unsigned
+        .TC(1'b0), //unsigned
         .PRODUCT(productB[0:15])
     );
 
@@ -200,7 +198,7 @@ module alu #(
     multByte1(
         .A(multInA[8:15]),
         .B(multInB[8:15]),
-        .TC(0), //unsigned
+        .TC(1'b0), //unsigned
         .PRODUCT(productB[16:31])
     );
 
@@ -211,7 +209,7 @@ module alu #(
     multByte2(
         .A(multInA[16:23]),
         .B(multInB[16:23]),
-        .TC(0), //unsigned
+        .TC(1'b0), //unsigned
         .PRODUCT(productB[32:47])
     );
 
@@ -222,7 +220,7 @@ module alu #(
     multByte3(
         .A(multInA[24:31]),
         .B(multInB[24:31]),
-        .TC(0), //unsigned
+        .TC(1'b0), //unsigned
         .PRODUCT(productB[48:63])
     );
 
@@ -234,7 +232,7 @@ module alu #(
     multHalfWord0(
         .A(multInA[0:15]),
         .B(multInB[0:15]),
-        .TC(0), //unsigned
+        .TC(1'b0), //unsigned
         .PRODUCT(productH[0:31])
     );
 
@@ -245,7 +243,7 @@ module alu #(
     multHalfWord1(
         .A(multInA[16:31]),
         .B(multInB[16:31]),
-        .TC(0), //unsigned
+        .TC(1'b0), //unsigned
         .PRODUCT(productH[32:63])
     );
 
@@ -258,7 +256,7 @@ module alu #(
     multWord(
         .A(multInA[0:31]),
         .B(multInB[0:31]),
-        .TC(0), //unsigned
+        .TC(1'b0), //unsigned
         .PRODUCT(productW[0:63])
     );
 
@@ -353,7 +351,10 @@ module alu #(
         For arithmetic shift, a signed register is needed to copy rA value
         and then >>> can be performed
     */
-    reg signed [0:DATA_WIDTH-1] rAexSigned = rAex;
+    reg signed [0:DATA_WIDTH-1] rAexSigned;
+    always @(*) begin
+        rAexSigned = rAex;
+    end
 //-------------------------------------------End Shifters-------------------------------------------//
 
 //---------------------------------------------Dividers---------------------------------------------//

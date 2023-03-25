@@ -46,7 +46,7 @@ module DW_shifter(data_in, data_tc, sh, sh_tc, sh_mode, data_out);
 
       
   // include modeling functions
-  `include "DW_shifter_function.inc"
+  `include "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_shifter_function.inc"
      
   // synopsys translate_off
   //-------------------------------------------------------------------------

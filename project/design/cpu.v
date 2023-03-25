@@ -449,17 +449,6 @@ module cpu #(
     assign pppWB = pppEX;
     assign regFileWrAddrWB = rDex;
     assign nicAddr = nicAddrEX;
-
-
-    
-
-
-
-
-    
-
-
-
 //-------------------------------End EX Stage------------------------------//
     
 endmodule

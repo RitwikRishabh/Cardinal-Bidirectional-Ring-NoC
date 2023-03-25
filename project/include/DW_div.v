@@ -53,7 +53,7 @@ module DW_div (a, b, quotient, remainder, divide_by_0);
   reg 		       b_x;
 
   // include modeling functions
-`include "DW_div_function.inc"
+`include "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_div_function.inc"
 
   
  
