@@ -35,7 +35,7 @@ module DW_sqrt (a, root);
   output [(width+1)/2-1 : 0] root;
   
   // include modeling functions
-`include "DW_sqrt_function.inc"
+`include "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_sqrt_function.inc"
 
   
  
