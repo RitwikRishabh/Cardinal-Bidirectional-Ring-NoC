@@ -1,0 +1,134 @@
+ncelab(64): 15.20-s079: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	ncelab(64)	15.20-s079: Started on Mar 25, 2023 at 21:16:36 PDT
+ncelab
+    -ACCESS +rwc
+    -NCFATAL INVSUP
+    -NCFATAL CUNOTB
+    -ERRORMAX 5
+    -UPDATE
+    -MESSAGES
+    -TIMESCALE 1ns/10ps
+    -LIBVERBOSE
+    work.tb_cpu
+
+	Elaborating the design hierarchy:
+Resolving design unit 'cpu' at 'tb_cpu.cpuDUT'.
+		Caching library 'work' ....... Done
+	library: 'work' views: 'module' -> found
+Resolved design unit 'cpu' at 'tb_cpu.cpuDUT' to 'work.cpu:module'.
+Resolving design unit 'REGFILE32x64' at 'tb_cpu.cpuDUT@cpu<module>.regFile'.
+	library: 'work' views: 'module' -> found
+Resolved design unit 'REGFILE32x64' at 'tb_cpu.cpuDUT@cpu<module>.regFile' to 'work.REGFILE32x64:module'.
+Resolving design unit 'alu' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU'.
+	library: 'work' views: 'module' -> found
+Resolved design unit 'alu' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU' to 'work.alu:module'.
+Resolving design unit 'DW02_mult' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.multByte0'.
+	library: 'work' views: 'module' -> found
+Resolved design unit 'DW02_mult' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.multByte0' to 'work.DW02_mult:module'.
+Resolved design unit 'DW02_mult' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.multByte1' to 'work.DW02_mult:module'.
+Resolved design unit 'DW02_mult' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.multByte2' to 'work.DW02_mult:module'.
+Resolved design unit 'DW02_mult' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.multByte3' to 'work.DW02_mult:module'.
+Resolved design unit 'DW02_mult' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.multHalfWord0' to 'work.DW02_mult:module'.
+Resolved design unit 'DW02_mult' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.multHalfWord1' to 'work.DW02_mult:module'.
+Resolved design unit 'DW02_mult' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.multWord' to 'work.DW02_mult:module'.
+Resolving design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divB0'.
+	library: 'work' views: 'module' -> found
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divB0' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divB1' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divB2' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divB3' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divB4' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divB5' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divB6' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divB7' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divH0' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divH1' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divH2' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divH3' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divW0' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divW1' to 'work.DW_div:module'.
+Resolved design unit 'DW_div' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.divD0' to 'work.DW_div:module'.
+Resolving design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtB0'.
+	library: 'work' views: 'module' -> found
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtB0' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtB1' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtB2' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtB3' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtB4' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtB5' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtB6' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtB7' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtH0' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtH1' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtH2' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtH3' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtW0' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtW1' to 'work.DW_sqrt:module'.
+Resolved design unit 'DW_sqrt' at 'tb_cpu.cpuDUT@cpu<module>.cardinalALU@alu<module>.sqrtD0' to 'work.DW_sqrt:module'.
+Resolving design unit 'imem' at 'tb_cpu.imem0'.
+	library: 'work' views: 'module' -> found
+Resolved design unit 'imem' at 'tb_cpu.imem0' to 'work.imem:module'.
+Resolving design unit 'dmem' at 'tb_cpu.dmem0'.
+	library: 'work' views: 'module' -> found
+Resolved design unit 'dmem' at 'tb_cpu.dmem0' to 'work.dmem:module'.
+    .memAddr(dmemAddr),
+                    |
+ncelab: *W,CUVMPW (./tb/tb_cpu.v,48|20): port sizes differ in port connection (32/8).
+            $fdisplay(regFileFP, "R%1d: %h", count, cpuDUT.regFile.regFile[count]);
+                              |
+ncelab: *W,MCDWID (./tb/tb_cpu.v,71|30): Invalid width on mcd argument.
+            $fdisplay(dmemFP, "Memory location #%1d: %h", count, dmem0.MEM[count]);
+                           |
+ncelab: *W,MCDWID (./tb/tb_cpu.v,75|27): Invalid width on mcd argument.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		work.DW02_mult:module <0x08e3b5f5>
+			streams:   6, words:  2681
+		work.DW02_mult:module <0x21398f21>
+			streams:   6, words:  2981
+		work.DW02_mult:module <0x684b5fc8>
+			streams:   6, words:  2678
+		work.DW_div:module <0x01391c5c>
+			streams:   8, words: 13894
+		work.DW_div:module <0x228d8339>
+			streams:   8, words: 13678
+		work.DW_div:module <0x5da7915b>
+			streams:   8, words: 19613
+		work.DW_div:module <0x7d5bd0ce>
+			streams:   8, words: 13590
+		work.DW_sqrt:module <0x0e7ed6a4>
+			streams:   4, words:  4020
+		work.DW_sqrt:module <0x41046bdd>
+			streams:   4, words:  3273
+		work.DW_sqrt:module <0x45350faf>
+			streams:   4, words:  3220
+		work.DW_sqrt:module <0x71dac45c>
+			streams:   4, words:  3425
+		work.REGFILE32x64:module <0x742c471a>
+			streams:   8, words: 21004
+		work.alu:module <0x68a088a6>
+			streams:  63, words: 60047
+		work.cpu:module <0x5232cfbe>
+			streams:  65, words: 38926
+		work.dmem:module <0x37d286c7>
+			streams:   5, words:  2364
+		work.imem:module <0x43b3f676>
+			streams:   1, words:   191
+		work.tb_cpu:module <0x762c3e13>
+			streams:   5, words:  5705
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 43       9
+		Registers:              977     103
+		Scalar wires:            37       -
+		Expanded wires:         800      65
+		Vectored wires:         119       -
+		Always blocks:           38      24
+		Initial blocks:          38       4
+		Cont. assignments:       69      70
+		Pseudo assignments:      62      62
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: work.tb_cpu:module
+TOOL:	ncelab(64)	15.20-s079: Exiting on Mar 25, 2023 at 21:16:36 PDT  (total: 00:00:00)

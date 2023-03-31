@@ -20,7 +20,7 @@ module REGFILE32x64 #(
 
 //------------------------------------Instantiate Memory--------------------------//
     reg [0:DATA_WIDTH-1] regFile [DEPTH-1:0];
-    reg [0:DEPTH] resetRegCount; // Variable to reset the regfile
+    reg [0:$clog2(DEPTH)] resetRegCount; // Variable to reset the regfile
 //----------------------------------End Instantiate Memory------------------------//
 
 //------------------------------------Read Data-----------------------------------//
@@ -52,7 +52,6 @@ module REGFILE32x64 #(
                     dataOut0[40:47] = dataIn[40:47];
                     dataOut0[56:63] = dataIn[56:63];
                 end
-                default: dataOut0 = 64'bx;
             endcase
         end
         if (wrEn && (wrAddr == rdAddr1)) begin
@@ -78,7 +77,6 @@ module REGFILE32x64 #(
                     dataOut1[40:47] = dataIn[40:47];
                     dataOut1[56:63] = dataIn[56:63];
                 end
-                default: dataOut1 = 64'bx;
             endcase
         end
     end

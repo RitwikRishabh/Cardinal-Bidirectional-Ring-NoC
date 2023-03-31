@@ -112,7 +112,7 @@ module cpu #(
     assign rDid               = regIF_ID[6:10];
     assign rAid               = regIF_ID[11:15];
     assign rBid               = regIF_ID[16:20];
-    assign pppID              = opcodeID == MTYPE_LW ? 3'b000 : regIF_ID[21:23];
+    assign pppID              = (opcodeID == MTYPE_LW) ? 3'b000 : regIF_ID[21:23];
     assign wwID               = regIF_ID[24:25];
     assign functionCodeID     = regIF_ID[26:31];
     assign immediateAddrID    = regIF_ID[16:31];
@@ -150,21 +150,31 @@ module cpu #(
 
     // Control Unit
     reg dmemEnID, dmemWrEnID, nicEnID, nicWrEnID, regFileWrEnID;
-    always @(*) begin       
+    always @(*) begin
+        {dmemEnID, dmemWrEnID, nicEnID, nicWrEnID, regFileWrEnID} = 5'b00000;
         case (opcodeID)
             RTYPE_ALU : begin
                 regFileWrEnID = 1;
             end
             MTYPE_LW: begin
                 regFileWrEnID = 1;
-                dmemEnID = 1;
+                if (immediateAddrID[0:1] == 2'b11) begin
+                    nicEnID = 1;
+                end
+                else begin
+                    dmemEnID = 1;
+                end
             end
             MTYPE_SW: begin
-                dmemWrEnID = 1;
-                dmemEnID = 1;
+                if (immediateAddrID[0:1] == 2'b11) begin
+                    nicEnID = 1;
+                    nicWrEnID = 1;
+                end
+                else begin
+                    dmemWrEnID = 1;
+                    dmemEnID = 1;
+                end
             end
-            default: 
-            {dmemEnID, dmemWrEnID, nicEnID, nicWrEnID, regFileWrEnID} = 5'b00000;
         endcase
     end
 
@@ -174,7 +184,7 @@ module cpu #(
     assign stallLWSWid = (opcodeID == MTYPE_SW) || (opcodeID == MTYPE_LW) && (rDid != 0);
     // Stall due to DIV and MOD 
     wire stallDIVMODid;
-    assign stallDIVMODid = (opcodeID == RTYPE_ALU) && ((functionCodeID == VDIV) || (functionCodeID == VMOD));
+    assign stallDIVMODid = (opcodeID == RTYPE_ALU) && ((functionCodeID == VDIV) || (functionCodeID == VMOD)) && (rDid != 0);
     // Stall due to MULT, SQAURE
     wire stallMULTSQid;
     assign stallMULTSQid = (opcodeID == RTYPE_ALU) && ((functionCodeID == VMULEU) || (functionCodeID == VMULOU) || 
@@ -276,12 +286,26 @@ module cpu #(
         end
     end
 
-    
+    // Since data reg doesn't have an input enable signal we need to provide a reg and a mux
+    // to bypass when there are no stalls
+    reg [0:97] bypassReg;
+    always @(posedge clk) begin
+        if (reset) begin
+            bypassReg <= 0;
+        end
+        else begin
+            bypassReg[0] <= dmemWrEnID;
+            bypassReg[1] <= dmemEnID;
+            bypassReg[2:33] <= branchAddr;
+            bypassReg[34:97] <= regFileRdDataOut0ID;
+
+        end
+    end    
     // Assign data memory outputs
-    assign dmemEn = dmemEnID;
-    assign dmemWrEn = dmemWrEnID;
-    assign dmemAddr = branchAddr;
-    assign dmemDataout = regFileRdDataOut0ID;
+    assign dmemWrEn = (stall) ? bypassReg[0] : dmemWrEnID;
+    assign dmemEn = (stall) ? bypassReg[1] : dmemEnID;
+    assign dmemAddr = (stall) ? bypassReg[2:33] :  branchAddr;
+    assign dmemDataout = (stall) ? bypassReg[34:97] : regFileRdDataOut0ID;
 
     // ID/EX Stage Register
     reg [0:156] regID_EX;
@@ -310,6 +334,9 @@ module cpu #(
                 regID_EX [155] <= stallSQRTid;
                 regID_EX [156] <= stallSLLSRLSRAid;
             end
+            else begin
+                regID_EX <= regID_EX;
+            end
         end
     end
 //-------------------------------End ID Stage------------------------------//
@@ -320,7 +347,6 @@ module cpu #(
     wire stallLWSWex, stallADDSUBex, stallMULTSQex, stallDIVMODex, stallSQRTex, stallSLLSRLSRAex;
     wire [0:5] functionCodeEX;
     wire [0:1] wwEX;
-    wire [0:1] nicAddrEX;
 
     //Assign wires to stage reg
     assign rDex = regID_EX[133:137];
@@ -328,7 +354,7 @@ module cpu #(
     assign wwEX = regID_EX[141:142];
     assign functionCodeEX = regID_EX[143:148];
 
-    assign nicAddrEX = regID_EX[149:150];
+    assign nicAddr = regID_EX[149:150];
     assign nicDataOut = regID_EX[0:63];
     assign {dmemEnEX, dmemWrEnEX, nicEnEX, nicWrEnEX, regFileWrEnEx} = regID_EX [128:132];
 
@@ -369,7 +395,7 @@ module cpu #(
         end
         else begin
             if (stallLWSWex) begin
-                memCounter <= memCounter + 1;
+                memCounter <= ~memCounter;
             end
         end
     end
@@ -443,12 +469,29 @@ module cpu #(
         end
     end
 
+    reg [0:72] regEX_WB;
+    always @(posedge clk) begin
+        if (reset) begin
+            regEX_WB <= 0;
+        end
+        else begin
+            if (stall) begin
+                regEX_WB[64] <= 0;
+            end
+            else begin
+                regEX_WB[0:63] <= regFileWrDataInEX;
+                regEX_WB[64] <= regFileWrEnEx;
+                regEX_WB[65:67] <= pppEX;
+                regEX_WB[68:72] <= rDex;
+            end
+        end
+    end
+
     // There is no WB stage so no need for a stage register
-    assign regFileDataInWB = regFileWrDataInEX;
-    assign regFileWrEnWB = regFileWrEnEx;
-    assign pppWB = pppEX;
-    assign regFileWrAddrWB = rDex;
-    assign nicAddr = nicAddrEX;
+    assign regFileDataInWB = regEX_WB[0:63];
+    assign regFileWrEnWB = regEX_WB[64];
+    assign pppWB = regEX_WB[65:67];
+    assign regFileWrAddrWB = regEX_WB[68:72];
 //-------------------------------End EX Stage------------------------------//
     
 endmodule

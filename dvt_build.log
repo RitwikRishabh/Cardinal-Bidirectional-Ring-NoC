@@ -8,264 +8,364 @@ INFO: Auto-config - Wrote:
     -f C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\.dvt\default.build.auto.1
 *** List of invocations ***
 Invocation #1 +dvt_init+dvt in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\.dvt\default.build.auto.1 at line 9
-*** Done analyzing build configuration [93 ms] ***
+*** Done analyzing build configuration [221 ms] ***
 *** Start SystemVerilog build ***
 *** Invocation #1***
-Loading (1) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\buffer.v ...
-Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\buffer.v [17 ms, 39 lines, Verilog_2001] ...
-Loading (2) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_ring.v ...
-Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_ring.v [1 ms, 118 lines, Verilog_2001] ...
-Loading (3) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v ...
-Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [5 ms, 566 lines, Verilog_2001] ...
-Loading (4) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\rotating_prioritizer.v ...
-Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\rotating_prioritizer.v [1 ms, 94 lines, Verilog_2001] ...
-Loading (5) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v ...
-Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [7 ms, 1055 lines, Verilog_2001] ...
-Loading (6) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v ...
-Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [2 ms, 139 lines, Verilog_2001] ...
-Loading (7) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v ...
-Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [3 ms, 373 lines, Verilog_2001] ...
-Loading (8) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v ...
-Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [2 ms, 224 lines, Verilog_2001] ...
-Loading (9) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_rotating_prioritizer.v ...
-Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_rotating_prioritizer.v [0 ms, 44 lines, Verilog_2001] ...
-*** Done invocation #1 [34 ms] ***
-*** Total number of lines [2 652] ***
+Loading (1) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_nic.v ...
+Loading (2) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_nic_buffer.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_nic_buffer.v [52 ms, 59 lines, Verilog_2001] ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_nic.v [8 ms, 129 lines, Verilog_2001] ...
+Loading (3) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cpu.v ...
+Loading (4) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\REGFILE32x64.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\REGFILE32x64.v [8 ms, 124 lines, Verilog_2001] ...
+Loading (5) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\alu.v ...
+Loading (6) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW02_mult.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW02_mult.v [5 ms, 102 lines, Verilog_2001] ...
+Loading (7) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v [5 ms, 130 lines, Verilog_2001] ...
+Loading (8) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_sqrt.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_sqrt.v [4 ms, 81 lines, Verilog_2001] ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\alu.v [48 ms, 870 lines, Verilog_2001] ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cpu.v [22 ms, 498 lines, Verilog_2001] ...
+Loading (9) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW01_addsub.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW01_addsub.v [3 ms, 93 lines, Verilog_2001] ...
+Loading (10) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW02_mult_3_stage.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW02_mult_3_stage.v [3 ms, 73 lines, Verilog_2001] ...
+Loading (11) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_shifter.v ...
+Loading (12) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_shifter_function.inc ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_shifter_function.inc [21 ms, 317 lines, SystemVerilog_2009] ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_shifter.v [2 ms, 109 lines, Verilog_2001] ...
+Loading (13) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_alu.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_alu.v [23 ms, 136 lines, Verilog_2001] ...
+Loading (14) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [18 ms, 139 lines, Verilog_2001] ...
+Loading (15) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v [12 ms, 82 lines, Verilog_2001] ...
+Loading (16) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [26 ms, 373 lines, Verilog_2001] ...
+Loading (17) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [14 ms, 224 lines, Verilog_2001] ...
+Loading (18) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_rotating_prioritizer.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_rotating_prioritizer.v [3 ms, 44 lines, Verilog_2001] ...
+Loading (19) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v ...
+Loading (20) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\dmem.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\dmem.v [1 ms, 47 lines, Verilog_2001] ...
+Loading (21) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\imem.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\imem.v [1 ms, 27 lines, Verilog_2001] ...
+Loading (22) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [25 ms, 1055 lines, Verilog_2001] ...
+Loading (23) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\REGFILE32x64.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\REGFILE32x64.v [6 ms, 124 lines, Verilog_2001] ...
+Loading (24) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_ring.v ...
+Loading (25) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v ...
+Loading (26) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\buffer.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\buffer.v [1 ms, 39 lines, Verilog_2001] ...
+Loading (27) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\rotating_prioritizer.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\rotating_prioritizer.v [2 ms, 94 lines, Verilog_2001] ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v [12 ms, 569 lines, Verilog_2001] ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_ring.v [4 ms, 119 lines, Verilog_2001] ...
+Loading (28) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v ...
+Loading (29) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\buffer.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\buffer.v [2 ms, 39 lines, Verilog_2001] ...
+Loading (30) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\rotating_prioritizer.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\rotating_prioritizer.v [2 ms, 94 lines, Verilog_2001] ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v [17 ms, 569 lines, Verilog_2001] ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [6 ms, 253 lines, Verilog_2001] ...
+Loading (31) C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v ...
+Done C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [4 ms, 97 lines, Verilog_2001] ...
+*** Done invocation #1 [362 ms] ***
+*** Total number of lines [6 709] ***
 Performing post full build actions ...
-Performing post full build step 1 (SRI) [0 ms] ...
-Performing post full build step 2 (RI) [0 ms] ...
+Performing post full build step 1 (SRI) [1 ms] ...
+Performing post full build step 2 (RI) [1 ms] ...
 Performing post full build step 3 (RCP) [0 ms] ...
-*** Done SystemVerilog build [41 ms] ***
+*** Error: VERILOG_2001: Cannot open `include file "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_div_function.inc"
+    at line 56 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v [compile index 1][invocation 1]
+*** Error: VERILOG_2001: Cannot open `include file "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_sqrt_function.inc"
+    at line 38 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_sqrt.v [compile index 1][invocation 1]
+*** Done SystemVerilog build [370 ms] ***
 *** Start mixed mode extension build ***
-Performing mixed post full build step (VLOG - RI) [0 ms] ...
+Performing mixed post full build step (VLOG - RI) [1 ms] ...
 *** Warning: UNSPECIFIED_TOP: Please specify a -top module/entity/configuration in the project build file
-*** Top design candidates: work.AND2X1, work.AND2X2, work.AOI21X1, work.AOI22X1, work.BUFX2, work.BUFX4, work.CLKBUF1, work.CLKBUF2, work.CLKBUF3, work.DFFNEGX1, work.DFFPOSX1, ...
-Performing mixed post full build step (MIXED - ELAB) [254 ms] ...
-Performing mixed post full build step (MIXED - UNEL) [64 ms] ...
-*** Warning: UNDECLARED_MODULE: Module 'cardinal_nic' is not declared
-    at line 19 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [compile index 6]
-*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'net_di' of '64-bit' type from 'i' of '32-bit' type
-    at line 60 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [compile index 6]
-*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'd_in' of '64-bit' type from 'i' of '32-bit' type
-    at line 82 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [compile index 6]
+*** Top design candidates: work.tb_alu, work.tb, work.tb_cpu, work.tb_gold_ring, work.tb_gold_router, work.tb_rotating_prioritizer, work.AND2X1, work.AND2X2, work.AOI21X1, work.AOI22X1, work.BUFX2, ...
+Performing mixed post full build step (MIXED - ELAB) [361 ms] ...
+Performing mixed post full build step (MIXED - UNEL) [62 ms] ...
+*** Warning: UNDECLARED_MODULE: Module 'gold_ring' is not declared
+    at line 110 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'pedi_0_res' of '6-bit' type from 'phase' of '2-bit' type
-    at line 148 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 148 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'pedi_1_res' of '6-bit' type from 'phase' of '2-bit' type
-    at line 182 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 182 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'pedi_2_res' of '6-bit' type from 'phase' of '2-bit' type
-    at line 216 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 216 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'pedi_3_res' of '6-bit' type from 'phase' of '2-bit' type
-    at line 250 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 250 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'phase' of '2-bit' type from 'phase_ptr' of '32-bit' type
-    at line 327 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
-Performing mixed post full build step (VLOG - RD) [0 ms] ...
-Performing mixed post full build step (VLOG - FSC) [64 ms] ...
-Performing mixed post full build step (VLOG - EV) [63 ms] ...
+    at line 327 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
+*** Warning: UNDECLARED_MODULE: Module 'gold_router' is not declared
+    at line 21 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 17]
+*** Warning: UNDECLARED_MODULE: Module 'cardinal_cmp' is not declared
+    at line 146 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: ASSIGNMENT_NON_BLOCKING: Non-blocking assignment of 'CLK' in combinational logic (use blocking assignment)
+    at line 183 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'memAddr' of '8-bit' type from 'dmemAddr' of '32-bit' type
+    at line 48 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v [compile index 15]
+*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'regFileFP' of '33-bit' type from '$fopen()' of '32-bit' type
+    at line 56 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v [compile index 15]
+*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'dmemFP' of '33-bit' type from '$fopen()' of '32-bit' type
+    at line 57 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v [compile index 15]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'DWF_sqrt_uns' is not declared
+    at line 73 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_sqrt.v [compile index 8]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'DWF_sqrt_tc' is not declared
+    at line 75 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_sqrt.v [compile index 8]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'DWF_div_uns' is not declared
+    at line 107 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v [compile index 7]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'DWF_rem_uns' is not declared
+    at line 109 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v [compile index 7]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'DWF_mod_uns' is not declared
+    at line 111 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v [compile index 7]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'DWF_div_tc' is not declared
+    at line 114 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v [compile index 7]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'DWF_rem_tc' is not declared
+    at line 116 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v [compile index 7]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'DWF_mod_tc' is not declared
+    at line 118 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v [compile index 7]
+*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'net_di' of '64-bit' type from 'i' of '32-bit' type
+    at line 60 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [compile index 14]
+*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'd_in' of '64-bit' type from 'i' of '32-bit' type
+    at line 82 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [compile index 14]
+*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'rA' of '64-bit' type from '$urandom' of '32-bit' type
+    at line 47 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_alu.v [compile index 13]
+*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'rB' of '64-bit' type from '$urandom' of '32-bit' type
+    at line 48 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_alu.v [compile index 13]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'rd_addr_0' of '5-bit' type from 'count' of '32-bit' type
+    at line 55 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'wr_addr' of '5-bit' type from 'count' of '32-bit' type
+    at line 65 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'rd_addr_0' of '5-bit' type from 'count' of '32-bit' type
+    at line 67 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'rd_addr_1' of '5-bit' type from 'count' of '32-bit' type
+    at line 68 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'ppp' of '3-bit' type from 'count' of '32-bit' type
+    at line 76 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'wr_addr' of '5-bit' type from 'count' of '32-bit' type
+    at line 77 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'rd_addr_0' of '5-bit' type from 'count' of '32-bit' type
+    at line 79 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'rd_addr_1' of '5-bit' type from 'count' of '32-bit' type
+    at line 80 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'rd_addr_0' of '5-bit' type from 'count' of '32-bit' type
+    at line 87 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Warning: UNELABORATED_MODULE: Module 'work.DW01_addsub' is not elaborated
+    at line 44 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW01_addsub.v [compile index 9]
+*** Warning: UNELABORATED_MODULE: Module 'work.DW02_mult_3_stage' is not elaborated
+    at line 40 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW02_mult_3_stage.v [compile index 10]
+*** Warning: UNELABORATED_MODULE: Module 'work.DW_shifter' is not elaborated
+    at line 30 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_shifter.v [compile index 11]
+Performing mixed post full build step (VLOG - RD) [1 ms] ...
+Performing mixed post full build step (VLOG - FSC) [59 ms] ...
+Performing mixed post full build step (VLOG - EV) [60 ms] ...
 Performing mixed post full build step (VLOG - ELPC) [0 ms] ...
-Performing mixed post full build step (VLOG - US) [64 ms] ...
-*** Warning: SIGNAL_MULTIPLE_DRIVERS: Signal 'node0Polarity' has multiple drivers
-    at line 33 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_ring.v [compile index 2]
-*** Warning: SIGNAL_MULTIPLE_DRIVERS: Signal 'node1Polarity' has multiple drivers
-    at line 33 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_ring.v [compile index 2]
-*** Warning: SIGNAL_MULTIPLE_DRIVERS: Signal 'node2Polarity' has multiple drivers
-    at line 33 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_ring.v [compile index 2]
-*** Warning: SIGNAL_MULTIPLE_DRIVERS: Signal 'node3Polarity' has multiple drivers
-    at line 33 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_ring.v [compile index 2]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 238 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 239 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 240 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 246 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 247 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 248 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 251 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'cwso' is not recommended
-    at line 251 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 252 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'cwso' is not recommended
-    at line 252 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 253 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'ccwso' is not recommended
-    at line 253 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 254 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'ccwso' is not recommended
-    at line 254 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 255 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'peso' is not recommended
-    at line 255 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 256 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'peso' is not recommended
-    at line 256 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 269 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 280 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 331 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'cwri' is not recommended
-    at line 336 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'ccwri' is not recommended
-    at line 343 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'peri' is not recommended
-    at line 350 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'cwri' is not recommended
-    at line 362 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'ccwri' is not recommended
-    at line 369 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'peri' is not recommended
-    at line 376 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 399 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: OUTPUT_PORT_READ: Reading from an output port 'polarity' is not recommended
-    at line 475 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\gold_router.v [compile index 3]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 61 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
-    at line 62 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 94 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
-    at line 95 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I2_out' using `default_nettype set to wire
-    at line 96 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'NOTIFIER' is never written (connected to sub-instance input port)
-    at line 238 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_CLOCK' using `default_nettype set to wire
-    at line 240 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'DS0000' using `default_nettype set to wire
-    at line 241 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0000' using `default_nettype set to wire
-    at line 242 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_READ: Signal 'P0000' is never read (connected to sub-instance output port)
-    at line 242 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'NOTIFIER' is never written (connected to sub-instance input port)
-    at line 278 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'DS0000' using `default_nettype set to wire
-    at line 280 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0000' using `default_nettype set to wire
-    at line 281 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_READ: Signal 'P0000' is never read (connected to sub-instance output port)
-    at line 281 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'NOTIFIER' is never written (connected to sub-instance input port)
-    at line 319 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_CLEAR' using `default_nettype set to wire
-    at line 321 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_SET' using `default_nettype set to wire
-    at line 322 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0003' using `default_nettype set to wire
-    at line 323 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'D_' using `default_nettype set to wire
-    at line 323 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0002' using `default_nettype set to wire
-    at line 325 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'D_EQ_1_AN_S_EQ_1' using `default_nettype set to wire
-    at line 327 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_READ: Signal 'D_EQ_1_AN_S_EQ_1' is never read (connected to sub-instance output port)
-    at line 327 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I9_out' using `default_nettype set to wire
-    at line 328 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'D_EQ_0_AN_R_EQ_1' using `default_nettype set to wire
-    at line 329 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_READ: Signal 'D_EQ_0_AN_R_EQ_1' is never read (connected to sub-instance output port)
-    at line 329 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'S_EQ_1_AN_R_EQ_1' using `default_nettype set to wire
-    at line 330 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_READ: Signal 'S_EQ_1_AN_R_EQ_1' is never read (connected to sub-instance output port)
-    at line 330 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 389 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
-    at line 390 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I3_out' using `default_nettype set to wire
-    at line 391 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I5_out' using `default_nettype set to wire
-    at line 393 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'NOTIFIER' is never written (connected to sub-instance input port)
-    at line 553 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'DS0000' using `default_nettype set to wire
-    at line 555 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0000' using `default_nettype set to wire
-    at line 556 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: SIGNAL_NEVER_READ: Signal 'P0000' is never read (connected to sub-instance output port)
-    at line 556 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 595 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 625 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
-    at line 653 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 683 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
-    at line 711 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 742 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
-    at line 743 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 775 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
-    at line 776 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I2_out' using `default_nettype set to wire
-    at line 777 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 862 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 891 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
-    at line 920 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 5]
+Performing mixed post full build step (VLOG - US) [62 ms] ...
+*** Warning: SIGNAL_NEVER_USED: Signal 'b_x' is never used
+    at line 53 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\sim_ver\DW_div.v [compile index 7]
+*** Warning: SIGNAL_NEVER_READ: Signal 'dmemWrEnEX' is never read
+    at line 346 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cpu.v [compile index 3]
 *** Warning: INTERNAL_GENERATED_CLOCK: Clock signal 'clk' is not an input port
-    at line 25 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [compile index 6]
+    at line 25 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [compile index 14]
 *** Warning: INTERNAL_GENERATED_RESET: Reset signal 'reset' is not an input port
-    at line 27 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [compile index 6]
+    at line 27 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cardinal_nic.v [compile index 14]
+*** Warning: SIGNAL_NEVER_READ: Signal 'nicAddr' is never read (connected to sub-instance output port)
+    at line 7 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v [compile index 15]
+*** Warning: SIGNAL_NEVER_READ: Signal 'nicDataIn' is never read (connected to sub-instance output port)
+    at line 8 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v [compile index 15]
+*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'nicDataOut' is never written (connected to sub-instance input port)
+    at line 8 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v [compile index 15]
+*** Warning: SIGNAL_NEVER_READ: Signal 'nicEn' is never read (connected to sub-instance output port)
+    at line 9 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v [compile index 15]
+*** Warning: SIGNAL_NEVER_READ: Signal 'nicWrEn' is never read (connected to sub-instance output port)
+    at line 9 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cpu.v [compile index 15]
 *** Warning: SIGNAL_NEVER_READ: Signal 'pedo_0_hop' is never read
-    at line 37 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 37 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: SIGNAL_NEVER_READ: Signal 'pedo_1_hop' is never read
-    at line 58 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 58 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: SIGNAL_NEVER_READ: Signal 'pedo_2_hop' is never read
-    at line 79 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 79 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: SIGNAL_NEVER_READ: Signal 'pedo_3_hop' is never read
-    at line 100 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 100 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: INTERNAL_GENERATED_CLOCK: Clock signal 'clk' is not an input port
-    at line 340 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 340 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: INTERNAL_GENERATED_CLOCK: Clock signal 'clk' is not an input port
-    at line 348 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 348 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: INTERNAL_GENERATED_CLOCK: Clock signal 'clk' is not an input port
-    at line 356 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
+    at line 356 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: INTERNAL_GENERATED_CLOCK: Clock signal 'clk' is not an input port
-    at line 364 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 7]
-*** Warning: SIGNAL_NEVER_READ: Signal 'polarity' is never read (connected to sub-instance output port)
-    at line 9 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Warning: SIGNAL_NEVER_READ: Signal 'cwri' is never read (connected to sub-instance output port)
-    at line 12 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Warning: SIGNAL_NEVER_READ: Signal 'ccwri' is never read (connected to sub-instance output port)
-    at line 12 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Warning: SIGNAL_NEVER_READ: Signal 'peri' is never read (connected to sub-instance output port)
-    at line 12 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Warning: SIGNAL_NEVER_READ: Signal 'cwso' is never read (connected to sub-instance output port)
-    at line 16 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Warning: SIGNAL_NEVER_READ: Signal 'ccwso' is never read (connected to sub-instance output port)
-    at line 16 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Warning: SIGNAL_NEVER_READ: Signal 'peso' is never read (connected to sub-instance output port)
-    at line 16 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Warning: SIGNAL_NEVER_READ: Signal 'cwdo' is never read (connected to sub-instance output port)
-    at line 17 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Warning: SIGNAL_NEVER_READ: Signal 'ccwdo' is never read (connected to sub-instance output port)
-    at line 17 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Warning: SIGNAL_NEVER_READ: Signal 'pedo' is never read (connected to sub-instance output port)
-    at line 17 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
+    at line 364 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_ring.v [compile index 16]
 *** Warning: SIGNAL_NEVER_USED: Signal 'i' is never used
-    at line 19 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 8]
-*** Done mixed mode extension build [510 ms] ***
-*** Total build time [646 ms] ***
+    at line 19 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_gold_router.v [compile index 17]
+*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'MEM' is never written
+    at line 20 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\imem.v [compile index 21]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 61 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
+    at line 62 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 94 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
+    at line 95 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I2_out' using `default_nettype set to wire
+    at line 96 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'NOTIFIER' is never written (connected to sub-instance input port)
+    at line 238 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_CLOCK' using `default_nettype set to wire
+    at line 240 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'DS0000' using `default_nettype set to wire
+    at line 241 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0000' using `default_nettype set to wire
+    at line 242 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_READ: Signal 'P0000' is never read (connected to sub-instance output port)
+    at line 242 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'NOTIFIER' is never written (connected to sub-instance input port)
+    at line 278 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'DS0000' using `default_nettype set to wire
+    at line 280 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0000' using `default_nettype set to wire
+    at line 281 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_READ: Signal 'P0000' is never read (connected to sub-instance output port)
+    at line 281 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'NOTIFIER' is never written (connected to sub-instance input port)
+    at line 319 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_CLEAR' using `default_nettype set to wire
+    at line 321 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_SET' using `default_nettype set to wire
+    at line 322 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0003' using `default_nettype set to wire
+    at line 323 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'D_' using `default_nettype set to wire
+    at line 323 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0002' using `default_nettype set to wire
+    at line 325 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'D_EQ_1_AN_S_EQ_1' using `default_nettype set to wire
+    at line 327 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_READ: Signal 'D_EQ_1_AN_S_EQ_1' is never read (connected to sub-instance output port)
+    at line 327 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I9_out' using `default_nettype set to wire
+    at line 328 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'D_EQ_0_AN_R_EQ_1' using `default_nettype set to wire
+    at line 329 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_READ: Signal 'D_EQ_0_AN_R_EQ_1' is never read (connected to sub-instance output port)
+    at line 329 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'S_EQ_1_AN_R_EQ_1' using `default_nettype set to wire
+    at line 330 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_READ: Signal 'S_EQ_1_AN_R_EQ_1' is never read (connected to sub-instance output port)
+    at line 330 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 389 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
+    at line 390 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I3_out' using `default_nettype set to wire
+    at line 391 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I5_out' using `default_nettype set to wire
+    at line 393 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'NOTIFIER' is never written (connected to sub-instance input port)
+    at line 553 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'DS0000' using `default_nettype set to wire
+    at line 555 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'P0000' using `default_nettype set to wire
+    at line 556 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: SIGNAL_NEVER_READ: Signal 'P0000' is never read (connected to sub-instance output port)
+    at line 556 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 595 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 625 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
+    at line 653 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 683 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
+    at line 711 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 742 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
+    at line 743 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 775 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I1_out' using `default_nettype set to wire
+    at line 776 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I2_out' using `default_nettype set to wire
+    at line 777 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 862 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 891 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'I0_out' using `default_nettype set to wire
+    at line 920 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\include\gscl45nm.v [compile index 22]
+*** Warning: OUTPUT_PORT_READ: Reading from an output port 'cwso' is not recommended
+    at line 254 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v [compile index 25]
+*** Warning: OUTPUT_PORT_READ: Reading from an output port 'cwso' is not recommended
+    at line 255 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v [compile index 25]
+*** Warning: OUTPUT_PORT_READ: Reading from an output port 'ccwso' is not recommended
+    at line 256 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v [compile index 25]
+*** Warning: OUTPUT_PORT_READ: Reading from an output port 'ccwso' is not recommended
+    at line 257 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v [compile index 25]
+*** Warning: OUTPUT_PORT_READ: Reading from an output port 'peso' is not recommended
+    at line 258 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v [compile index 25]
+*** Warning: OUTPUT_PORT_READ: Reading from an output port 'peso' is not recommended
+    at line 259 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_router.v [compile index 25]
+*** Warning: SIGNAL_MULTIPLE_DRIVERS: Signal 'node0Polarity' has multiple drivers
+    at line 34 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_ring.v [compile index 24]
+*** Warning: SIGNAL_MULTIPLE_DRIVERS: Signal 'node1Polarity' has multiple drivers
+    at line 34 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_ring.v [compile index 24]
+*** Warning: SIGNAL_MULTIPLE_DRIVERS: Signal 'node2Polarity' has multiple drivers
+    at line 34 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_ring.v [compile index 24]
+*** Warning: SIGNAL_MULTIPLE_DRIVERS: Signal 'node3Polarity' has multiple drivers
+    at line 34 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\cardinal_ring.v [compile index 24]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node0_addr_nic' is never used
+    at line 45 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node0_din_nic' is never used
+    at line 46 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node0_dout_nic' is never used
+    at line 46 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node0_nicEn' is never used
+    at line 47 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node0_nicWrEn' is never used
+    at line 47 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node1_addr_nic' is never used
+    at line 55 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node1_din_nic' is never used
+    at line 56 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node1_dout_nic' is never used
+    at line 56 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node1_nicEn' is never used
+    at line 57 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node1_nicWrEn' is never used
+    at line 57 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node2_addr_nic' is never used
+    at line 65 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node2_din_nic' is never used
+    at line 66 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node2_dout_nic' is never used
+    at line 66 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node2_nicEn' is never used
+    at line 67 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node2_nicWrEn' is never used
+    at line 67 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node3_addr_nic' is never used
+    at line 75 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node3_din_nic' is never used
+    at line 76 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node3_dout_nic' is never used
+    at line 76 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node3_nicEn' is never used
+    at line 77 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_USED: Signal 'node3_nicWrEn' is never used
+    at line 77 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: INTERNAL_GENERATED_CLOCK: Clock signal 'CLK' is not an input port
+    at line 243 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: INTERNAL_GENERATED_RESET: Reset signal 'RESET' is not an input port
+    at line 245 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_cmp.v [compile index 19]
+*** Warning: SIGNAL_NEVER_READ: Signal 'rd_data_1' is never read (connected to sub-instance output port)
+    at line 14 in C:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\tb\tb_regfile.v [compile index 31]
+*** Done mixed mode extension build [614 ms] ***
+*** Total build time [1s.208ms] ***

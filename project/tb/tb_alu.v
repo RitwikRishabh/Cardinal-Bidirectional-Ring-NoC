@@ -44,8 +44,8 @@ module tb_alu;
     task sendPacket(input reg [0:5] code, input reg [0:1] mode);
     begin
         #10
-        rA = 64'hffffffffffffffff;
-        rB = 64'hffffffffffffffff;
+        rA = $urandom;
+        rB = $urandom;
         functionCode = code;
         ww = mode;
     end
@@ -126,8 +126,8 @@ module tb_alu;
         sendPacket(VSQRT, hMode);
         sendPacket(VSQRT, wMode);
         sendPacket(VSQRT, dMode);
-
-        // $stop;
+        #10;
+        $stop;
 
 
     end
