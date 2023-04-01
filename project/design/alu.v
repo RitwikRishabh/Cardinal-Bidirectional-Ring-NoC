@@ -1,6 +1,6 @@
-`include "./include/sim_ver/DW02_mult.v"
-`include "./include/sim_ver/DW_div.v"
-`include "./include/sim_ver/DW_sqrt.v"
+// `include "./include/sim_ver/DW02_mult.v"
+// `include "./include/sim_ver/DW_div.v"
+// `include "./include/sim_ver/DW_sqrt.v"
 
 module alu #(
     parameter DATA_WIDTH = 64
@@ -132,6 +132,8 @@ module alu #(
 
     // Assign the wires based on WW field and the function code
     always @(*) begin
+        multInA = 32'bx;
+        multInB = 32'bx;
         case (functionCodeEX)
             VMULEU : begin // even
                 if (wwEX == bMode) begin

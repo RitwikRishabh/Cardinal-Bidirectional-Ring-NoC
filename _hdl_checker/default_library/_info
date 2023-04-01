@@ -7,4 +7,26 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dc:/Users/ritwi/OneDrive/Desktop/Study Material/EE-577B/Project/Cardinal-Bidirectional-Ring-NoC
+Z0 dc:/Users/ritwi/OneDrive/Desktop/Study Material/EE-577B/Project/Cardinal-Bidirectional-Ring-NoC
+vREGFILE32x64
+!s110 1680314630
+!i10b 1
+!s100 GMWNOM3F=9@XUd_346>TK2
+IU;6HbDP9bB=?k^8@CPU4h0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1680314613
+8c:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\REGFILE32x64.v
+Fc:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\REGFILE32x64.v
+L0 1
+OL;L;10.6e;65
+r1
+!s85 0
+31
+!s108 1680314630.000000
+!s107 c:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\REGFILE32x64.v|
+!s90 -modelsimini|c:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\_hdl_checker\modelsim.ini|-quiet|-work|c:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\_hdl_checker\default_library|-lint|-hazards|-pedanticerrors|-L|default_library|c:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\project\design\REGFILE32x64.v|
+!i113 0
+o-quiet -work {c:\Users\ritwi\OneDrive\Desktop\Study Material\EE-577B\Project\Cardinal-Bidirectional-Ring-NoC\_hdl_checker\default_library} -lint -hazards -pedanticerrors -L default_library -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
+n@r@e@g@f@i@l@e32x64

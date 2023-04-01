@@ -19,65 +19,74 @@ module REGFILE32x64 #(
     localparam oModePPP = 3'b100;
 
 //------------------------------------Instantiate Memory--------------------------//
-    reg [0:DATA_WIDTH-1] regFile [DEPTH-1:0];
+    reg [0:DATA_WIDTH-1] regFile [DEPTH-1:1]; // As R0 is 0 always we handle it while checking read address
     reg [0:$clog2(DEPTH)] resetRegCount; // Variable to reset the regfile
 //----------------------------------End Instantiate Memory------------------------//
 
 //------------------------------------Read Data-----------------------------------//
     always @(*) begin // Asynchronous Read
-        regFile[0] = 0; // R0 hardcoded to 0;
-        dataOut0 = regFile[rdAddr0];
-        dataOut1 = regFile[rdAddr1];
-        // If read and write address match then bypass
-        if (wrEn && (wrAddr == rdAddr0)) begin
-            case (ppp)
-                aModePPP : begin
-                    dataOut0 = dataIn;
-                end
-                uModePPP : begin
-                    dataOut0[0:31] = dataIn[0:31];
-                end
-                dModePPP : begin
-                    dataOut0[32:63] = dataIn[32:63];
-                end
-                eModePPP : begin
-                    dataOut0[0:7] = dataIn[0:7];
-                    dataOut0[16:23] = dataIn[16:23];
-                    dataOut0[32:39] = dataIn[32:39];
-                    dataOut0[48:55] = dataIn[48:55];
-                end
-                oModePPP : begin
-                    dataOut0[8:15] = dataIn[8:15];
-                    dataOut0[24:31] = dataIn[24:31];
-                    dataOut0[40:47] = dataIn[40:47];
-                    dataOut0[56:63] = dataIn[56:63];
-                end
-            endcase
+        if(rdAddr0 == 0) begin
+            dataOut0 = 0;
         end
-        if (wrEn && (wrAddr == rdAddr1)) begin
-            case (ppp)
-                aModePPP : begin
-                    dataOut1 = dataIn;
-                end
-                uModePPP : begin
-                    dataOut1[0:31] = dataIn[0:31];
-                end
-                dModePPP : begin
-                    dataOut1[32:63] = dataIn[32:63];
-                end
-                eModePPP : begin
-                    dataOut1[0:7] = dataIn[0:7];
-                    dataOut1[16:23] = dataIn[16:23];
-                    dataOut1[32:39] = dataIn[32:39];
-                    dataOut1[48:55] = dataIn[48:55];
-                end
-                oModePPP : begin
-                    dataOut1[8:15] = dataIn[8:15];
-                    dataOut1[24:31] = dataIn[24:31];
-                    dataOut1[40:47] = dataIn[40:47];
-                    dataOut1[56:63] = dataIn[56:63];
-                end
-            endcase
+        else begin
+            dataOut0 = regFile[rdAddr0];
+            // If read and write address match then bypass
+            if (wrEn && (wrAddr == rdAddr0)) begin
+                case (ppp)
+                    aModePPP : begin
+                        dataOut0 = dataIn;
+                    end
+                    uModePPP : begin
+                        dataOut0[0:31] = dataIn[0:31];
+                    end
+                    dModePPP : begin
+                        dataOut0[32:63] = dataIn[32:63];
+                    end
+                    eModePPP : begin
+                        dataOut0[0:7] = dataIn[0:7];
+                        dataOut0[16:23] = dataIn[16:23];
+                        dataOut0[32:39] = dataIn[32:39];
+                        dataOut0[48:55] = dataIn[48:55];
+                    end
+                    oModePPP : begin
+                        dataOut0[8:15] = dataIn[8:15];
+                        dataOut0[24:31] = dataIn[24:31];
+                        dataOut0[40:47] = dataIn[40:47];
+                        dataOut0[56:63] = dataIn[56:63];
+                    end
+                endcase
+            end
+        end
+        if (rdAddr1 == 0) begin
+            dataOut1 = 0;
+        end
+        else begin
+            dataOut1 = regFile[rdAddr1];
+            if (wrEn && (wrAddr == rdAddr1)) begin
+                case (ppp)
+                    aModePPP : begin
+                        dataOut1 = dataIn;
+                    end
+                    uModePPP : begin
+                        dataOut1[0:31] = dataIn[0:31];
+                    end
+                    dModePPP : begin
+                        dataOut1[32:63] = dataIn[32:63];
+                    end
+                    eModePPP : begin
+                        dataOut1[0:7] = dataIn[0:7];
+                        dataOut1[16:23] = dataIn[16:23];
+                        dataOut1[32:39] = dataIn[32:39];
+                        dataOut1[48:55] = dataIn[48:55];
+                    end
+                    oModePPP : begin
+                        dataOut1[8:15] = dataIn[8:15];
+                        dataOut1[24:31] = dataIn[24:31];
+                        dataOut1[40:47] = dataIn[40:47];
+                        dataOut1[56:63] = dataIn[56:63];
+                    end
+                endcase
+            end
         end
     end
 //----------------------------------End Read Data---------------------------------//
@@ -86,7 +95,7 @@ module REGFILE32x64 #(
     always @(posedge clk) begin
         if (reset) begin
             for (resetRegCount = 1; resetRegCount < DEPTH; resetRegCount = resetRegCount + 1) begin // No need to reset R0 as it is always 0
-                regFile[resetRegCount] <= 0;                
+                regFile[resetRegCount] <= 0;       
             end
         end
         else begin
