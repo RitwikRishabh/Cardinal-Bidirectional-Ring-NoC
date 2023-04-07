@@ -235,7 +235,7 @@ module cmp ( clk, reset,
 		.nicEn      (node3_nicEn), 
         .nicWrEn    (node3_nicWrEn),
 		.net_ro     (node3Peri),
-        .net_polarity(node3Polarity)
+        .net_polarity(node3Polarity),
 		.net_si     (node3Peso),
         .addr       (node3_nicAddr), 
 		.net_di     (node3Pedo), 
@@ -282,7 +282,8 @@ module cmp ( clk, reset,
         .node3Pedi         (node3Pedi), 
         .node3Peso         (node3Peso), 
         .node3Pero         (node3Pero), 
-        .node3Pedo         (node3Pedo));
+        .node3Pedo         (node3Pedo)
+		);
 
 
 endmodule
