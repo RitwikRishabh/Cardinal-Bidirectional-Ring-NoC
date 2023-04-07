@@ -23,8 +23,8 @@
 `include "./design/REGFILE32x64.v"
 
 //Design File
-//`include "./design/cpu.v"
-//`include "./design/cardinal_nic.v"
+`include "./design/cpu.v"
+`include "./design/cardinal_nic.v"
 `include "./design/cardinal_ring.v"
 `include "./design/cardinal_router.v"
 
