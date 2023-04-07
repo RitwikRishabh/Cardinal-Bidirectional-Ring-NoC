@@ -1,11 +1,11 @@
-module tb;
+module tb_nic;
     // Define parameters for packet size, clock cycles, and number of packets
     parameter PACKET_SIZE = 64;
     parameter CLK_CYCLE = 4;
-    parameter NUM_OF_PAC = 15;
+    parameter NUM_OF_PAC = 10000;
 
     // Define register and wire signals for test bench
-    reg clk, reset, nicEn, nicWrEn, net_ro, net_polarity, net_si;
+    reg clk, reset, nicEn, nicEnWr, net_ro, net_polarity, net_si;
     reg [0:1] addr; 
     reg [0:PACKET_SIZE - 1] d_in, net_di;
     wire [0:PACKET_SIZE - 1] d_out, net_do; 
@@ -16,7 +16,23 @@ module tb;
     integer i;
 
     // Create instance of Cardinal NIC module
-    cardinal_nic cardinal_nic_inst( clk, reset, nicEn, nicWrEn, net_ro, net_polarity, net_si, addr, net_di, d_in, d_out, net_do, net_so, net_ri );
+    cardinal_nic nic_design_dut
+    (
+        .clk(clk),
+        .reset(reset),
+        .net_so(net_so),
+        .net_ro(net_ro),
+        .net_do(net_do),
+        .net_polarity(net_polarity),
+        .net_si(net_si),
+        .net_ri(net_ri),
+        .net_di(net_di),
+        .addr(addr),
+        .d_in(d_in),
+        .d_out(d_out),
+        .nicEn(nicEn),
+        .nicEnWr(nicEnWr)
+    );
 
     // Toggle clock signal every 0.5 clock cycle
     always #(0.5 * CLK_CYCLE) clk = ~ clk;
@@ -41,12 +57,13 @@ module tb;
     begin		
         clk = 1;
         reset = 1;
+
         nicEn = 1; 
-        nicWrEn = 0;
-        d_in = 0;
+        nicEnWr = 0;
+
         net_ro = 0;
         net_si = 0;
-        net_di = 0;
+
         send_finish = 0;
         #(5 * CLK_CYCLE);
         reset = 0;
@@ -78,13 +95,13 @@ module tb;
             if(d_out[63] == 0)
             begin
                 addr = 2'b10;
-                nicWrEn = 1;
+                nicEnWr = 1;
                 d_in = i;
                 d_in[0] = i % 2; // Change the VC bit to test conditional sending to router
                 i = i + 1;
             end
             #(0.8 * CLK_CYCLE)
-            nicWrEn = 0;
+            nicEnWr = 0;
         end
 
         // Close files for storing data received by processor and router        
