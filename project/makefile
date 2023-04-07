@@ -42,7 +42,7 @@
 
 # top level module
 TOP = tb_cpu
-TOP_SYN = tb_syn
+TOP_SYN = tb_cpu_syn
 DESIGN_NAME = cpu
 
 # List of the design files

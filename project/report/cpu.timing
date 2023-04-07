@@ -1,0 +1,1395 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'cpu' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cpu
+Version: K-2015.06-SP5-5
+Date   : Sat Apr  1 00:12:20 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: regID_EX_reg[147]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pc_reg[24] (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regID_EX_reg[147]/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  regID_EX_reg[147]/Q (DFFPOSX1)                          0.11       0.11 f
+  cardinalALU/functionCodeEX[4] (alu)                     0.00       0.11 f
+  cardinalALU/U10054/Y (AND2X2)                           0.04       0.14 f
+  cardinalALU/U10055/Y (INVX1)                            0.00       0.15 r
+  cardinalALU/U22414/Y (NOR3X1)                           0.02       0.17 f
+  cardinalALU/U18828/Y (AND2X2)                           0.06       0.23 f
+  cardinalALU/U20224/Y (AND2X2)                           0.05       0.27 f
+  cardinalALU/U17046/Y (INVX8)                            0.03       0.31 r
+  cardinalALU/U4160/Y (INVX8)                             0.03       0.34 f
+  cardinalALU/divD0/u_add_B6/B[7] (alu_DW01_add_577)      0.00       0.34 f
+  cardinalALU/divD0/u_add_B6/U840/Y (OR2X2)               0.05       0.39 f
+  cardinalALU/divD0/u_add_B6/U1108/Y (INVX1)              0.00       0.39 r
+  cardinalALU/divD0/u_add_B6/U1188/Y (OR2X2)              0.04       0.42 r
+  cardinalALU/divD0/u_add_B6/U1190/Y (INVX1)              0.02       0.44 f
+  cardinalALU/divD0/u_add_B6/U754/Y (AOI21X1)             0.03       0.47 r
+  cardinalALU/divD0/u_add_B6/U847/Y (BUFX2)               0.04       0.51 r
+  cardinalALU/divD0/u_add_B6/U752/Y (OAI21X1)             0.01       0.52 f
+  cardinalALU/divD0/u_add_B6/U659/Y (AOI21X1)             0.03       0.55 r
+  cardinalALU/divD0/u_add_B6/U1167/Y (BUFX2)              0.05       0.60 r
+  cardinalALU/divD0/u_add_B6/U842/Y (OAI21X1)             0.02       0.62 f
+  cardinalALU/divD0/u_add_B6/U825/Y (INVX2)               0.02       0.64 r
+  cardinalALU/divD0/u_add_B6/U832/Y (INVX1)               0.02       0.66 f
+  cardinalALU/divD0/u_add_B6/U432/Y (AOI21X1)             0.04       0.70 r
+  cardinalALU/divD0/u_add_B6/U1204/Y (BUFX2)              0.04       0.73 r
+  cardinalALU/divD0/u_add_B6/U1632/Y (XNOR2X1)            0.04       0.77 r
+  cardinalALU/divD0/u_add_B6/SUM[36] (alu_DW01_add_577)
+                                                          0.00       0.77 r
+  cardinalALU/U22585/Y (INVX2)                            0.03       0.80 f
+  cardinalALU/U22787/Y (INVX8)                            0.03       0.83 r
+  cardinalALU/divD0/u_add_PartRem_20_6/B[36] (alu_DW01_add_1441)
+                                                          0.00       0.83 r
+  cardinalALU/divD0/u_add_PartRem_20_6/U206/Y (AND2X2)
+                                                          0.03       0.86 r
+  cardinalALU/divD0/u_add_PartRem_20_6/U207/Y (INVX1)     0.02       0.87 f
+  cardinalALU/divD0/u_add_PartRem_20_6/U152/Y (OR2X2)     0.05       0.92 f
+  cardinalALU/divD0/u_add_PartRem_20_6/U122/Y (OR2X2)     0.05       0.97 f
+  cardinalALU/divD0/u_add_PartRem_20_6/U153/Y (OR2X2)     0.04       1.00 f
+  cardinalALU/divD0/u_add_PartRem_20_6/U154/Y (INVX1)     0.00       1.00 r
+  cardinalALU/divD0/u_add_PartRem_20_6/U190/Y (AND2X2)
+                                                          0.03       1.03 r
+  cardinalALU/divD0/u_add_PartRem_20_6/U125/Y (AND2X2)
+                                                          0.04       1.07 r
+  cardinalALU/divD0/u_add_PartRem_20_6/CO (alu_DW01_add_1441)
+                                                          0.00       1.07 r
+  cardinalALU/U11869/Y (AND2X2)                           0.03       1.10 r
+  cardinalALU/U241/Y (INVX1)                              0.02       1.12 f
+  cardinalALU/U250/Y (AND2X2)                             0.04       1.15 f
+  cardinalALU/U18056/Y (INVX1)                            0.01       1.17 r
+  cardinalALU/U10023/Y (OR2X2)                            0.03       1.20 r
+  cardinalALU/U10024/Y (INVX1)                            0.02       1.22 f
+  cardinalALU/U23602/Y (NOR3X1)                           0.04       1.26 r
+  cardinalALU/U23606/Y (AOI21X1)                          0.02       1.28 f
+  cardinalALU/U12431/Y (BUFX2)                            0.04       1.32 f
+  cardinalALU/U1535/Y (INVX1)                             0.01       1.33 r
+  cardinalALU/divD0/u_add_PartRem_19_2/A[6] (alu_DW01_add_1350)
+                                                          0.00       1.33 r
+  cardinalALU/divD0/u_add_PartRem_19_2/U133/Y (OR2X2)     0.04       1.36 r
+  cardinalALU/divD0/u_add_PartRem_19_2/U141/Y (INVX1)     0.02       1.39 f
+  cardinalALU/divD0/u_add_PartRem_19_2/U242/Y (OR2X2)     0.04       1.43 f
+  cardinalALU/divD0/u_add_PartRem_19_2/U243/Y (INVX1)     0.00       1.43 r
+  cardinalALU/divD0/u_add_PartRem_19_2/U239/Y (AND2X2)
+                                                          0.03       1.46 r
+  cardinalALU/divD0/u_add_PartRem_19_2/U240/Y (INVX1)     0.02       1.47 f
+  cardinalALU/divD0/u_add_PartRem_19_2/U1/Y (OAI21X1)     0.05       1.52 r
+  cardinalALU/divD0/u_add_PartRem_19_2/CO (alu_DW01_add_1350)
+                                                          0.00       1.52 r
+  cardinalALU/U1852/Y (INVX1)                             0.03       1.55 f
+  cardinalALU/U17250/Y (INVX1)                            0.00       1.55 r
+  cardinalALU/U4236/Y (AND2X2)                            0.03       1.59 r
+  cardinalALU/U4910/Y (OR2X2)                             0.04       1.63 r
+  cardinalALU/U4911/Y (INVX1)                             0.01       1.64 f
+  cardinalALU/U4636/Y (AND2X2)                            0.03       1.68 f
+  cardinalALU/U12697/Y (INVX1)                            0.00       1.68 r
+  cardinalALU/U2213/Y (AND2X2)                            0.03       1.71 r
+  cardinalALU/U703/Y (INVX1)                              0.02       1.73 f
+  cardinalALU/U23656/Y (NAND3X1)                          0.03       1.76 r
+  cardinalALU/U12194/Y (BUFX2)                            0.03       1.80 r
+  cardinalALU/U12291/Y (AND2X2)                           0.03       1.83 r
+  cardinalALU/U12292/Y (INVX1)                            0.02       1.85 f
+  cardinalALU/divD0/u_add_PartRem_18_6/A[3] (alu_DW01_add_2158)
+                                                          0.00       1.85 f
+  cardinalALU/divD0/u_add_PartRem_18_6/U182/Y (AND2X1)
+                                                          0.05       1.90 f
+  cardinalALU/divD0/u_add_PartRem_18_6/U265/Y (INVX1)     0.00       1.90 r
+  cardinalALU/divD0/u_add_PartRem_18_6/U155/Y (OAI21X1)
+                                                          0.01       1.91 f
+  cardinalALU/divD0/u_add_PartRem_18_6/U140/Y (AOI21X1)
+                                                          0.03       1.95 r
+  cardinalALU/divD0/u_add_PartRem_18_6/U270/Y (BUFX2)     0.04       1.99 r
+  cardinalALU/divD0/u_add_PartRem_18_6/U99/Y (OAI21X1)
+                                                          0.02       2.00 f
+  cardinalALU/divD0/u_add_PartRem_18_6/U2/Y (AOI21X1)     0.03       2.03 r
+  cardinalALU/divD0/u_add_PartRem_18_6/U346/Y (INVX1)     0.02       2.06 f
+  cardinalALU/divD0/u_add_PartRem_18_6/CO (alu_DW01_add_2158)
+                                                          0.00       2.06 f
+  cardinalALU/U17656/Y (INVX1)                            0.01       2.07 r
+  cardinalALU/U16179/Y (INVX1)                            0.01       2.08 f
+  cardinalALU/U23664/Y (AOI22X1)                          0.04       2.12 r
+  cardinalALU/U5990/Y (AND2X2)                            0.03       2.15 r
+  cardinalALU/U5991/Y (INVX1)                             0.01       2.17 f
+  cardinalALU/U17748/Y (AND2X2)                           0.04       2.21 f
+  cardinalALU/U4166/Y (INVX1)                             0.01       2.21 r
+  cardinalALU/U647/Y (INVX1)                              0.03       2.24 f
+  cardinalALU/U12229/Y (AND2X2)                           0.04       2.28 f
+  cardinalALU/U12230/Y (INVX1)                            0.00       2.28 r
+  cardinalALU/U11185/Y (AND2X2)                           0.04       2.32 r
+  cardinalALU/U1700/Y (INVX1)                             0.02       2.34 f
+  cardinalALU/divD0/u_add_PartRem_17_6/A[4] (alu_DW01_add_2162)
+                                                          0.00       2.34 f
+  cardinalALU/divD0/u_add_PartRem_17_6/U249/Y (OR2X1)     0.05       2.39 f
+  cardinalALU/divD0/u_add_PartRem_17_6/U245/Y (AND2X2)
+                                                          0.04       2.43 f
+  cardinalALU/divD0/u_add_PartRem_17_6/U183/Y (AOI21X1)
+                                                          0.03       2.45 r
+  cardinalALU/divD0/u_add_PartRem_17_6/U312/Y (BUFX2)     0.04       2.49 r
+  cardinalALU/divD0/u_add_PartRem_17_6/U417/Y (INVX1)     0.04       2.53 f
+  cardinalALU/divD0/u_add_PartRem_17_6/U162/Y (AOI21X1)
+                                                          0.04       2.57 r
+  cardinalALU/divD0/u_add_PartRem_17_6/U318/Y (BUFX2)     0.04       2.61 r
+  cardinalALU/divD0/u_add_PartRem_17_6/U151/Y (XOR2X1)
+                                                          0.03       2.65 r
+  cardinalALU/divD0/u_add_PartRem_17_6/SUM[8] (alu_DW01_add_2162)
+                                                          0.00       2.65 r
+  cardinalALU/U8504/Y (OR2X2)                             0.04       2.69 r
+  cardinalALU/U8505/Y (INVX1)                             0.02       2.70 f
+  cardinalALU/U23755/Y (AOI22X1)                          0.04       2.74 r
+  cardinalALU/U3101/Y (BUFX2)                             0.04       2.78 r
+  cardinalALU/U23756/Y (OAI21X1)                          0.01       2.79 f
+  cardinalALU/U23757/Y (OAI21X1)                          0.02       2.81 r
+  cardinalALU/U20405/Y (AND2X2)                           0.06       2.87 r
+  cardinalALU/divD0/u_add_PartRem_16_3/A[11] (alu_DW01_add_2077)
+                                                          0.00       2.87 r
+  cardinalALU/divD0/u_add_PartRem_16_3/U391/Y (OR2X2)     0.04       2.91 r
+  cardinalALU/divD0/u_add_PartRem_16_3/U392/Y (INVX1)     0.02       2.93 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U168/Y (OAI21X1)
+                                                          0.06       2.99 r
+  cardinalALU/divD0/u_add_PartRem_16_3/U142/Y (AOI21X1)
+                                                          0.03       3.01 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U377/Y (BUFX2)     0.04       3.05 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U90/Y (OAI21X1)
+                                                          0.04       3.09 r
+  cardinalALU/divD0/u_add_PartRem_16_3/U88/Y (AOI21X1)
+                                                          0.02       3.11 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U326/Y (BUFX2)     0.03       3.15 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U303/Y (OR2X2)     0.04       3.18 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U265/Y (INVX1)     0.01       3.19 r
+  cardinalALU/divD0/u_add_PartRem_16_3/CO (alu_DW01_add_2077)
+                                                          0.00       3.19 r
+  cardinalALU/U15979/Y (INVX1)                            0.02       3.21 f
+  cardinalALU/U23842/Y (AOI22X1)                          0.04       3.25 r
+  cardinalALU/U7879/Y (BUFX2)                             0.04       3.29 r
+  cardinalALU/U23843/Y (OR2X2)                            0.04       3.33 r
+  cardinalALU/U12706/Y (AND2X2)                           0.03       3.36 r
+  cardinalALU/U12707/Y (INVX1)                            0.02       3.38 f
+  cardinalALU/U23845/Y (OAI21X1)                          0.02       3.40 r
+  cardinalALU/U23846/Y (NAND3X1)                          0.02       3.41 f
+  cardinalALU/U12373/Y (BUFX2)                            0.04       3.45 f
+  cardinalALU/U4689/Y (OR2X2)                             0.04       3.49 f
+  cardinalALU/U4690/Y (INVX1)                             0.01       3.49 r
+  cardinalALU/divD0/u_add_PartRem_15_4/A[13] (alu_DW01_add_2148)
+                                                          0.00       3.49 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U380/Y (OR2X2)     0.04       3.53 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U305/Y (AND2X2)
+                                                          0.03       3.57 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U266/Y (OR2X2)     0.04       3.60 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U152/Y (AOI21X1)
+                                                          0.01       3.61 f
+  cardinalALU/divD0/u_add_PartRem_15_4/U395/Y (BUFX2)     0.04       3.65 f
+  cardinalALU/divD0/u_add_PartRem_15_4/U100/Y (OAI21X1)
+                                                          0.04       3.69 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U98/Y (AOI21X1)
+                                                          0.02       3.71 f
+  cardinalALU/divD0/u_add_PartRem_15_4/U391/Y (BUFX2)     0.04       3.74 f
+  cardinalALU/divD0/u_add_PartRem_15_4/U1/Y (OAI21X1)     0.05       3.79 r
+  cardinalALU/divD0/u_add_PartRem_15_4/CO (alu_DW01_add_2148)
+                                                          0.00       3.79 r
+  cardinalALU/U15596/Y (INVX2)                            0.03       3.82 f
+  cardinalALU/U12687/Y (AND2X2)                           0.04       3.86 f
+  cardinalALU/U12689/Y (INVX1)                            0.00       3.86 r
+  cardinalALU/U11892/Y (AND2X2)                           0.04       3.89 r
+  cardinalALU/U4344/Y (OR2X2)                             0.05       3.94 r
+  cardinalALU/U1546/Y (AND2X2)                            0.04       3.98 r
+  cardinalALU/U1555/Y (INVX1)                             0.03       4.00 f
+  cardinalALU/U24006/Y (OAI21X1)                          0.02       4.02 r
+  cardinalALU/U24007/Y (OAI21X1)                          0.02       4.04 f
+  cardinalALU/U16337/Y (INVX1)                            0.01       4.05 r
+  cardinalALU/U12541/Y (AND2X2)                           0.05       4.11 r
+  cardinalALU/divD0/u_add_PartRem_14_5/A[5] (alu_DW01_add_2088)
+                                                          0.00       4.11 r
+  cardinalALU/divD0/u_add_PartRem_14_5/U330/Y (OR2X2)     0.05       4.15 r
+  cardinalALU/divD0/u_add_PartRem_14_5/U321/Y (INVX1)     0.02       4.17 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U280/Y (OAI21X1)
+                                                          0.04       4.21 r
+  cardinalALU/divD0/u_add_PartRem_14_5/U278/Y (AOI21X1)
+                                                          0.02       4.23 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U432/Y (BUFX2)     0.04       4.27 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U335/Y (OR2X2)     0.04       4.31 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U469/Y (AND2X2)
+                                                          0.04       4.35 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U470/Y (INVX1)     0.00       4.35 r
+  cardinalALU/divD0/u_add_PartRem_14_5/U144/Y (AOI21X1)
+                                                          0.01       4.36 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U480/Y (BUFX2)     0.04       4.39 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U3/Y (OAI21X1)     0.04       4.43 r
+  cardinalALU/divD0/u_add_PartRem_14_5/CO (alu_DW01_add_2088)
+                                                          0.00       4.43 r
+  cardinalALU/U2496/Y (INVX2)                             0.03       4.46 f
+  cardinalALU/U1635/Y (OAI21X1)                           0.04       4.50 r
+  cardinalALU/U12771/Y (AND2X2)                           0.03       4.54 r
+  cardinalALU/U1667/Y (INVX1)                             0.02       4.55 f
+  cardinalALU/U15598/Y (AND2X2)                           0.04       4.59 f
+  cardinalALU/U17996/Y (AND2X2)                           0.03       4.62 f
+  cardinalALU/U1839/Y (INVX1)                             0.00       4.63 r
+  cardinalALU/U8250/Y (OR2X2)                             0.04       4.67 r
+  cardinalALU/U4085/Y (AND2X2)                            0.03       4.70 r
+  cardinalALU/U16696/Y (INVX1)                            0.02       4.71 f
+  cardinalALU/U5855/Y (OR2X2)                             0.04       4.75 f
+  cardinalALU/U2596/Y (OR2X2)                             0.05       4.80 f
+  cardinalALU/U3866/Y (INVX8)                             0.02       4.82 r
+  cardinalALU/divD0/u_add_PartRem_13_4/A[19] (alu_DW01_add_1067)
+                                                          0.00       4.82 r
+  cardinalALU/divD0/u_add_PartRem_13_4/U529/Y (OR2X2)     0.04       4.86 r
+  cardinalALU/divD0/u_add_PartRem_13_4/U531/Y (INVX1)     0.02       4.87 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U175/Y (OAI21X1)
+                                                          0.05       4.92 r
+  cardinalALU/divD0/u_add_PartRem_13_4/U149/Y (AOI21X1)
+                                                          0.02       4.94 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U515/Y (BUFX2)     0.04       4.98 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U97/Y (OAI21X1)
+                                                          0.04       5.02 r
+  cardinalALU/divD0/u_add_PartRem_13_4/U4/Y (AOI21X1)     0.02       5.04 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U378/Y (BUFX2)     0.03       5.08 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U2/Y (OAI21X1)     0.03       5.11 r
+  cardinalALU/divD0/u_add_PartRem_13_4/CO (alu_DW01_add_1067)
+                                                          0.00       5.11 r
+  cardinalALU/U22596/Y (BUFX4)                            0.03       5.13 r
+  cardinalALU/U12070/Y (OR2X2)                            0.04       5.17 r
+  cardinalALU/U225/Y (INVX1)                              0.02       5.19 f
+  cardinalALU/U19322/Y (AND2X2)                           0.04       5.23 f
+  cardinalALU/U3839/Y (INVX1)                             0.02       5.25 r
+  cardinalALU/U9066/Y (OR2X2)                             0.04       5.29 r
+  cardinalALU/U9067/Y (INVX1)                             0.02       5.31 f
+  cardinalALU/U4024/Y (NOR3X1)                            0.05       5.36 r
+  cardinalALU/U13445/Y (AND2X2)                           0.05       5.41 r
+  cardinalALU/divD0/u_add_PartRem_12_6/A[21] (alu_DW01_add_1327)
+                                                          0.00       5.41 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U528/Y (OR2X2)     0.05       5.46 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U686/Y (INVX1)     0.02       5.48 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U161/Y (OAI21X1)
+                                                          0.04       5.52 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U159/Y (AOI21X1)
+                                                          0.02       5.54 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U526/Y (BUFX2)     0.04       5.58 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U450/Y (OR2X2)     0.04       5.62 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U451/Y (INVX1)     0.00       5.62 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U402/Y (OR2X2)     0.04       5.66 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U7/Y (AOI21X1)     0.01       5.67 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U394/Y (BUFX2)     0.03       5.71 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U5/Y (OAI21X1)     0.02       5.73 r
+  cardinalALU/divD0/u_add_PartRem_12_6/CO (alu_DW01_add_1327)
+                                                          0.00       5.73 r
+  cardinalALU/U2219/Y (INVX1)                             0.03       5.76 f
+  cardinalALU/U24213/Y (NAND3X1)                          0.03       5.79 r
+  cardinalALU/U3647/Y (BUFX2)                             0.04       5.83 r
+  cardinalALU/U511/Y (INVX2)                              0.03       5.86 f
+  cardinalALU/U2395/Y (INVX4)                             0.03       5.88 r
+  cardinalALU/U18331/Y (OR2X2)                            0.04       5.93 r
+  cardinalALU/U24258/Y (OAI21X1)                          0.02       5.94 f
+  cardinalALU/U24259/Y (NOR3X1)                           0.05       5.99 r
+  cardinalALU/U16063/Y (AND2X2)                           0.05       6.04 r
+  cardinalALU/divD0/u_add_PartRem_11_5/A[21] (alu_DW01_add_2157)
+                                                          0.00       6.04 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U816/Y (OR2X2)     0.05       6.09 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U639/Y (AND2X2)
+                                                          0.03       6.12 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U640/Y (INVX1)     0.02       6.14 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U748/Y (OR2X2)     0.04       6.18 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U749/Y (INVX1)     0.00       6.18 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U603/Y (AND2X2)
+                                                          0.05       6.23 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U604/Y (INVX1)     0.03       6.25 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U596/Y (OR2X2)     0.04       6.29 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U597/Y (INVX1)     0.00       6.29 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U574/Y (AND2X2)
+                                                          0.03       6.32 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U575/Y (INVX1)     0.02       6.34 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U3/Y (OAI21X1)     0.04       6.38 r
+  cardinalALU/divD0/u_add_PartRem_11_5/CO (alu_DW01_add_2157)
+                                                          0.00       6.38 r
+  cardinalALU/U17193/Y (INVX1)                            0.03       6.41 f
+  cardinalALU/U13537/Y (AND2X2)                           0.03       6.44 f
+  cardinalALU/U8124/Y (INVX1)                             0.00       6.44 r
+  cardinalALU/U12365/Y (OR2X2)                            0.05       6.49 r
+  cardinalALU/U2166/Y (INVX4)                             0.03       6.52 f
+  cardinalALU/U3845/Y (INVX8)                             0.02       6.53 r
+  cardinalALU/U10202/Y (OR2X2)                            0.04       6.58 r
+  cardinalALU/U10203/Y (INVX1)                            0.02       6.59 f
+  cardinalALU/U24350/Y (NOR3X1)                           0.04       6.63 r
+  cardinalALU/U19993/Y (AND2X2)                           0.06       6.69 r
+  cardinalALU/U19994/Y (INVX1)                            0.03       6.72 f
+  cardinalALU/U15671/Y (INVX1)                            0.02       6.74 r
+  cardinalALU/divD0/u_add_PartRem_10_7/A[32] (alu_DW01_add_2076)
+                                                          0.00       6.74 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U558/Y (OR2X2)     0.04       6.78 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U871/Y (INVX1)     0.02       6.81 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U680/Y (OR2X2)     0.05       6.86 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U681/Y (INVX1)     0.00       6.85 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U695/Y (AND2X2)
+                                                          0.03       6.89 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U696/Y (INVX1)     0.02       6.90 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U683/Y (OR2X2)     0.04       6.94 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U684/Y (INVX1)     0.01       6.95 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U658/Y (AND2X2)
+                                                          0.03       6.98 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U659/Y (INVX1)     0.02       7.00 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U85/Y (OAI21X1)
+                                                          0.04       7.04 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U2/Y (AOI21X1)     0.02       7.06 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U883/Y (INVX1)     0.01       7.07 r
+  cardinalALU/divD0/u_add_PartRem_10_7/CO (alu_DW01_add_2076)
+                                                          0.00       7.07 r
+  cardinalALU/U1828/Y (BUFX2)                             0.04       7.11 r
+  cardinalALU/U19065/Y (AND2X2)                           0.04       7.15 r
+  cardinalALU/U18134/Y (INVX1)                            0.02       7.17 f
+  cardinalALU/U8275/Y (OR2X2)                             0.05       7.22 f
+  cardinalALU/U8276/Y (INVX1)                             0.00       7.22 r
+  cardinalALU/U5967/Y (OR2X2)                             0.04       7.26 r
+  cardinalALU/U5968/Y (INVX1)                             0.02       7.27 f
+  cardinalALU/U17507/Y (AND2X2)                           0.04       7.31 f
+  cardinalALU/U17334/Y (AND2X2)                           0.04       7.35 f
+  cardinalALU/divD0/u_add_PartRem_9_2/A[12] (alu_DW01_add_1795)
+                                                          0.00       7.35 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U656/Y (OR2X1)      0.04       7.39 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U657/Y (INVX1)      0.01       7.40 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U734/Y (OR2X2)      0.04       7.44 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U871/Y (INVX1)      0.01       7.45 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U658/Y (AND2X2)     0.04       7.49 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U659/Y (INVX1)      0.00       7.49 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U494/Y (OR2X1)      0.05       7.54 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U600/Y (INVX1)      0.02       7.56 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U320/Y (AOI21X1)
+                                                          0.03       7.58 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U692/Y (BUFX2)      0.04       7.63 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U113/Y (OAI21X1)
+                                                          0.02       7.64 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U4/Y (AOI21X1)      0.03       7.68 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U942/Y (INVX1)      0.02       7.70 f
+  cardinalALU/divD0/u_add_PartRem_9_2/CO (alu_DW01_add_1795)
+                                                          0.00       7.70 f
+  cardinalALU/U12927/Y (INVX1)                            0.02       7.72 r
+  cardinalALU/U5461/Y (AND2X2)                            0.03       7.75 r
+  cardinalALU/U5462/Y (INVX1)                             0.02       7.77 f
+  cardinalALU/U8448/Y (OR2X2)                             0.05       7.81 f
+  cardinalALU/U4463/Y (INVX8)                             0.04       7.85 r
+  cardinalALU/U24702/Y (AOI22X1)                          0.02       7.87 f
+  cardinalALU/U3111/Y (BUFX2)                             0.04       7.91 f
+  cardinalALU/U24703/Y (OAI21X1)                          0.02       7.93 r
+  cardinalALU/U8796/Y (OR2X2)                             0.05       7.97 r
+  cardinalALU/U8797/Y (INVX1)                             0.02       7.99 f
+  cardinalALU/U24705/Y (NAND3X1)                          0.03       8.02 r
+  cardinalALU/U12442/Y (BUFX2)                            0.04       8.06 r
+  cardinalALU/U353/Y (INVX4)                              0.03       8.09 f
+  cardinalALU/divD0/u_add_PartRem_8_6/A[15] (alu_DW01_add_1296)
+                                                          0.00       8.09 f
+  cardinalALU/divD0/u_add_PartRem_8_6/U546/Y (OR2X2)      0.04       8.13 f
+  cardinalALU/divD0/u_add_PartRem_8_6/U682/Y (INVX1)      0.00       8.13 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U565/Y (OR2X2)      0.05       8.18 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U545/Y (OR2X2)      0.04       8.22 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U632/Y (OR2X2)      0.04       8.26 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U633/Y (INVX1)      0.02       8.28 f
+  cardinalALU/divD0/u_add_PartRem_8_6/U358/Y (AOI21X1)
+                                                          0.03       8.31 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U686/Y (BUFX2)      0.04       8.34 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U151/Y (OAI21X1)
+                                                          0.02       8.36 f
+  cardinalALU/divD0/u_add_PartRem_8_6/U3/Y (AOI21X1)      0.03       8.40 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U772/Y (INVX1)      0.02       8.42 f
+  cardinalALU/divD0/u_add_PartRem_8_6/CO (alu_DW01_add_1296)
+                                                          0.00       8.42 f
+  cardinalALU/U24757/Y (AOI22X1)                          0.05       8.47 r
+  cardinalALU/U12025/Y (BUFX2)                            0.04       8.50 r
+  cardinalALU/U12753/Y (AND2X2)                           0.03       8.54 r
+  cardinalALU/U130/Y (INVX1)                              0.02       8.55 f
+  cardinalALU/U12632/Y (AND2X2)                           0.04       8.59 f
+  cardinalALU/U11872/Y (INVX1)                            0.00       8.59 r
+  cardinalALU/U20311/Y (AND2X2)                           0.04       8.62 r
+  cardinalALU/U1590/Y (INVX2)                             0.03       8.65 f
+  cardinalALU/U24818/Y (OAI21X1)                          0.04       8.69 r
+  cardinalALU/U1769/Y (OR2X2)                             0.04       8.73 r
+  cardinalALU/U4906/Y (OR2X2)                             0.04       8.77 r
+  cardinalALU/U1676/Y (OR2X2)                             0.05       8.82 r
+  cardinalALU/U2078/Y (INVX1)                             0.02       8.84 f
+  cardinalALU/divD0/u_add_PartRem_7_4/A[29] (alu_DW01_add_2110)
+                                                          0.00       8.84 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U712/Y (OR2X2)      0.04       8.88 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U713/Y (INVX1)      0.00       8.88 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U627/Y (OR2X2)      0.04       8.92 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U659/Y (OR2X2)      0.04       8.96 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U660/Y (INVX1)      0.01       8.97 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U730/Y (AND2X2)     0.04       9.01 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U594/Y (AND2X2)     0.04       9.05 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U170/Y (AOI21X1)
+                                                          0.03       9.07 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U588/Y (BUFX2)      0.04       9.11 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U572/Y (OAI21X1)
+                                                          0.01       9.12 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U4/Y (AOI21X1)      0.03       9.16 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U779/Y (BUFX2)      0.03       9.19 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U563/Y (INVX1)      0.02       9.21 f
+  cardinalALU/divD0/u_add_PartRem_7_4/CO (alu_DW01_add_2110)
+                                                          0.00       9.21 f
+  cardinalALU/U1593/Y (INVX1)                             0.01       9.22 r
+  cardinalALU/U1939/Y (INVX1)                             0.02       9.23 f
+  cardinalALU/U24934/Y (NAND3X1)                          0.03       9.26 r
+  cardinalALU/U3310/Y (BUFX2)                             0.03       9.30 r
+  cardinalALU/U24935/Y (OAI21X1)                          0.01       9.31 f
+  cardinalALU/U11858/Y (AND2X2)                           0.03       9.34 f
+  cardinalALU/U11860/Y (INVX1)                            0.01       9.35 r
+  cardinalALU/U16210/Y (AND2X2)                           0.04       9.39 r
+  cardinalALU/U2290/Y (INVX1)                             0.02       9.41 f
+  cardinalALU/U18402/Y (OR2X2)                            0.05       9.46 f
+  cardinalALU/U25102/Y (OAI21X1)                          0.02       9.47 r
+  cardinalALU/U2160/Y (OR2X1)                             0.04       9.51 r
+  cardinalALU/U12075/Y (INVX1)                            0.02       9.54 f
+  cardinalALU/U17451/Y (AND2X2)                           0.04       9.58 f
+  cardinalALU/divD0/u_add_PartRem_6_4/A[5] (alu_DW01_add_1129)
+                                                          0.00       9.58 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U623/Y (OR2X2)      0.04       9.62 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U688/Y (AND2X2)     0.03       9.65 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U689/Y (INVX1)      0.00       9.65 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U722/Y (AND2X2)     0.03       9.68 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U723/Y (INVX1)      0.01       9.69 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U551/Y (AOI21X1)
+                                                          0.02       9.71 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U817/Y (BUFX2)      0.04       9.75 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U584/Y (OAI21X1)
+                                                          0.02       9.77 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U417/Y (AOI21X1)
+                                                          0.03       9.80 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U795/Y (BUFX2)      0.04       9.84 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U210/Y (OAI21X1)
+                                                          0.02       9.86 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U4/Y (AOI21X1)      0.03       9.89 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U845/Y (INVX1)      0.02       9.91 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U620/Y (INVX1)      0.01       9.92 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U621/Y (INVX4)      0.03       9.94 f
+  cardinalALU/divD0/u_add_PartRem_6_4/CO (alu_DW01_add_1129)
+                                                          0.00       9.94 f
+  cardinalALU/U25115/Y (NAND3X1)                          0.03       9.97 r
+  cardinalALU/U11190/Y (BUFX2)                            0.04      10.01 r
+  cardinalALU/U3831/Y (INVX1)                             0.02      10.03 f
+  cardinalALU/U15920/Y (INVX1)                            0.04      10.08 r
+  cardinalALU/U13163/Y (OR2X2)                            0.05      10.12 r
+  cardinalALU/U13164/Y (INVX1)                            0.02      10.14 f
+  cardinalALU/U25197/Y (NOR3X1)                           0.04      10.18 r
+  cardinalALU/U12584/Y (AND2X2)                           0.08      10.25 r
+  cardinalALU/divD0/u_add_PartRem_5_3/A[27] (alu_DW01_add_1146)
+                                                          0.00      10.25 r
+  cardinalALU/divD0/u_add_PartRem_5_3/U638/Y (OR2X2)      0.05      10.30 r
+  cardinalALU/divD0/u_add_PartRem_5_3/U1201/Y (INVX1)     0.02      10.32 f
+  cardinalALU/divD0/u_add_PartRem_5_3/U977/Y (OR2X2)      0.05      10.37 f
+  cardinalALU/divD0/u_add_PartRem_5_3/U978/Y (INVX1)      0.00      10.37 r
+  cardinalALU/divD0/u_add_PartRem_5_3/U867/Y (AND2X2)     0.03      10.40 r
+  cardinalALU/divD0/u_add_PartRem_5_3/U868/Y (INVX1)      0.02      10.42 f
+  cardinalALU/divD0/u_add_PartRem_5_3/U929/Y (OR2X2)      0.05      10.47 f
+  cardinalALU/divD0/u_add_PartRem_5_3/U930/Y (INVX1)      0.00      10.47 r
+  cardinalALU/divD0/u_add_PartRem_5_3/U817/Y (AND2X2)     0.03      10.50 r
+  cardinalALU/divD0/u_add_PartRem_5_3/U818/Y (INVX1)      0.02      10.52 f
+  cardinalALU/divD0/u_add_PartRem_5_3/U243/Y (OAI21X1)
+                                                          0.05      10.56 r
+  cardinalALU/divD0/u_add_PartRem_5_3/U5/Y (AOI21X1)      0.02      10.59 f
+  cardinalALU/divD0/u_add_PartRem_5_3/U989/Y (INVX1)      0.02      10.60 r
+  cardinalALU/divD0/u_add_PartRem_5_3/CO (alu_DW01_add_1146)
+                                                          0.00      10.60 r
+  cardinalALU/U4916/Y (OR2X2)                             0.04      10.64 r
+  cardinalALU/U4915/Y (OR2X2)                             0.04      10.68 r
+  cardinalALU/U2184/Y (INVX1)                             0.02      10.70 f
+  cardinalALU/U2180/Y (INVX1)                             0.02      10.72 r
+  cardinalALU/U9612/Y (OR2X2)                             0.04      10.77 r
+  cardinalALU/U9613/Y (INVX1)                             0.02      10.78 f
+  cardinalALU/U25503/Y (NOR3X1)                           0.05      10.84 r
+  cardinalALU/U191/Y (AND2X2)                             0.04      10.87 r
+  cardinalALU/U4093/Y (AND2X2)                            0.04      10.91 r
+  cardinalALU/divD0/u_add_PartRem_4_6/A[9] (alu_DW01_add_2170)
+                                                          0.00      10.91 r
+  cardinalALU/divD0/u_add_PartRem_4_6/U883/Y (OR2X2)      0.04      10.95 r
+  cardinalALU/divD0/u_add_PartRem_4_6/U884/Y (INVX1)      0.02      10.97 f
+  cardinalALU/divD0/u_add_PartRem_4_6/U716/Y (OR2X2)      0.05      11.02 f
+  cardinalALU/divD0/u_add_PartRem_4_6/U668/Y (INVX1)      0.00      11.02 r
+  cardinalALU/divD0/u_add_PartRem_4_6/U797/Y (AND2X2)     0.03      11.05 r
+  cardinalALU/divD0/u_add_PartRem_4_6/U798/Y (INVX1)      0.02      11.07 f
+  cardinalALU/divD0/u_add_PartRem_4_6/U673/Y (OAI21X1)
+                                                          0.05      11.11 r
+  cardinalALU/divD0/u_add_PartRem_4_6/U481/Y (AOI21X1)
+                                                          0.02      11.14 f
+  cardinalALU/divD0/u_add_PartRem_4_6/U928/Y (BUFX2)      0.04      11.17 f
+  cardinalALU/divD0/u_add_PartRem_4_6/U679/Y (OAI21X1)
+                                                          0.04      11.21 r
+  cardinalALU/divD0/u_add_PartRem_4_6/U4/Y (AOI21X1)      0.02      11.24 f
+  cardinalALU/divD0/u_add_PartRem_4_6/U1315/Y (INVX1)     0.01      11.24 r
+  cardinalALU/divD0/u_add_PartRem_4_6/CO (alu_DW01_add_2170)
+                                                          0.00      11.24 r
+  cardinalALU/U18009/Y (INVX1)                            0.02      11.26 f
+  cardinalALU/U17509/Y (INVX1)                            0.01      11.27 r
+  cardinalALU/U5375/Y (AND2X2)                            0.03      11.30 r
+  cardinalALU/U20737/Y (AND2X2)                           0.05      11.36 r
+  cardinalALU/U2488/Y (INVX2)                             0.03      11.38 f
+  cardinalALU/U25629/Y (OAI21X1)                          0.04      11.42 r
+  cardinalALU/U13010/Y (OR2X2)                            0.04      11.46 r
+  cardinalALU/U8798/Y (OR2X2)                             0.04      11.50 r
+  cardinalALU/U8799/Y (INVX1)                             0.02      11.52 f
+  cardinalALU/U25630/Y (NAND3X1)                          0.03      11.55 r
+  cardinalALU/U12352/Y (BUFX2)                            0.04      11.59 r
+  cardinalALU/U547/Y (INVX4)                              0.03      11.61 f
+  cardinalALU/divD0/u_add_PartRem_3_4/A[34] (alu_DW01_add_573)
+                                                          0.00      11.61 f
+  cardinalALU/divD0/u_add_PartRem_3_4/U726/Y (OR2X2)      0.04      11.65 f
+  cardinalALU/divD0/u_add_PartRem_3_4/U905/Y (INVX1)      0.01      11.66 r
+  cardinalALU/divD0/u_add_PartRem_3_4/U955/Y (OR2X2)      0.04      11.70 r
+  cardinalALU/divD0/u_add_PartRem_3_4/U763/Y (OR2X2)      0.04      11.74 r
+  cardinalALU/divD0/u_add_PartRem_3_4/U758/Y (INVX1)      0.02      11.76 f
+  cardinalALU/divD0/u_add_PartRem_3_4/U759/Y (AND2X2)     0.04      11.79 f
+  cardinalALU/divD0/u_add_PartRem_3_4/U317/Y (AOI21X1)
+                                                          0.03      11.82 r
+  cardinalALU/divD0/u_add_PartRem_3_4/U1062/Y (BUFX2)     0.04      11.85 r
+  cardinalALU/divD0/u_add_PartRem_3_4/U315/Y (OAI21X1)
+                                                          0.01      11.87 f
+  cardinalALU/divD0/u_add_PartRem_3_4/U7/Y (AOI21X1)      0.03      11.90 r
+  cardinalALU/divD0/u_add_PartRem_3_4/U967/Y (BUFX2)      0.04      11.94 r
+  cardinalALU/divD0/u_add_PartRem_3_4/U1335/Y (INVX4)     0.03      11.97 f
+  cardinalALU/divD0/u_add_PartRem_3_4/CO (alu_DW01_add_573)
+                                                          0.00      11.97 f
+  cardinalALU/U25758/Y (NAND3X1)                          0.03      12.00 r
+  cardinalALU/U11192/Y (BUFX2)                            0.04      12.04 r
+  cardinalALU/U13365/Y (INVX1)                            0.02      12.06 f
+  cardinalALU/U18307/Y (INVX1)                            0.01      12.07 r
+  cardinalALU/U8159/Y (OR2X2)                             0.04      12.11 r
+  cardinalALU/U8160/Y (INVX1)                             0.02      12.13 f
+  cardinalALU/U16668/Y (OR2X2)                            0.05      12.17 f
+  cardinalALU/U6129/Y (OR2X2)                             0.04      12.21 f
+  cardinalALU/U6130/Y (INVX1)                             0.00      12.21 r
+  cardinalALU/U12863/Y (AND2X2)                           0.03      12.24 r
+  cardinalALU/U4155/Y (INVX1)                             0.02      12.26 f
+  cardinalALU/U4154/Y (INVX1)                             0.01      12.27 r
+  cardinalALU/divD0/u_add_PartRem_2_4/A[13] (alu_DW01_add_2033)
+                                                          0.00      12.27 r
+  cardinalALU/divD0/u_add_PartRem_2_4/U1113/Y (OR2X2)     0.04      12.31 r
+  cardinalALU/divD0/u_add_PartRem_2_4/U736/Y (INVX1)      0.02      12.33 f
+  cardinalALU/divD0/u_add_PartRem_2_4/U737/Y (INVX1)      0.01      12.33 r
+  cardinalALU/divD0/u_add_PartRem_2_4/U818/Y (AND2X2)     0.03      12.37 r
+  cardinalALU/divD0/u_add_PartRem_2_4/U996/Y (AND2X2)     0.03      12.40 r
+  cardinalALU/divD0/u_add_PartRem_2_4/U997/Y (INVX1)      0.02      12.42 f
+  cardinalALU/divD0/u_add_PartRem_2_4/U1014/Y (OR2X2)     0.05      12.46 f
+  cardinalALU/divD0/u_add_PartRem_2_4/U819/Y (OAI21X1)
+                                                          0.04      12.51 r
+  cardinalALU/divD0/u_add_PartRem_2_4/U776/Y (INVX2)      0.02      12.53 f
+  cardinalALU/divD0/u_add_PartRem_2_4/U1400/Y (OAI21X1)
+                                                          0.04      12.57 r
+  cardinalALU/divD0/u_add_PartRem_2_4/U7/Y (AOI21X1)      0.02      12.59 f
+  cardinalALU/divD0/u_add_PartRem_2_4/U1055/Y (BUFX2)     0.04      12.63 f
+  cardinalALU/divD0/u_add_PartRem_2_4/U1418/Y (INVX4)     0.02      12.65 r
+  cardinalALU/divD0/u_add_PartRem_2_4/CO (alu_DW01_add_2033)
+                                                          0.00      12.65 r
+  cardinalALU/U6380/Y (AND2X2)                            0.03      12.68 r
+  cardinalALU/U6381/Y (INVX1)                             0.01      12.70 f
+  cardinalALU/U17665/Y (OAI21X1)                          0.02      12.72 r
+  cardinalALU/U20307/Y (AND2X2)                           0.04      12.76 r
+  cardinalALU/U19393/Y (AND2X2)                           0.06      12.82 r
+  cardinalALU/U17583/Y (INVX8)                            0.03      12.85 f
+  cardinalALU/U7846/Y (OR2X2)                             0.05      12.90 f
+  cardinalALU/U4507/Y (AND2X2)                            0.03      12.93 f
+  cardinalALU/U17240/Y (INVX1)                            0.00      12.93 r
+  cardinalALU/U5907/Y (OR2X2)                             0.04      12.97 r
+  cardinalALU/U5908/Y (INVX1)                             0.02      12.98 f
+  cardinalALU/U12822/Y (AND2X2)                           0.03      13.02 f
+  cardinalALU/U12824/Y (INVX1)                            0.00      13.02 r
+  cardinalALU/U15995/Y (INVX1)                            0.03      13.04 f
+  cardinalALU/divD0/u_add_PartRem_1_6/A[54] (alu_DW01_add_542)
+                                                          0.00      13.04 f
+  cardinalALU/divD0/u_add_PartRem_1_6/U803/Y (OR2X1)      0.04      13.08 f
+  cardinalALU/divD0/u_add_PartRem_1_6/U1058/Y (INVX1)     0.00      13.09 r
+  cardinalALU/divD0/u_add_PartRem_1_6/U1029/Y (OR2X2)     0.04      13.12 r
+  cardinalALU/divD0/u_add_PartRem_1_6/U1030/Y (INVX1)     0.01      13.14 f
+  cardinalALU/divD0/u_add_PartRem_1_6/U955/Y (AND2X2)     0.04      13.18 f
+  cardinalALU/divD0/u_add_PartRem_1_6/U883/Y (AND2X2)     0.04      13.21 f
+  cardinalALU/divD0/u_add_PartRem_1_6/U963/Y (AND2X2)     0.04      13.25 f
+  cardinalALU/divD0/u_add_PartRem_1_6/U968/Y (AND2X2)     0.03      13.28 f
+  cardinalALU/divD0/u_add_PartRem_1_6/U969/Y (INVX1)      0.00      13.27 r
+  cardinalALU/divD0/u_add_PartRem_1_6/U812/Y (AND2X2)     0.03      13.30 r
+  cardinalALU/divD0/u_add_PartRem_1_6/U984/Y (INVX1)      0.02      13.32 f
+  cardinalALU/divD0/u_add_PartRem_1_6/U8/Y (AOI21X1)      0.02      13.34 r
+  cardinalALU/divD0/u_add_PartRem_1_6/U1611/Y (INVX1)     0.02      13.36 f
+  cardinalALU/divD0/u_add_PartRem_1_6/CO (alu_DW01_add_542)
+                                                          0.00      13.36 f
+  cardinalALU/U26202/Y (OR2X2)                            0.05      13.41 f
+  cardinalALU/U26203/Y (NAND3X1)                          0.03      13.43 r
+  cardinalALU/U11896/Y (BUFX2)                            0.04      13.47 r
+  cardinalALU/U20145/Y (AND2X2)                           0.04      13.51 r
+  cardinalALU/U15565/Y (INVX1)                            0.02      13.53 f
+  cardinalALU/U17527/Y (AND2X2)                           0.04      13.57 f
+  cardinalALU/U18591/Y (INVX1)                            0.01      13.58 r
+  cardinalALU/U20878/Y (OR2X1)                            0.05      13.63 r
+  cardinalALU/U26407/Y (OAI21X1)                          0.02      13.65 f
+  cardinalALU/U17754/Y (OR2X2)                            0.05      13.70 f
+  cardinalALU/U4671/Y (OR2X2)                             0.04      13.74 f
+  cardinalALU/U4672/Y (INVX1)                             0.01      13.74 r
+  cardinalALU/divD0/u_add_PartRem_0_6/A[11] (alu_DW01_add_541)
+                                                          0.00      13.74 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U923/Y (OR2X2)      0.04      13.78 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U832/Y (INVX1)      0.02      13.80 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U711/Y (OAI21X1)
+                                                          0.05      13.85 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U685/Y (AOI21X1)
+                                                          0.03      13.88 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U1027/Y (BUFX2)     0.03      13.91 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U1582/Y (INVX1)     0.00      13.91 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U987/Y (AND2X2)     0.03      13.94 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U988/Y (INVX1)      0.01      13.96 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U828/Y (AND2X2)     0.03      13.99 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U1000/Y (INVX1)     0.00      13.99 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U631/Y (AOI21X1)
+                                                          0.01      13.99 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U1201/Y (BUFX2)     0.04      14.03 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U424/Y (OAI21X1)
+                                                          0.05      14.07 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U6/Y (AOI21X1)      0.02      14.10 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U999/Y (BUFX2)      0.03      14.13 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U911/Y (OR2X2)      0.04      14.17 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U912/Y (INVX1)      0.00      14.17 r
+  cardinalALU/divD0/u_add_PartRem_0_6/CO (alu_DW01_add_541)
+                                                          0.00      14.17 r
+  cardinalALU/U4482/Y (INVX1)                             0.01      14.19 f
+  cardinalALU/U18069/Y (INVX1)                            0.01      14.19 r
+  cardinalALU/U2540/Y (INVX1)                             0.01      14.20 f
+  cardinalALU/U26525/Y (NAND3X1)                          0.03      14.24 r
+  cardinalALU/U12217/Y (BUFX2)                            0.05      14.28 r
+  cardinalALU/U4096/Y (INVX8)                             0.03      14.31 f
+  cardinalALU/U4393/Y (INVX1)                             0.03      14.34 r
+  cardinalALU/U4484/Y (NOR3X1)                            0.02      14.37 f
+  cardinalALU/U2182/Y (OR2X1)                             0.04      14.41 f
+  cardinalALU/U4883/Y (OR2X2)                             0.04      14.45 f
+  cardinalALU/U28714/Y (NOR3X1)                           0.02      14.47 r
+  cardinalALU/U253/Y (INVX2)                              0.02      14.49 f
+  cardinalALU/rDex[19] (alu)                              0.00      14.49 f
+  U1691/Y (BUFX2)                                         0.04      14.53 f
+  U3975/Y (NOR3X1)                                        0.02      14.55 r
+  U3978/Y (AOI22X1)                                       0.04      14.59 f
+  U2447/Y (BUFX2)                                         0.04      14.63 f
+  U3225/Y (OR2X2)                                         0.04      14.67 f
+  U2596/Y (OR2X2)                                         0.05      14.71 f
+  U1888/Y (NOR3X1)                                        0.02      14.73 r
+  U3215/Y (INVX1)                                         0.03      14.76 f
+  U2600/Y (OR2X2)                                         0.05      14.81 f
+  U2601/Y (INVX1)                                         0.00      14.81 r
+  U4058/Y (NAND3X1)                                       0.01      14.82 f
+  U2646/Y (BUFX2)                                         0.04      14.85 f
+  U3254/Y (INVX1)                                         0.00      14.85 r
+  U1881/Y (AND2X2)                                        0.03      14.88 r
+  U1840/Y (INVX1)                                         0.01      14.90 f
+  U1855/Y (AND2X2)                                        0.04      14.93 f
+  U1614/Y (AND2X2)                                        0.04      14.97 f
+  U2441/Y (AND2X2)                                        0.05      15.02 f
+  U2442/Y (INVX1)                                         0.00      15.02 r
+  U1938/Y (AND2X2)                                        0.03      15.05 r
+  U1939/Y (INVX1)                                         0.01      15.06 f
+  pc_reg[24]/D (DFFPOSX1)                                 0.00      15.06 f
+  data arrival time                                                 15.06
+
+  clock clk (rise edge)                                   5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  pc_reg[24]/CLK (DFFPOSX1)                               0.00       5.00 r
+  library setup time                                     -0.06       4.94
+  data required time                                                 4.94
+  --------------------------------------------------------------------------
+  data required time                                                 4.94
+  data arrival time                                                -15.06
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                 -10.12
+
+
+  Startpoint: regID_EX_reg[147]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dmemDataout[1]
+            (output port)
+  Path Group: default
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  regID_EX_reg[147]/CLK (DFFPOSX1)                        0.00 #     0.00 r
+  regID_EX_reg[147]/Q (DFFPOSX1)                          0.11       0.11 f
+  cardinalALU/functionCodeEX[4] (alu)                     0.00       0.11 f
+  cardinalALU/U10054/Y (AND2X2)                           0.04       0.14 f
+  cardinalALU/U10055/Y (INVX1)                            0.00       0.15 r
+  cardinalALU/U22414/Y (NOR3X1)                           0.02       0.17 f
+  cardinalALU/U18828/Y (AND2X2)                           0.06       0.23 f
+  cardinalALU/U20224/Y (AND2X2)                           0.05       0.27 f
+  cardinalALU/U17046/Y (INVX8)                            0.03       0.31 r
+  cardinalALU/U4160/Y (INVX8)                             0.03       0.34 f
+  cardinalALU/divD0/u_add_B6/B[7] (alu_DW01_add_577)      0.00       0.34 f
+  cardinalALU/divD0/u_add_B6/U840/Y (OR2X2)               0.05       0.39 f
+  cardinalALU/divD0/u_add_B6/U1108/Y (INVX1)              0.00       0.39 r
+  cardinalALU/divD0/u_add_B6/U1188/Y (OR2X2)              0.04       0.42 r
+  cardinalALU/divD0/u_add_B6/U1190/Y (INVX1)              0.02       0.44 f
+  cardinalALU/divD0/u_add_B6/U754/Y (AOI21X1)             0.03       0.47 r
+  cardinalALU/divD0/u_add_B6/U847/Y (BUFX2)               0.04       0.51 r
+  cardinalALU/divD0/u_add_B6/U752/Y (OAI21X1)             0.01       0.52 f
+  cardinalALU/divD0/u_add_B6/U659/Y (AOI21X1)             0.03       0.55 r
+  cardinalALU/divD0/u_add_B6/U1167/Y (BUFX2)              0.05       0.60 r
+  cardinalALU/divD0/u_add_B6/U842/Y (OAI21X1)             0.02       0.62 f
+  cardinalALU/divD0/u_add_B6/U825/Y (INVX2)               0.02       0.64 r
+  cardinalALU/divD0/u_add_B6/U832/Y (INVX1)               0.02       0.66 f
+  cardinalALU/divD0/u_add_B6/U432/Y (AOI21X1)             0.04       0.70 r
+  cardinalALU/divD0/u_add_B6/U1204/Y (BUFX2)              0.04       0.73 r
+  cardinalALU/divD0/u_add_B6/U1632/Y (XNOR2X1)            0.04       0.77 r
+  cardinalALU/divD0/u_add_B6/SUM[36] (alu_DW01_add_577)
+                                                          0.00       0.77 r
+  cardinalALU/U22585/Y (INVX2)                            0.03       0.80 f
+  cardinalALU/U22787/Y (INVX8)                            0.03       0.83 r
+  cardinalALU/divD0/u_add_PartRem_20_6/B[36] (alu_DW01_add_1441)
+                                                          0.00       0.83 r
+  cardinalALU/divD0/u_add_PartRem_20_6/U206/Y (AND2X2)
+                                                          0.03       0.86 r
+  cardinalALU/divD0/u_add_PartRem_20_6/U207/Y (INVX1)     0.02       0.87 f
+  cardinalALU/divD0/u_add_PartRem_20_6/U152/Y (OR2X2)     0.05       0.92 f
+  cardinalALU/divD0/u_add_PartRem_20_6/U122/Y (OR2X2)     0.05       0.97 f
+  cardinalALU/divD0/u_add_PartRem_20_6/U153/Y (OR2X2)     0.04       1.00 f
+  cardinalALU/divD0/u_add_PartRem_20_6/U154/Y (INVX1)     0.00       1.00 r
+  cardinalALU/divD0/u_add_PartRem_20_6/U190/Y (AND2X2)
+                                                          0.03       1.03 r
+  cardinalALU/divD0/u_add_PartRem_20_6/U125/Y (AND2X2)
+                                                          0.04       1.07 r
+  cardinalALU/divD0/u_add_PartRem_20_6/CO (alu_DW01_add_1441)
+                                                          0.00       1.07 r
+  cardinalALU/U11869/Y (AND2X2)                           0.03       1.10 r
+  cardinalALU/U241/Y (INVX1)                              0.02       1.12 f
+  cardinalALU/U250/Y (AND2X2)                             0.04       1.15 f
+  cardinalALU/U18056/Y (INVX1)                            0.01       1.17 r
+  cardinalALU/U10023/Y (OR2X2)                            0.03       1.20 r
+  cardinalALU/U10024/Y (INVX1)                            0.02       1.22 f
+  cardinalALU/U23602/Y (NOR3X1)                           0.04       1.26 r
+  cardinalALU/U23606/Y (AOI21X1)                          0.02       1.28 f
+  cardinalALU/U12431/Y (BUFX2)                            0.04       1.32 f
+  cardinalALU/U1535/Y (INVX1)                             0.01       1.33 r
+  cardinalALU/divD0/u_add_PartRem_19_2/A[6] (alu_DW01_add_1350)
+                                                          0.00       1.33 r
+  cardinalALU/divD0/u_add_PartRem_19_2/U133/Y (OR2X2)     0.04       1.36 r
+  cardinalALU/divD0/u_add_PartRem_19_2/U141/Y (INVX1)     0.02       1.39 f
+  cardinalALU/divD0/u_add_PartRem_19_2/U242/Y (OR2X2)     0.04       1.43 f
+  cardinalALU/divD0/u_add_PartRem_19_2/U243/Y (INVX1)     0.00       1.43 r
+  cardinalALU/divD0/u_add_PartRem_19_2/U239/Y (AND2X2)
+                                                          0.03       1.46 r
+  cardinalALU/divD0/u_add_PartRem_19_2/U240/Y (INVX1)     0.02       1.47 f
+  cardinalALU/divD0/u_add_PartRem_19_2/U1/Y (OAI21X1)     0.05       1.52 r
+  cardinalALU/divD0/u_add_PartRem_19_2/CO (alu_DW01_add_1350)
+                                                          0.00       1.52 r
+  cardinalALU/U1852/Y (INVX1)                             0.03       1.55 f
+  cardinalALU/U17250/Y (INVX1)                            0.00       1.55 r
+  cardinalALU/U4236/Y (AND2X2)                            0.03       1.59 r
+  cardinalALU/U4910/Y (OR2X2)                             0.04       1.63 r
+  cardinalALU/U4911/Y (INVX1)                             0.01       1.64 f
+  cardinalALU/U4636/Y (AND2X2)                            0.03       1.68 f
+  cardinalALU/U12697/Y (INVX1)                            0.00       1.68 r
+  cardinalALU/U2213/Y (AND2X2)                            0.03       1.71 r
+  cardinalALU/U703/Y (INVX1)                              0.02       1.73 f
+  cardinalALU/U23656/Y (NAND3X1)                          0.03       1.76 r
+  cardinalALU/U12194/Y (BUFX2)                            0.03       1.80 r
+  cardinalALU/U12291/Y (AND2X2)                           0.03       1.83 r
+  cardinalALU/U12292/Y (INVX1)                            0.02       1.85 f
+  cardinalALU/divD0/u_add_PartRem_18_6/A[3] (alu_DW01_add_2158)
+                                                          0.00       1.85 f
+  cardinalALU/divD0/u_add_PartRem_18_6/U182/Y (AND2X1)
+                                                          0.05       1.90 f
+  cardinalALU/divD0/u_add_PartRem_18_6/U265/Y (INVX1)     0.00       1.90 r
+  cardinalALU/divD0/u_add_PartRem_18_6/U155/Y (OAI21X1)
+                                                          0.01       1.91 f
+  cardinalALU/divD0/u_add_PartRem_18_6/U140/Y (AOI21X1)
+                                                          0.03       1.95 r
+  cardinalALU/divD0/u_add_PartRem_18_6/U270/Y (BUFX2)     0.04       1.99 r
+  cardinalALU/divD0/u_add_PartRem_18_6/U99/Y (OAI21X1)
+                                                          0.02       2.00 f
+  cardinalALU/divD0/u_add_PartRem_18_6/U2/Y (AOI21X1)     0.03       2.03 r
+  cardinalALU/divD0/u_add_PartRem_18_6/U346/Y (INVX1)     0.02       2.06 f
+  cardinalALU/divD0/u_add_PartRem_18_6/CO (alu_DW01_add_2158)
+                                                          0.00       2.06 f
+  cardinalALU/U17656/Y (INVX1)                            0.01       2.07 r
+  cardinalALU/U16179/Y (INVX1)                            0.01       2.08 f
+  cardinalALU/U23664/Y (AOI22X1)                          0.04       2.12 r
+  cardinalALU/U5990/Y (AND2X2)                            0.03       2.15 r
+  cardinalALU/U5991/Y (INVX1)                             0.01       2.17 f
+  cardinalALU/U17748/Y (AND2X2)                           0.04       2.21 f
+  cardinalALU/U4166/Y (INVX1)                             0.01       2.21 r
+  cardinalALU/U647/Y (INVX1)                              0.03       2.24 f
+  cardinalALU/U12229/Y (AND2X2)                           0.04       2.28 f
+  cardinalALU/U12230/Y (INVX1)                            0.00       2.28 r
+  cardinalALU/U11185/Y (AND2X2)                           0.04       2.32 r
+  cardinalALU/U1700/Y (INVX1)                             0.02       2.34 f
+  cardinalALU/divD0/u_add_PartRem_17_6/A[4] (alu_DW01_add_2162)
+                                                          0.00       2.34 f
+  cardinalALU/divD0/u_add_PartRem_17_6/U249/Y (OR2X1)     0.05       2.39 f
+  cardinalALU/divD0/u_add_PartRem_17_6/U245/Y (AND2X2)
+                                                          0.04       2.43 f
+  cardinalALU/divD0/u_add_PartRem_17_6/U183/Y (AOI21X1)
+                                                          0.03       2.45 r
+  cardinalALU/divD0/u_add_PartRem_17_6/U312/Y (BUFX2)     0.04       2.49 r
+  cardinalALU/divD0/u_add_PartRem_17_6/U417/Y (INVX1)     0.04       2.53 f
+  cardinalALU/divD0/u_add_PartRem_17_6/U162/Y (AOI21X1)
+                                                          0.04       2.57 r
+  cardinalALU/divD0/u_add_PartRem_17_6/U318/Y (BUFX2)     0.04       2.61 r
+  cardinalALU/divD0/u_add_PartRem_17_6/U151/Y (XOR2X1)
+                                                          0.03       2.65 r
+  cardinalALU/divD0/u_add_PartRem_17_6/SUM[8] (alu_DW01_add_2162)
+                                                          0.00       2.65 r
+  cardinalALU/U8504/Y (OR2X2)                             0.04       2.69 r
+  cardinalALU/U8505/Y (INVX1)                             0.02       2.70 f
+  cardinalALU/U23755/Y (AOI22X1)                          0.04       2.74 r
+  cardinalALU/U3101/Y (BUFX2)                             0.04       2.78 r
+  cardinalALU/U23756/Y (OAI21X1)                          0.01       2.79 f
+  cardinalALU/U23757/Y (OAI21X1)                          0.02       2.81 r
+  cardinalALU/U20405/Y (AND2X2)                           0.06       2.87 r
+  cardinalALU/divD0/u_add_PartRem_16_3/A[11] (alu_DW01_add_2077)
+                                                          0.00       2.87 r
+  cardinalALU/divD0/u_add_PartRem_16_3/U391/Y (OR2X2)     0.04       2.91 r
+  cardinalALU/divD0/u_add_PartRem_16_3/U392/Y (INVX1)     0.02       2.93 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U168/Y (OAI21X1)
+                                                          0.06       2.99 r
+  cardinalALU/divD0/u_add_PartRem_16_3/U142/Y (AOI21X1)
+                                                          0.03       3.01 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U377/Y (BUFX2)     0.04       3.05 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U90/Y (OAI21X1)
+                                                          0.04       3.09 r
+  cardinalALU/divD0/u_add_PartRem_16_3/U88/Y (AOI21X1)
+                                                          0.02       3.11 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U326/Y (BUFX2)     0.03       3.15 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U303/Y (OR2X2)     0.04       3.18 f
+  cardinalALU/divD0/u_add_PartRem_16_3/U265/Y (INVX1)     0.01       3.19 r
+  cardinalALU/divD0/u_add_PartRem_16_3/CO (alu_DW01_add_2077)
+                                                          0.00       3.19 r
+  cardinalALU/U15979/Y (INVX1)                            0.02       3.21 f
+  cardinalALU/U23842/Y (AOI22X1)                          0.04       3.25 r
+  cardinalALU/U7879/Y (BUFX2)                             0.04       3.29 r
+  cardinalALU/U23843/Y (OR2X2)                            0.04       3.33 r
+  cardinalALU/U12706/Y (AND2X2)                           0.03       3.36 r
+  cardinalALU/U12707/Y (INVX1)                            0.02       3.38 f
+  cardinalALU/U23845/Y (OAI21X1)                          0.02       3.40 r
+  cardinalALU/U23846/Y (NAND3X1)                          0.02       3.41 f
+  cardinalALU/U12373/Y (BUFX2)                            0.04       3.45 f
+  cardinalALU/U4689/Y (OR2X2)                             0.04       3.49 f
+  cardinalALU/U4690/Y (INVX1)                             0.01       3.49 r
+  cardinalALU/divD0/u_add_PartRem_15_4/A[13] (alu_DW01_add_2148)
+                                                          0.00       3.49 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U380/Y (OR2X2)     0.04       3.53 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U305/Y (AND2X2)
+                                                          0.03       3.57 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U266/Y (OR2X2)     0.04       3.60 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U152/Y (AOI21X1)
+                                                          0.01       3.61 f
+  cardinalALU/divD0/u_add_PartRem_15_4/U395/Y (BUFX2)     0.04       3.65 f
+  cardinalALU/divD0/u_add_PartRem_15_4/U100/Y (OAI21X1)
+                                                          0.04       3.69 r
+  cardinalALU/divD0/u_add_PartRem_15_4/U98/Y (AOI21X1)
+                                                          0.02       3.71 f
+  cardinalALU/divD0/u_add_PartRem_15_4/U391/Y (BUFX2)     0.04       3.74 f
+  cardinalALU/divD0/u_add_PartRem_15_4/U1/Y (OAI21X1)     0.05       3.79 r
+  cardinalALU/divD0/u_add_PartRem_15_4/CO (alu_DW01_add_2148)
+                                                          0.00       3.79 r
+  cardinalALU/U15596/Y (INVX2)                            0.03       3.82 f
+  cardinalALU/U12687/Y (AND2X2)                           0.04       3.86 f
+  cardinalALU/U12689/Y (INVX1)                            0.00       3.86 r
+  cardinalALU/U11892/Y (AND2X2)                           0.04       3.89 r
+  cardinalALU/U4344/Y (OR2X2)                             0.05       3.94 r
+  cardinalALU/U1546/Y (AND2X2)                            0.04       3.98 r
+  cardinalALU/U1555/Y (INVX1)                             0.03       4.00 f
+  cardinalALU/U24006/Y (OAI21X1)                          0.02       4.02 r
+  cardinalALU/U24007/Y (OAI21X1)                          0.02       4.04 f
+  cardinalALU/U16337/Y (INVX1)                            0.01       4.05 r
+  cardinalALU/U12541/Y (AND2X2)                           0.05       4.11 r
+  cardinalALU/divD0/u_add_PartRem_14_5/A[5] (alu_DW01_add_2088)
+                                                          0.00       4.11 r
+  cardinalALU/divD0/u_add_PartRem_14_5/U330/Y (OR2X2)     0.05       4.15 r
+  cardinalALU/divD0/u_add_PartRem_14_5/U321/Y (INVX1)     0.02       4.17 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U280/Y (OAI21X1)
+                                                          0.04       4.21 r
+  cardinalALU/divD0/u_add_PartRem_14_5/U278/Y (AOI21X1)
+                                                          0.02       4.23 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U432/Y (BUFX2)     0.04       4.27 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U335/Y (OR2X2)     0.04       4.31 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U469/Y (AND2X2)
+                                                          0.04       4.35 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U470/Y (INVX1)     0.00       4.35 r
+  cardinalALU/divD0/u_add_PartRem_14_5/U144/Y (AOI21X1)
+                                                          0.01       4.36 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U480/Y (BUFX2)     0.04       4.39 f
+  cardinalALU/divD0/u_add_PartRem_14_5/U3/Y (OAI21X1)     0.04       4.43 r
+  cardinalALU/divD0/u_add_PartRem_14_5/CO (alu_DW01_add_2088)
+                                                          0.00       4.43 r
+  cardinalALU/U2496/Y (INVX2)                             0.03       4.46 f
+  cardinalALU/U1635/Y (OAI21X1)                           0.04       4.50 r
+  cardinalALU/U12771/Y (AND2X2)                           0.03       4.54 r
+  cardinalALU/U1667/Y (INVX1)                             0.02       4.55 f
+  cardinalALU/U15598/Y (AND2X2)                           0.04       4.59 f
+  cardinalALU/U17996/Y (AND2X2)                           0.03       4.62 f
+  cardinalALU/U1839/Y (INVX1)                             0.00       4.63 r
+  cardinalALU/U8250/Y (OR2X2)                             0.04       4.67 r
+  cardinalALU/U4085/Y (AND2X2)                            0.03       4.70 r
+  cardinalALU/U16696/Y (INVX1)                            0.02       4.71 f
+  cardinalALU/U5855/Y (OR2X2)                             0.04       4.75 f
+  cardinalALU/U2596/Y (OR2X2)                             0.05       4.80 f
+  cardinalALU/U3866/Y (INVX8)                             0.02       4.82 r
+  cardinalALU/divD0/u_add_PartRem_13_4/A[19] (alu_DW01_add_1067)
+                                                          0.00       4.82 r
+  cardinalALU/divD0/u_add_PartRem_13_4/U529/Y (OR2X2)     0.04       4.86 r
+  cardinalALU/divD0/u_add_PartRem_13_4/U531/Y (INVX1)     0.02       4.87 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U175/Y (OAI21X1)
+                                                          0.05       4.92 r
+  cardinalALU/divD0/u_add_PartRem_13_4/U149/Y (AOI21X1)
+                                                          0.02       4.94 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U515/Y (BUFX2)     0.04       4.98 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U97/Y (OAI21X1)
+                                                          0.04       5.02 r
+  cardinalALU/divD0/u_add_PartRem_13_4/U4/Y (AOI21X1)     0.02       5.04 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U378/Y (BUFX2)     0.03       5.08 f
+  cardinalALU/divD0/u_add_PartRem_13_4/U2/Y (OAI21X1)     0.03       5.11 r
+  cardinalALU/divD0/u_add_PartRem_13_4/CO (alu_DW01_add_1067)
+                                                          0.00       5.11 r
+  cardinalALU/U22596/Y (BUFX4)                            0.03       5.13 r
+  cardinalALU/U12070/Y (OR2X2)                            0.04       5.17 r
+  cardinalALU/U225/Y (INVX1)                              0.02       5.19 f
+  cardinalALU/U19322/Y (AND2X2)                           0.04       5.23 f
+  cardinalALU/U3839/Y (INVX1)                             0.02       5.25 r
+  cardinalALU/U9066/Y (OR2X2)                             0.04       5.29 r
+  cardinalALU/U9067/Y (INVX1)                             0.02       5.31 f
+  cardinalALU/U4024/Y (NOR3X1)                            0.05       5.36 r
+  cardinalALU/U13445/Y (AND2X2)                           0.05       5.41 r
+  cardinalALU/divD0/u_add_PartRem_12_6/A[21] (alu_DW01_add_1327)
+                                                          0.00       5.41 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U528/Y (OR2X2)     0.05       5.46 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U686/Y (INVX1)     0.02       5.48 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U161/Y (OAI21X1)
+                                                          0.04       5.52 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U159/Y (AOI21X1)
+                                                          0.02       5.54 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U526/Y (BUFX2)     0.04       5.58 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U450/Y (OR2X2)     0.04       5.62 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U451/Y (INVX1)     0.00       5.62 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U402/Y (OR2X2)     0.04       5.66 r
+  cardinalALU/divD0/u_add_PartRem_12_6/U7/Y (AOI21X1)     0.01       5.67 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U394/Y (BUFX2)     0.03       5.71 f
+  cardinalALU/divD0/u_add_PartRem_12_6/U5/Y (OAI21X1)     0.02       5.73 r
+  cardinalALU/divD0/u_add_PartRem_12_6/CO (alu_DW01_add_1327)
+                                                          0.00       5.73 r
+  cardinalALU/U2219/Y (INVX1)                             0.03       5.76 f
+  cardinalALU/U24213/Y (NAND3X1)                          0.03       5.79 r
+  cardinalALU/U3647/Y (BUFX2)                             0.04       5.83 r
+  cardinalALU/U511/Y (INVX2)                              0.03       5.86 f
+  cardinalALU/U2395/Y (INVX4)                             0.03       5.88 r
+  cardinalALU/U18331/Y (OR2X2)                            0.04       5.93 r
+  cardinalALU/U24258/Y (OAI21X1)                          0.02       5.94 f
+  cardinalALU/U24259/Y (NOR3X1)                           0.05       5.99 r
+  cardinalALU/U16063/Y (AND2X2)                           0.05       6.04 r
+  cardinalALU/divD0/u_add_PartRem_11_5/A[21] (alu_DW01_add_2157)
+                                                          0.00       6.04 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U816/Y (OR2X2)     0.05       6.09 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U639/Y (AND2X2)
+                                                          0.03       6.12 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U640/Y (INVX1)     0.02       6.14 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U748/Y (OR2X2)     0.04       6.18 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U749/Y (INVX1)     0.00       6.18 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U603/Y (AND2X2)
+                                                          0.05       6.23 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U604/Y (INVX1)     0.03       6.25 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U596/Y (OR2X2)     0.04       6.29 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U597/Y (INVX1)     0.00       6.29 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U574/Y (AND2X2)
+                                                          0.03       6.32 r
+  cardinalALU/divD0/u_add_PartRem_11_5/U575/Y (INVX1)     0.02       6.34 f
+  cardinalALU/divD0/u_add_PartRem_11_5/U3/Y (OAI21X1)     0.04       6.38 r
+  cardinalALU/divD0/u_add_PartRem_11_5/CO (alu_DW01_add_2157)
+                                                          0.00       6.38 r
+  cardinalALU/U17193/Y (INVX1)                            0.03       6.41 f
+  cardinalALU/U13537/Y (AND2X2)                           0.03       6.44 f
+  cardinalALU/U8124/Y (INVX1)                             0.00       6.44 r
+  cardinalALU/U12365/Y (OR2X2)                            0.05       6.49 r
+  cardinalALU/U2166/Y (INVX4)                             0.03       6.52 f
+  cardinalALU/U3845/Y (INVX8)                             0.02       6.53 r
+  cardinalALU/U10202/Y (OR2X2)                            0.04       6.58 r
+  cardinalALU/U10203/Y (INVX1)                            0.02       6.59 f
+  cardinalALU/U24350/Y (NOR3X1)                           0.04       6.63 r
+  cardinalALU/U19993/Y (AND2X2)                           0.06       6.69 r
+  cardinalALU/U19994/Y (INVX1)                            0.03       6.72 f
+  cardinalALU/U15671/Y (INVX1)                            0.02       6.74 r
+  cardinalALU/divD0/u_add_PartRem_10_7/A[32] (alu_DW01_add_2076)
+                                                          0.00       6.74 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U558/Y (OR2X2)     0.04       6.78 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U871/Y (INVX1)     0.02       6.81 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U680/Y (OR2X2)     0.05       6.86 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U681/Y (INVX1)     0.00       6.85 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U695/Y (AND2X2)
+                                                          0.03       6.89 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U696/Y (INVX1)     0.02       6.90 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U683/Y (OR2X2)     0.04       6.94 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U684/Y (INVX1)     0.01       6.95 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U658/Y (AND2X2)
+                                                          0.03       6.98 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U659/Y (INVX1)     0.02       7.00 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U85/Y (OAI21X1)
+                                                          0.04       7.04 r
+  cardinalALU/divD0/u_add_PartRem_10_7/U2/Y (AOI21X1)     0.02       7.06 f
+  cardinalALU/divD0/u_add_PartRem_10_7/U883/Y (INVX1)     0.01       7.07 r
+  cardinalALU/divD0/u_add_PartRem_10_7/CO (alu_DW01_add_2076)
+                                                          0.00       7.07 r
+  cardinalALU/U1828/Y (BUFX2)                             0.04       7.11 r
+  cardinalALU/U19065/Y (AND2X2)                           0.04       7.15 r
+  cardinalALU/U18134/Y (INVX1)                            0.02       7.17 f
+  cardinalALU/U8275/Y (OR2X2)                             0.05       7.22 f
+  cardinalALU/U8276/Y (INVX1)                             0.00       7.22 r
+  cardinalALU/U5967/Y (OR2X2)                             0.04       7.26 r
+  cardinalALU/U5968/Y (INVX1)                             0.02       7.27 f
+  cardinalALU/U17507/Y (AND2X2)                           0.04       7.31 f
+  cardinalALU/U17334/Y (AND2X2)                           0.04       7.35 f
+  cardinalALU/divD0/u_add_PartRem_9_2/A[12] (alu_DW01_add_1795)
+                                                          0.00       7.35 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U656/Y (OR2X1)      0.04       7.39 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U657/Y (INVX1)      0.01       7.40 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U734/Y (OR2X2)      0.04       7.44 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U871/Y (INVX1)      0.01       7.45 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U658/Y (AND2X2)     0.04       7.49 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U659/Y (INVX1)      0.00       7.49 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U494/Y (OR2X1)      0.05       7.54 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U600/Y (INVX1)      0.02       7.56 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U320/Y (AOI21X1)
+                                                          0.03       7.58 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U692/Y (BUFX2)      0.04       7.63 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U113/Y (OAI21X1)
+                                                          0.02       7.64 f
+  cardinalALU/divD0/u_add_PartRem_9_2/U4/Y (AOI21X1)      0.03       7.68 r
+  cardinalALU/divD0/u_add_PartRem_9_2/U942/Y (INVX1)      0.02       7.70 f
+  cardinalALU/divD0/u_add_PartRem_9_2/CO (alu_DW01_add_1795)
+                                                          0.00       7.70 f
+  cardinalALU/U12927/Y (INVX1)                            0.02       7.72 r
+  cardinalALU/U5461/Y (AND2X2)                            0.03       7.75 r
+  cardinalALU/U5462/Y (INVX1)                             0.02       7.77 f
+  cardinalALU/U8448/Y (OR2X2)                             0.05       7.81 f
+  cardinalALU/U4463/Y (INVX8)                             0.04       7.85 r
+  cardinalALU/U24702/Y (AOI22X1)                          0.02       7.87 f
+  cardinalALU/U3111/Y (BUFX2)                             0.04       7.91 f
+  cardinalALU/U24703/Y (OAI21X1)                          0.02       7.93 r
+  cardinalALU/U8796/Y (OR2X2)                             0.05       7.97 r
+  cardinalALU/U8797/Y (INVX1)                             0.02       7.99 f
+  cardinalALU/U24705/Y (NAND3X1)                          0.03       8.02 r
+  cardinalALU/U12442/Y (BUFX2)                            0.04       8.06 r
+  cardinalALU/U353/Y (INVX4)                              0.03       8.09 f
+  cardinalALU/divD0/u_add_PartRem_8_6/A[15] (alu_DW01_add_1296)
+                                                          0.00       8.09 f
+  cardinalALU/divD0/u_add_PartRem_8_6/U546/Y (OR2X2)      0.04       8.13 f
+  cardinalALU/divD0/u_add_PartRem_8_6/U682/Y (INVX1)      0.00       8.13 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U565/Y (OR2X2)      0.05       8.18 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U545/Y (OR2X2)      0.04       8.22 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U632/Y (OR2X2)      0.04       8.26 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U633/Y (INVX1)      0.02       8.28 f
+  cardinalALU/divD0/u_add_PartRem_8_6/U358/Y (AOI21X1)
+                                                          0.03       8.31 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U686/Y (BUFX2)      0.04       8.34 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U151/Y (OAI21X1)
+                                                          0.02       8.36 f
+  cardinalALU/divD0/u_add_PartRem_8_6/U3/Y (AOI21X1)      0.03       8.40 r
+  cardinalALU/divD0/u_add_PartRem_8_6/U772/Y (INVX1)      0.02       8.42 f
+  cardinalALU/divD0/u_add_PartRem_8_6/CO (alu_DW01_add_1296)
+                                                          0.00       8.42 f
+  cardinalALU/U24757/Y (AOI22X1)                          0.05       8.47 r
+  cardinalALU/U12025/Y (BUFX2)                            0.04       8.50 r
+  cardinalALU/U12753/Y (AND2X2)                           0.03       8.54 r
+  cardinalALU/U130/Y (INVX1)                              0.02       8.55 f
+  cardinalALU/U12632/Y (AND2X2)                           0.04       8.59 f
+  cardinalALU/U11872/Y (INVX1)                            0.00       8.59 r
+  cardinalALU/U20311/Y (AND2X2)                           0.04       8.62 r
+  cardinalALU/U1590/Y (INVX2)                             0.03       8.65 f
+  cardinalALU/U24818/Y (OAI21X1)                          0.04       8.69 r
+  cardinalALU/U1769/Y (OR2X2)                             0.04       8.73 r
+  cardinalALU/U4906/Y (OR2X2)                             0.04       8.77 r
+  cardinalALU/U1676/Y (OR2X2)                             0.05       8.82 r
+  cardinalALU/U2078/Y (INVX1)                             0.02       8.84 f
+  cardinalALU/divD0/u_add_PartRem_7_4/A[29] (alu_DW01_add_2110)
+                                                          0.00       8.84 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U712/Y (OR2X2)      0.04       8.88 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U713/Y (INVX1)      0.00       8.88 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U627/Y (OR2X2)      0.04       8.92 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U659/Y (OR2X2)      0.04       8.96 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U660/Y (INVX1)      0.01       8.97 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U730/Y (AND2X2)     0.04       9.01 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U594/Y (AND2X2)     0.04       9.05 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U170/Y (AOI21X1)
+                                                          0.03       9.07 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U588/Y (BUFX2)      0.04       9.11 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U572/Y (OAI21X1)
+                                                          0.01       9.12 f
+  cardinalALU/divD0/u_add_PartRem_7_4/U4/Y (AOI21X1)      0.03       9.16 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U779/Y (BUFX2)      0.03       9.19 r
+  cardinalALU/divD0/u_add_PartRem_7_4/U563/Y (INVX1)      0.02       9.21 f
+  cardinalALU/divD0/u_add_PartRem_7_4/CO (alu_DW01_add_2110)
+                                                          0.00       9.21 f
+  cardinalALU/U1593/Y (INVX1)                             0.01       9.22 r
+  cardinalALU/U1939/Y (INVX1)                             0.02       9.23 f
+  cardinalALU/U24934/Y (NAND3X1)                          0.03       9.26 r
+  cardinalALU/U3310/Y (BUFX2)                             0.03       9.30 r
+  cardinalALU/U24935/Y (OAI21X1)                          0.01       9.31 f
+  cardinalALU/U11858/Y (AND2X2)                           0.03       9.34 f
+  cardinalALU/U11860/Y (INVX1)                            0.01       9.35 r
+  cardinalALU/U16210/Y (AND2X2)                           0.04       9.39 r
+  cardinalALU/U2290/Y (INVX1)                             0.02       9.41 f
+  cardinalALU/U18402/Y (OR2X2)                            0.05       9.46 f
+  cardinalALU/U25102/Y (OAI21X1)                          0.02       9.47 r
+  cardinalALU/U2160/Y (OR2X1)                             0.04       9.51 r
+  cardinalALU/U12075/Y (INVX1)                            0.02       9.54 f
+  cardinalALU/U17451/Y (AND2X2)                           0.04       9.58 f
+  cardinalALU/divD0/u_add_PartRem_6_4/A[5] (alu_DW01_add_1129)
+                                                          0.00       9.58 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U623/Y (OR2X2)      0.04       9.62 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U688/Y (AND2X2)     0.03       9.65 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U689/Y (INVX1)      0.00       9.65 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U722/Y (AND2X2)     0.03       9.68 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U723/Y (INVX1)      0.01       9.69 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U551/Y (AOI21X1)
+                                                          0.02       9.71 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U817/Y (BUFX2)      0.04       9.75 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U584/Y (OAI21X1)
+                                                          0.02       9.77 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U417/Y (AOI21X1)
+                                                          0.03       9.80 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U795/Y (BUFX2)      0.04       9.84 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U210/Y (OAI21X1)
+                                                          0.02       9.86 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U4/Y (AOI21X1)      0.03       9.89 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U845/Y (INVX1)      0.02       9.91 f
+  cardinalALU/divD0/u_add_PartRem_6_4/U620/Y (INVX1)      0.01       9.92 r
+  cardinalALU/divD0/u_add_PartRem_6_4/U621/Y (INVX4)      0.03       9.94 f
+  cardinalALU/divD0/u_add_PartRem_6_4/CO (alu_DW01_add_1129)
+                                                          0.00       9.94 f
+  cardinalALU/U25115/Y (NAND3X1)                          0.03       9.97 r
+  cardinalALU/U11190/Y (BUFX2)                            0.04      10.01 r
+  cardinalALU/U3831/Y (INVX1)                             0.02      10.03 f
+  cardinalALU/U18394/Y (INVX1)                            0.02      10.05 r
+  cardinalALU/U234/Y (OR2X1)                              0.05      10.10 r
+  cardinalALU/U25280/Y (OAI21X1)                          0.02      10.12 f
+  cardinalALU/U25281/Y (NOR3X1)                           0.04      10.16 r
+  cardinalALU/U25282/Y (NAND3X1)                          0.02      10.18 f
+  cardinalALU/U12787/Y (BUFX2)                            0.04      10.22 f
+  cardinalALU/U2123/Y (INVX4)                             0.03      10.25 r
+  cardinalALU/divD0/u_add_PartRem_5_7/A[6] (alu_DW01_add_1093)
+                                                          0.00      10.25 r
+  cardinalALU/divD0/u_add_PartRem_5_7/U688/Y (OR2X1)      0.04      10.29 r
+  cardinalALU/divD0/u_add_PartRem_5_7/U967/Y (INVX1)      0.02      10.31 f
+  cardinalALU/divD0/u_add_PartRem_5_7/U684/Y (OR2X2)      0.05      10.36 f
+  cardinalALU/divD0/u_add_PartRem_5_7/U794/Y (INVX1)      0.00      10.36 r
+  cardinalALU/divD0/u_add_PartRem_5_7/U585/Y (AOI21X1)
+                                                          0.02      10.38 f
+  cardinalALU/divD0/u_add_PartRem_5_7/U888/Y (BUFX2)      0.04      10.42 f
+  cardinalALU/divD0/u_add_PartRem_5_7/U544/Y (OAI21X1)
+                                                          0.05      10.46 r
+  cardinalALU/divD0/u_add_PartRem_5_7/U451/Y (AOI21X1)
+                                                          0.02      10.49 f
+  cardinalALU/divD0/u_add_PartRem_5_7/U863/Y (BUFX2)      0.04      10.52 f
+  cardinalALU/divD0/u_add_PartRem_5_7/U244/Y (OAI21X1)
+                                                          0.05      10.57 r
+  cardinalALU/divD0/u_add_PartRem_5_7/U4/Y (AOI21X1)      0.03      10.60 f
+  cardinalALU/divD0/u_add_PartRem_5_7/U1282/Y (INVX1)     0.02      10.62 r
+  cardinalALU/divD0/u_add_PartRem_5_7/CO (alu_DW01_add_1093)
+                                                          0.00      10.62 r
+  cardinalALU/U19714/Y (AND2X2)                           0.04      10.65 r
+  cardinalALU/U19242/Y (AND2X2)                           0.04      10.69 r
+  cardinalALU/U18020/Y (INVX1)                            0.02      10.71 f
+  cardinalALU/U15801/Y (INVX1)                            0.02      10.73 r
+  cardinalALU/U25483/Y (AOI22X1)                          0.03      10.76 f
+  cardinalALU/U3129/Y (BUFX2)                             0.04      10.80 f
+  cardinalALU/U25484/Y (OAI21X1)                          0.02      10.82 r
+  cardinalALU/U25487/Y (NOR3X1)                           0.03      10.85 f
+  cardinalALU/U25488/Y (OAI21X1)                          0.03      10.88 r
+  cardinalALU/U15592/Y (INVX4)                            0.03      10.92 f
+  cardinalALU/divD0/u_add_PartRem_4_2/A[13] (alu_DW01_add_2187)
+                                                          0.00      10.92 f
+  cardinalALU/divD0/u_add_PartRem_4_2/U875/Y (OR2X2)      0.04      10.96 f
+  cardinalALU/divD0/u_add_PartRem_4_2/U876/Y (INVX1)      0.00      10.96 r
+  cardinalALU/divD0/u_add_PartRem_4_2/U929/Y (OR2X2)      0.04      11.00 r
+  cardinalALU/divD0/u_add_PartRem_4_2/U931/Y (INVX1)      0.01      11.02 f
+  cardinalALU/divD0/u_add_PartRem_4_2/U855/Y (AND2X2)     0.04      11.06 f
+  cardinalALU/divD0/u_add_PartRem_4_2/U856/Y (INVX1)      0.00      11.05 r
+  cardinalALU/divD0/u_add_PartRem_4_2/U889/Y (OR2X2)      0.04      11.10 r
+  cardinalALU/divD0/u_add_PartRem_4_2/U1229/Y (INVX1)     0.02      11.11 f
+  cardinalALU/divD0/u_add_PartRem_4_2/U1241/Y (AOI21X1)
+                                                          0.03      11.14 r
+  cardinalALU/divD0/u_add_PartRem_4_2/U937/Y (BUFX2)      0.04      11.18 r
+  cardinalALU/divD0/u_add_PartRem_4_2/U271/Y (OAI21X1)
+                                                          0.02      11.20 f
+  cardinalALU/divD0/u_add_PartRem_4_2/U5/Y (AOI21X1)      0.03      11.23 r
+  cardinalALU/divD0/u_add_PartRem_4_2/U1240/Y (INVX1)     0.02      11.26 f
+  cardinalALU/divD0/u_add_PartRem_4_2/CO (alu_DW01_add_2187)
+                                                          0.00      11.26 f
+  cardinalALU/U16427/Y (INVX1)                            0.00      11.26 r
+  cardinalALU/U16428/Y (INVX1)                            0.01      11.27 f
+  cardinalALU/U25539/Y (NAND3X1)                          0.03      11.31 r
+  cardinalALU/U12265/Y (BUFX2)                            0.04      11.34 r
+  cardinalALU/U17941/Y (INVX1)                            0.02      11.36 f
+  cardinalALU/U2344/Y (INVX1)                             0.01      11.37 r
+  cardinalALU/U13382/Y (INVX1)                            0.02      11.39 f
+  cardinalALU/U25627/Y (AOI22X1)                          0.05      11.44 r
+  cardinalALU/U3132/Y (BUFX2)                             0.04      11.48 r
+  cardinalALU/U25628/Y (OAI21X1)                          0.01      11.49 f
+  cardinalALU/U8798/Y (OR2X2)                             0.04      11.54 f
+  cardinalALU/U8799/Y (INVX1)                             0.00      11.54 r
+  cardinalALU/U25630/Y (NAND3X1)                          0.01      11.55 f
+  cardinalALU/U12352/Y (BUFX2)                            0.04      11.58 f
+  cardinalALU/U16986/Y (INVX1)                            0.04      11.62 r
+  cardinalALU/divD0/u_add_PartRem_3_3/A[34] (alu_DW01_add_597)
+                                                          0.00      11.62 r
+  cardinalALU/divD0/u_add_PartRem_3_3/U955/Y (OR2X2)      0.04      11.66 r
+  cardinalALU/divD0/u_add_PartRem_3_3/U956/Y (INVX1)      0.02      11.69 f
+  cardinalALU/divD0/u_add_PartRem_3_3/U803/Y (OR2X2)      0.05      11.74 f
+  cardinalALU/divD0/u_add_PartRem_3_3/U1309/Y (INVX1)     0.00      11.73 r
+  cardinalALU/divD0/u_add_PartRem_3_3/U1030/Y (AND2X2)
+                                                          0.03      11.77 r
+  cardinalALU/divD0/u_add_PartRem_3_3/U1031/Y (INVX1)     0.02      11.78 f
+  cardinalALU/divD0/u_add_PartRem_3_3/U992/Y (OR2X2)      0.05      11.83 f
+  cardinalALU/divD0/u_add_PartRem_3_3/U714/Y (INVX1)      0.00      11.83 r
+  cardinalALU/divD0/u_add_PartRem_3_3/U1080/Y (AND2X2)
+                                                          0.03      11.86 r
+  cardinalALU/divD0/u_add_PartRem_3_3/U1081/Y (INVX1)     0.02      11.88 f
+  cardinalALU/divD0/u_add_PartRem_3_3/U744/Y (OAI21X1)
+                                                          0.05      11.93 r
+  cardinalALU/divD0/u_add_PartRem_3_3/U6/Y (AOI21X1)      0.02      11.95 f
+  cardinalALU/divD0/u_add_PartRem_3_3/U1379/Y (INVX1)     0.01      11.97 r
+  cardinalALU/divD0/u_add_PartRem_3_3/CO (alu_DW01_add_597)
+                                                          0.00      11.97 r
+  cardinalALU/U17110/Y (INVX1)                            0.01      11.98 f
+  cardinalALU/U5440/Y (AND2X2)                            0.04      12.02 f
+  cardinalALU/U2151/Y (AND2X2)                            0.04      12.06 f
+  cardinalALU/U4109/Y (INVX2)                             0.04      12.10 r
+  cardinalALU/U16939/Y (OR2X2)                            0.05      12.14 r
+  cardinalALU/U25790/Y (OAI21X1)                          0.02      12.16 f
+  cardinalALU/U25791/Y (NOR3X1)                           0.05      12.20 r
+  cardinalALU/U12604/Y (AND2X2)                           0.04      12.25 r
+  cardinalALU/U1167/Y (INVX2)                             0.03      12.27 f
+  cardinalALU/U885/Y (INVX4)                              0.02      12.29 r
+  cardinalALU/divD0/u_add_PartRem_2_6/A[52] (alu_DW01_add_1858)
+                                                          0.00      12.29 r
+  cardinalALU/divD0/u_add_PartRem_2_6/U968/Y (OR2X1)      0.04      12.33 r
+  cardinalALU/divD0/u_add_PartRem_2_6/U969/Y (INVX1)      0.02      12.35 f
+  cardinalALU/divD0/u_add_PartRem_2_6/U1033/Y (OR2X2)     0.04      12.39 f
+  cardinalALU/divD0/u_add_PartRem_2_6/U1035/Y (INVX1)     0.00      12.39 r
+  cardinalALU/divD0/u_add_PartRem_2_6/U1058/Y (AND2X2)
+                                                          0.04      12.43 r
+  cardinalALU/divD0/u_add_PartRem_2_6/U1059/Y (INVX1)     0.02      12.45 f
+  cardinalALU/divD0/u_add_PartRem_2_6/U888/Y (OR2X2)      0.04      12.49 f
+  cardinalALU/divD0/u_add_PartRem_2_6/U889/Y (INVX1)      0.00      12.49 r
+  cardinalALU/divD0/u_add_PartRem_2_6/U1054/Y (AND2X2)
+                                                          0.03      12.52 r
+  cardinalALU/divD0/u_add_PartRem_2_6/U1055/Y (INVX1)     0.02      12.54 f
+  cardinalALU/divD0/u_add_PartRem_2_6/U8/Y (OAI21X1)      0.04      12.58 r
+  cardinalALU/divD0/u_add_PartRem_2_6/U6/Y (AOI21X1)      0.02      12.60 f
+  cardinalALU/divD0/u_add_PartRem_2_6/U1466/Y (INVX1)     0.01      12.61 r
+  cardinalALU/divD0/u_add_PartRem_2_6/CO (alu_DW01_add_1858)
+                                                          0.00      12.61 r
+  cardinalALU/U8590/Y (AND2X2)                            0.03      12.64 r
+  cardinalALU/U8591/Y (INVX1)                             0.02      12.66 f
+  cardinalALU/U25979/Y (NAND3X1)                          0.03      12.69 r
+  cardinalALU/U20141/Y (AND2X2)                           0.04      12.73 r
+  cardinalALU/U20142/Y (INVX1)                            0.02      12.75 f
+  cardinalALU/U8449/Y (AND2X2)                            0.04      12.79 f
+  cardinalALU/U18508/Y (INVX1)                            0.01      12.80 r
+  cardinalALU/U16603/Y (INVX1)                            0.02      12.82 f
+  cardinalALU/U16612/Y (INVX1)                            0.02      12.85 r
+  cardinalALU/U9853/Y (OR2X2)                             0.04      12.89 r
+  cardinalALU/U9854/Y (INVX1)                             0.02      12.91 f
+  cardinalALU/U26165/Y (NOR3X1)                           0.05      12.96 r
+  cardinalALU/U15977/Y (AND2X2)                           0.07      13.02 r
+  cardinalALU/divD0/u_add_PartRem_1_5/A[13] (alu_DW01_add_615)
+                                                          0.00      13.02 r
+  cardinalALU/divD0/u_add_PartRem_1_5/U1534/Y (OR2X2)     0.04      13.07 r
+  cardinalALU/divD0/u_add_PartRem_1_5/U1535/Y (INVX1)     0.02      13.09 f
+  cardinalALU/divD0/u_add_PartRem_1_5/U1129/Y (OR2X2)     0.05      13.14 f
+  cardinalALU/divD0/u_add_PartRem_1_5/U1131/Y (INVX1)     0.00      13.14 r
+  cardinalALU/divD0/u_add_PartRem_1_5/U668/Y (AOI21X1)
+                                                          0.02      13.16 f
+  cardinalALU/divD0/u_add_PartRem_1_5/U1231/Y (INVX1)     0.03      13.20 r
+  cardinalALU/divD0/u_add_PartRem_1_5/U1232/Y (INVX1)     0.02      13.22 f
+  cardinalALU/divD0/u_add_PartRem_1_5/U616/Y (OAI21X1)
+                                                          0.04      13.26 r
+  cardinalALU/divD0/u_add_PartRem_1_5/U614/Y (AOI21X1)
+                                                          0.02      13.28 f
+  cardinalALU/divD0/u_add_PartRem_1_5/U1111/Y (BUFX2)     0.04      13.31 f
+  cardinalALU/divD0/u_add_PartRem_1_5/U833/Y (OAI21X1)
+                                                          0.05      13.36 r
+  cardinalALU/divD0/u_add_PartRem_1_5/U8/Y (AOI21X1)      0.02      13.38 f
+  cardinalALU/divD0/u_add_PartRem_1_5/U1592/Y (INVX1)     0.00      13.38 r
+  cardinalALU/divD0/u_add_PartRem_1_5/CO (alu_DW01_add_615)
+                                                          0.00      13.38 r
+  cardinalALU/U26202/Y (OR2X2)                            0.04      13.42 r
+  cardinalALU/U26203/Y (NAND3X1)                          0.01      13.43 f
+  cardinalALU/U11896/Y (BUFX2)                            0.04      13.47 f
+  cardinalALU/U20145/Y (AND2X2)                           0.03      13.50 f
+  cardinalALU/U4252/Y (INVX1)                             0.00      13.50 r
+  cardinalALU/U16794/Y (AND2X2)                           0.05      13.55 r
+  cardinalALU/U1752/Y (INVX1)                             0.03      13.58 f
+  cardinalALU/U15620/Y (INVX1)                            0.02      13.60 r
+  cardinalALU/U6413/Y (AND2X2)                            0.03      13.63 r
+  cardinalALU/U6414/Y (INVX1)                             0.01      13.64 f
+  cardinalALU/U26400/Y (OAI21X1)                          0.02      13.66 r
+  cardinalALU/U26401/Y (NOR3X1)                           0.04      13.71 f
+  cardinalALU/U16206/Y (AND2X2)                           0.05      13.75 f
+  cardinalALU/divD0/u_add_PartRem_0_6/A[13] (alu_DW01_add_541)
+                                                          0.00      13.75 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U925/Y (OR2X2)      0.04      13.79 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U904/Y (AND2X2)     0.04      13.83 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U685/Y (AOI21X1)
+                                                          0.03      13.86 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U1027/Y (BUFX2)     0.04      13.89 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U1582/Y (INVX1)     0.01      13.91 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U987/Y (AND2X2)     0.03      13.94 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U988/Y (INVX1)      0.00      13.94 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U828/Y (AND2X2)     0.03      13.97 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U1000/Y (INVX1)     0.02      13.98 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U631/Y (AOI21X1)
+                                                          0.02      14.00 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U1201/Y (BUFX2)     0.04      14.04 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U424/Y (OAI21X1)
+                                                          0.02      14.06 f
+  cardinalALU/divD0/u_add_PartRem_0_6/U6/Y (AOI21X1)      0.03      14.09 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U999/Y (BUFX2)      0.03      14.12 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U911/Y (OR2X2)      0.04      14.16 r
+  cardinalALU/divD0/u_add_PartRem_0_6/U912/Y (INVX1)      0.02      14.18 f
+  cardinalALU/divD0/u_add_PartRem_0_6/CO (alu_DW01_add_541)
+                                                          0.00      14.18 f
+  cardinalALU/U17866/Y (INVX1)                            0.01      14.18 r
+  cardinalALU/U17984/Y (INVX1)                            0.01      14.20 f
+  cardinalALU/U26441/Y (NAND3X1)                          0.03      14.23 r
+  cardinalALU/U12267/Y (BUFX2)                            0.04      14.27 r
+  cardinalALU/U4285/Y (INVX1)                             0.02      14.29 f
+  cardinalALU/U18311/Y (INVX1)                            0.02      14.31 r
+  cardinalALU/U18316/Y (INVX1)                            0.02      14.33 f
+  cardinalALU/U29526/Y (AOI22X1)                          0.03      14.36 r
+  cardinalALU/U4287/Y (INVX1)                             0.03      14.38 f
+  cardinalALU/U4453/Y (NOR3X1)                            0.02      14.41 r
+  cardinalALU/U4209/Y (AND2X2)                            0.04      14.44 r
+  cardinalALU/U29527/Y (AOI22X1)                          0.01      14.46 f
+  cardinalALU/U12837/Y (BUFX2)                            0.04      14.50 f
+  cardinalALU/rDex[1] (alu)                               0.00      14.50 f
+  U1892/Y (AND2X1)                                        0.03      14.53 f
+  U2446/Y (INVX1)                                         0.00      14.53 r
+  U1925/Y (AND2X2)                                        0.03      14.56 r
+  U1926/Y (INVX1)                                         0.01      14.57 f
+  U3230/Y (AND2X2)                                        0.03      14.61 f
+  U4500/Y (MUX2X1)                                        0.03      14.64 r
+  U3759/Y (INVX1)                                         0.02      14.66 f
+  dmemDataout[1] (out)                                    0.00      14.66 f
+  data arrival time                                                 14.66
+
+  max_delay                                               5.00       5.00
+  output external delay                                   0.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                -14.66
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -9.66
+
+
+1

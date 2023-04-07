@@ -1,5 +1,5 @@
 ncvlog(64): 15.20-s079: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
-TOOL:	ncvlog(64)	15.20-s079: Started on Mar 25, 2023 at 21:16:36 PDT
+TOOL:	ncvlog(64)	15.20-s079: Started on Mar 31, 2023 at 11:28:17 PDT
 ncvlog
     -STATUS
     -MESSAGES
@@ -13,4 +13,4 @@ file: ./tb/tb_rotating_prioritizer.v
 		errors: 0, warnings: 0
 ncvlog: Memory Usage - 21.4M program + 28.1M data = 49.5M total
 ncvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.0s, 100.0% cpu)
-TOOL:	ncvlog(64)	15.20-s079: Exiting on Mar 25, 2023 at 21:16:36 PDT  (total: 00:00:00)
+TOOL:	ncvlog(64)	15.20-s079: Exiting on Mar 31, 2023 at 11:28:17 PDT  (total: 00:00:00)

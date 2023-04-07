@@ -19,6 +19,31 @@
     "__class__": "Identifier"
    },
    {
+    "name": "mgc_ams",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "vital2000",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "verilog",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "mtiRnm",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "std",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
     "name": "mtiAvm",
     "case_sensitive": false,
     "__class__": "Identifier"
@@ -29,12 +54,7 @@
     "__class__": "Identifier"
    },
    {
-    "name": "infact",
-    "case_sensitive": false,
-    "__class__": "Identifier"
-   },
-   {
-    "name": "vital2000",
+    "name": "mtiOvm",
     "case_sensitive": false,
     "__class__": "Identifier"
    },
@@ -49,7 +69,7 @@
     "__class__": "Identifier"
    },
    {
-    "name": "mgc_ams",
+    "name": "sv_std",
     "case_sensitive": false,
     "__class__": "Identifier"
    },
@@ -59,22 +79,12 @@
     "__class__": "Identifier"
    },
    {
-    "name": "sv_std",
+    "name": "infact",
     "case_sensitive": false,
     "__class__": "Identifier"
    },
    {
-    "name": "mc2_lib",
-    "case_sensitive": false,
-    "__class__": "Identifier"
-   },
-   {
-    "name": "std",
-    "case_sensitive": false,
-    "__class__": "Identifier"
-   },
-   {
-    "name": "mtiRnm",
+    "name": "std_developerskit",
     "case_sensitive": false,
     "__class__": "Identifier"
    },
@@ -94,22 +104,12 @@
     "__class__": "Identifier"
    },
    {
+    "name": "mc2_lib",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
     "name": "mtiPA",
-    "case_sensitive": false,
-    "__class__": "Identifier"
-   },
-   {
-    "name": "std_developerskit",
-    "case_sensitive": false,
-    "__class__": "Identifier"
-   },
-   {
-    "name": "verilog",
-    "case_sensitive": false,
-    "__class__": "Identifier"
-   },
-   {
-    "name": "mtiOvm",
     "case_sensitive": false,
     "__class__": "Identifier"
    }
@@ -119,26 +119,73 @@
     "name": "default_library",
     "case_sensitive": false,
     "__class__": "Identifier"
+   },
+   {
+    "name": "work",
+    "case_sensitive": false,
+    "__class__": "Identifier"
    }
   ],
   "__class__": "MSim"
  },
  "config_file": [
   {
-   "name": "C:\\Users\\ritwi\\AppData\\Local\\Temp\\hdl_checker_project_pid26952_ywkcakpd.json",
+   "name": "C:\\Users\\ritwi\\AppData\\Local\\Temp\\hdl_checker_project_pid22480_0noh9h5b.json",
    "__class__": "Path"
   },
-  1680314628.469493,
+  1680371225.5320175,
   "generated"
  ],
  "database": {
   "sources": [
    {
     "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cpu.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5717478,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\alu.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680314598.3428576,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
      "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_gold_router.v",
      "__class__": "Path"
     },
     "mtime": 1680251251.5717478,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW01_addsub.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.561749,
     "flags": {
      "source_specific": [],
      "single": [],
@@ -163,10 +210,540 @@
    },
    {
     "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cpu.v",
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_ring.v",
      "__class__": "Path"
     },
-    "mtime": 1680251251.5717478,
+    "mtime": 1680251251.5587473,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_ring.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./design/cardinal_router.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        0,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_shifter.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5637496,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_shifter.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "DW_shifter_function.inc",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        48,
+        10
+       ]
+      ],
+      "__class__": "IncludedPath"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW02_mult_3_stage.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.562747,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cpu.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680467393.0783837,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cpu.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./design/REGFILE32x64.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        1,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     },
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cpu.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./design/alu.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        2,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_div.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.562747,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_div.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_div_function.inc",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        55,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5707488,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./include/gscl45nm.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        19,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     },
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./design/REGFILE32x64.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        22,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     },
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./design/cardinal_ring.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        27,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     },
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./include/dmem.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        17,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     },
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./design/cardinal_router.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        28,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     },
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./include/imem.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        18,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "mtime": 1679804991.0496173,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\buffer.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5577476,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_router.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5587473,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_router.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./design/rotating_prioritizer.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        1,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     },
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_router.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./design/buffer.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        0,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\imem.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5607476,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\REGFILE32x64.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680314613.157635,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_sqrt.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5647476,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_sqrt.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_sqrt_function.inc",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        37,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_alu.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5697482,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\rotating_prioritizer.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.559749,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cardinal_nic.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5707488,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\dmem.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5607476,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_nic.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.5577476,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_nic.v",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "./design/cardinal_nic_buffer.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        0,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW02_mult.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.561749,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_regfile.v",
+     "__class__": "Path"
+    },
+    "mtime": 1680251251.572747,
     "flags": {
      "source_specific": [],
      "single": [],
@@ -242,255 +819,6 @@
    },
    {
     "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_nic.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5577476,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_nic.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./design/cardinal_nic_buffer.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        0,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     }
-    ],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW02_mult_3_stage.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.562747,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW01_addsub.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.561749,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5707488,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./design/cardinal_ring.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        27,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     },
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./include/gscl45nm.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        19,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     },
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./design/cardinal_router.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        28,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     },
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./include/imem.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        18,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     },
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./design/REGFILE32x64.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        22,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     },
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./include/dmem.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        17,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     }
-    ],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\dmem.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5607476,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cpu.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680314608.9305005,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cpu.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./design/REGFILE32x64.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        1,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     },
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cpu.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./design/alu.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        2,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     }
-    ],
-    "diags": []
-   },
-   {
-    "path": {
      "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_rotating_prioritizer.v",
      "__class__": "Path"
     },
@@ -502,338 +830,27 @@
     },
     "dependencies": [],
     "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "mtime": 1679804991.0496173,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_ring.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5587473,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_ring.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./design/cardinal_router.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        0,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     }
-    ],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cardinal_nic.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5707488,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\imem.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5607476,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_regfile.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.572747,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_alu.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5697482,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_div.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.562747,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_div.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_div_function.inc",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        55,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     }
-    ],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_router.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5587473,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_router.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./design/buffer.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        0,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     },
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_router.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "./design/rotating_prioritizer.v",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        1,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     }
-    ],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\REGFILE32x64.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680314613.157635,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\buffer.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5577476,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW02_mult.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.561749,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_shifter.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5637496,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_shifter.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "DW_shifter_function.inc",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        48,
-        10
-       ]
-      ],
-      "__class__": "IncludedPath"
-     }
-    ],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_sqrt.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.5647476,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [
-     {
-      "owner": {
-       "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_sqrt.v",
-       "__class__": "Path"
-      },
-      "name": {
-       "name": "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_sqrt_function.inc",
-       "case_sensitive": true,
-       "__class__": "VerilogIdentifier"
-      },
-      "locations": [
-       [
-        37,
-        8
-       ]
-      ],
-      "__class__": "IncludedPath"
-     }
-    ],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\rotating_prioritizer.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680251251.559749,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
-   },
-   {
-    "path": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\alu.v",
-     "__class__": "Path"
-    },
-    "mtime": 1680314598.3428576,
-    "flags": {
-     "source_specific": [],
-     "single": [],
-     "dependencies": []
-    },
-    "dependencies": [],
-    "diags": []
    }
   ],
   "inferred_libraries": [
    {
-    "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\REGFILE32x64.v",
+    "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cpu.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cpu.v",
     "__class__": "Path"
    },
    {
     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "C:\\Users\\ritwi\\AppData\\Local\\Temp\\tmp_yb4l_dl.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\REGFILE32x64.v",
     "__class__": "Path"
    },
    {
@@ -844,88 +861,12 @@
   "design_units": [
    {
     "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\rotating_prioritizer.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "INVX8",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      526,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "tb_cmp",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      35,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW01_addsub.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "DW01_addsub",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      43,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "CLKBUF2",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      189,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cardinal_nic.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "tb",
+     "name": "rotating_prioritizer",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
@@ -944,63 +885,6 @@
     },
     "type_": "entity",
     "name": {
-     "name": "NOR2X1",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      677,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\dmem.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "dmem",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      14,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "OR2X2",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      830,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
      "name": "MUX2X1",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
@@ -1008,82 +892,6 @@
     "locations": [
      [
       588,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_rotating_prioritizer.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "tb_rotating_prioritizer",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      2,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_alu.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "tb_alu",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      2,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "DFFPOSX1",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      273,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "OR2X1",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      804,
       7
      ]
     ],
@@ -1115,13 +923,13 @@
     },
     "type_": "entity",
     "name": {
-     "name": "BUFX2",
+     "name": "INVX8",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      123,
+      526,
       7
      ]
     ],
@@ -1134,13 +942,32 @@
     },
     "type_": "entity",
     "name": {
-     "name": "CLKBUF1",
+     "name": "FAX1",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      167,
+      381,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_div.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "DW_div",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      34,
       7
      ]
     ],
@@ -1153,13 +980,13 @@
     },
     "type_": "entity",
     "name": {
-     "name": "XNOR2X1",
+     "name": "BUFX4",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      914,
+      145,
       7
      ]
     ],
@@ -1167,240 +994,12 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\REGFILE32x64.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "XOR2X1",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      941,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cpu.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "cpu",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      4,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "TBUFX2",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      885,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_router.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "cardinal_router",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      3,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "OAI22X1",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      767,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "OAI21X1",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      735,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "INVX2",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      482,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_sqrt.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "DW_sqrt",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      28,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "CLKBUF3",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      211,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "AND2X1",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      2,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "INVX4",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      504,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "DFFSR",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      312,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\rotating_prioritizer.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "rotating_prioritizer",
+     "name": "REGFILE32x64",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
@@ -1414,18 +1013,37 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW02_mult_3_stage.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "AND2X2",
+     "name": "DW02_mult_3_stage",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      28,
+      39,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW01_addsub.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "DW01_addsub",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      43,
       7
      ]
     ],
@@ -1438,108 +1056,13 @@
     },
     "type_": "entity",
     "name": {
-     "name": "LATCH",
+     "name": "HAX1",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      548,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_nic_buffer.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "cardinal_nic_buffer",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "INVX1",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      460,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\alu.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "alu",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      4,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cpu.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "tb_cpu",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      2,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_regfile.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "tb_regfile",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      6,
+      426,
       7
      ]
     ],
@@ -1571,13 +1094,13 @@
     },
     "type_": "entity",
     "name": {
-     "name": "FAX1",
+     "name": "OAI21X1",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      381,
+      735,
       7
      ]
     ],
@@ -1585,37 +1108,94 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\REGFILE32x64.v",
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "REGFILE32x64",
+     "name": "OR2X1",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      0,
-      6
+      804,
+      7
      ]
     ],
     "__class__": "VerilogDesignUnit"
    },
    {
     "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_div.v",
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "DW_div",
+     "name": "INVX4",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      34,
+      504,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "AND2X2",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      28,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "NOR2X1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      677,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_regfile.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "tb_regfile",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      6,
       7
      ]
     ],
@@ -1647,13 +1227,13 @@
     },
     "type_": "entity",
     "name": {
-     "name": "TBUFX1",
+     "name": "DFFSR",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      856,
+      312,
       7
      ]
     ],
@@ -1666,32 +1246,13 @@
     },
     "type_": "entity",
     "name": {
-     "name": "NOR3X1",
+     "name": "CLKBUF1",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      704,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW02_mult_3_stage.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "DW02_mult_3_stage",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      39,
+      167,
       7
      ]
     ],
@@ -1704,13 +1265,317 @@
     },
     "type_": "entity",
     "name": {
-     "name": "DFFNEGX1",
+     "name": "TBUFX2",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      233,
+      885,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "INVX2",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      482,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "CLKBUF3",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      211,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_nic.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "cardinal_nic",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "NAND2X1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      619,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "XNOR2X1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      914,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "LATCH",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      548,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "OAI22X1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      767,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cpu.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "tb_cpu",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      2,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "XOR2X1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      941,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\imem.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "imem",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      14,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\alu.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "alu",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      4,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\dmem.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "dmem",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      14,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_rotating_prioritizer.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "tb_rotating_prioritizer",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      2,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "BUFX2",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      123,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cardinal_nic.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "tb",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "CLKBUF2",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      189,
       7
      ]
     ],
@@ -1756,18 +1621,37 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_nic_buffer.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "NAND3X1",
+     "name": "cardinal_nic_buffer",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      646,
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "INVX1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      460,
       7
      ]
     ],
@@ -1780,13 +1664,13 @@
     },
     "type_": "entity",
     "name": {
-     "name": "AOI22X1",
+     "name": "TBUFX1",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      86,
+      856,
       7
      ]
     ],
@@ -1813,6 +1697,139 @@
    },
    {
     "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "OR2X2",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      830,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "NOR3X1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      704,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_cmp.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "tb_cmp",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      35,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cpu.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "cpu",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      4,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW_sqrt.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "DW_sqrt",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      28,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_router.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "cardinal_router",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      3,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "DFFPOSX1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      273,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
      "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\sim_ver\\DW02_mult.v",
      "__class__": "Path"
     },
@@ -1832,18 +1849,75 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\imem.v",
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "imem",
+     "name": "NAND3X1",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      14,
+      646,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "AND2X1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      2,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "DFFNEGX1",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      233,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\tb\\tb_alu.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "tb_alu",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      2,
       7
      ]
     ],
@@ -1875,70 +1949,13 @@
     },
     "type_": "entity",
     "name": {
-     "name": "NAND2X1",
+     "name": "AOI22X1",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      619,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "HAX1",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      426,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\design\\cardinal_nic.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "cardinal_nic",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      1,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\ritwi\\OneDrive\\Desktop\\Study Material\\EE-577B\\Project\\Cardinal-Bidirectional-Ring-NoC\\project\\include\\gscl45nm.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "BUFX4",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      145,
+      86,
       7
      ]
     ],

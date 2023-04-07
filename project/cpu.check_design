@@ -1,0 +1,41 @@
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06-SP5-5
+Date:        Fri Mar 31 12:52:49 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              27
+    Cells do not drive (LINT-1)                                    27
+--------------------------------------------------------------------------------
+
+Warning: In design 'cpu', cell 'B_42' does not drive any nets. (LINT-1)
+Warning: In design 'cpu', cell 'B_44' does not drive any nets. (LINT-1)
+Warning: In design 'cpu', cell 'C1893' does not drive any nets. (LINT-1)
+Warning: In design 'cpu', cell 'C1906' does not drive any nets. (LINT-1)
+Warning: In design 'cpu', cell 'C1917' does not drive any nets. (LINT-1)
+Warning: In design 'REGFILE32x64', cell 'B_22' does not drive any nets. (LINT-1)
+Warning: In design 'REGFILE32x64', cell 'B_23' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2628' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2629' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2630' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2631' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2637' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2638' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2639' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2640' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2649' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2650' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2651' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2652' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2658' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2659' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2660' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2661' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2667' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2668' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2669' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'C2670' does not drive any nets. (LINT-1)
+1

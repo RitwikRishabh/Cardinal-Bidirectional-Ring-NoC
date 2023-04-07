@@ -1,5 +1,5 @@
 ncelab(64): 15.20-s079: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
-TOOL:	ncelab(64)	15.20-s079: Started on Mar 25, 2023 at 21:16:36 PDT
+TOOL:	ncelab(64)	15.20-s079: Started on Mar 31, 2023 at 11:28:17 PDT
 ncelab
     -ACCESS +rwc
     -NCFATAL INVSUP
@@ -71,13 +71,10 @@ Resolved design unit 'imem' at 'tb_cpu.imem0' to 'work.imem:module'.
 Resolving design unit 'dmem' at 'tb_cpu.dmem0'.
 	library: 'work' views: 'module' -> found
 Resolved design unit 'dmem' at 'tb_cpu.dmem0' to 'work.dmem:module'.
-    .memAddr(dmemAddr),
-                    |
-ncelab: *W,CUVMPW (./tb/tb_cpu.v,48|20): port sizes differ in port connection (32/8).
             $fdisplay(regFileFP, "R%1d: %h", count, cpuDUT.regFile.regFile[count]);
                               |
 ncelab: *W,MCDWID (./tb/tb_cpu.v,71|30): Invalid width on mcd argument.
-            $fdisplay(dmemFP, "Memory location #%1d: %h", count, dmem0.MEM[count]);
+            $fdisplay(dmemFP, "Memory location\t#%1d: %h", count, dmem0.MEM[count]);
                            |
 ncelab: *W,MCDWID (./tb/tb_cpu.v,75|27): Invalid width on mcd argument.
 	Building instance overlay tables: .................... Done
@@ -104,31 +101,31 @@ ncelab: *W,MCDWID (./tb/tb_cpu.v,75|27): Invalid width on mcd argument.
 			streams:   4, words:  3220
 		work.DW_sqrt:module <0x71dac45c>
 			streams:   4, words:  3425
-		work.REGFILE32x64:module <0x742c471a>
-			streams:   8, words: 21004
-		work.alu:module <0x68a088a6>
-			streams:  63, words: 60047
-		work.cpu:module <0x5232cfbe>
-			streams:  65, words: 38926
-		work.dmem:module <0x37d286c7>
-			streams:   5, words:  2364
+		work.REGFILE32x64:module <0x0c44a421>
+			streams:   8, words: 21608
+		work.alu:module <0x02bf0b7c>
+			streams:  63, words: 60375
+		work.cpu:module <0x5f7a048b>
+			streams:  65, words: 38843
+		work.dmem:module <0x65dad686>
+			streams:   5, words:  2190
 		work.imem:module <0x43b3f676>
 			streams:   1, words:   191
-		work.tb_cpu:module <0x762c3e13>
-			streams:   5, words:  5705
+		work.tb_cpu:module <0x752cc744>
+			streams:   6, words:  5826
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		                  Instances  Unique
-		Modules:                 43       9
-		Registers:              977     103
-		Scalar wires:            37       -
-		Expanded wires:         800      65
-		Vectored wires:         119       -
-		Always blocks:           38      24
-		Initial blocks:          38       4
-		Cont. assignments:       69      70
-		Pseudo assignments:      62      62
-		Simulation timescale:  10ps
+		                 Instances  Unique
+		Modules:                43       9
+		Registers:             977     103
+		Scalar wires:           37       -
+		Expanded wires:        768      64
+		Vectored wires:        121       -
+		Always blocks:          38      24
+		Initial blocks:         38       4
+		Cont. assignments:      69      70
+		Pseudo assignments:     63      63
+		Simulation timescale:  1ps
 	Writing initial simulation snapshot: work.tb_cpu:module
-TOOL:	ncelab(64)	15.20-s079: Exiting on Mar 25, 2023 at 21:16:36 PDT  (total: 00:00:00)
+TOOL:	ncelab(64)	15.20-s079: Exiting on Mar 31, 2023 at 11:28:18 PDT  (total: 00:00:01)

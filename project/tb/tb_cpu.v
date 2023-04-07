@@ -45,7 +45,7 @@ module tb_cpu;
     .clk(clk),
     .memEn(dmemEn),
     .memWrEn(dmemWrEn),
-    .memAddr(dmemAddr),
+    .memAddr(dmemAddr[24:31]),
     .dataIn(dmemDataIn),
     .dataOut(dmemDataout)
    );
