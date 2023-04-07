@@ -23,10 +23,10 @@
 //`include "./design/REGFILE32x64.v"
 
 //Design File
-`include "./design/cpu.v"
-`include "./design/cardinal_nic.v"
-`include "./design/cardinal_ring.v"
-`include "./design/cmp.v"
+//`include "./design/cpu.v"
+//`include "./design/cardinal_nic.v"
+//`include "./design/cardinal_ring.v"
+//`include "./design/cardinal_router.v"
 
 // This testbench instantiates the following modules:
 // a. 64-bit Variable width Cardinal Processor as CPU, 

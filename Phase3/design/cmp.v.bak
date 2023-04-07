@@ -2,7 +2,7 @@
 `include "./design/cardinal_nic.v"
 `include "./design/cpu.v"
 
-module cmp ( clk, reset, 
+module cardinal_cmp ( clk, reset, 
 					  node0_instrIn, node0_dmemDataIn, node0_instrAddr, node0_dmemDataout, node0_dmemAddr, node0_dmemWrEn, node0_dmemEn, 
 			          node1_instrIn, node1_dmemDataIn, node1_instrAddr, node1_dmemDataout, node1_dmemAddr, node1_dmemWrEn, node1_dmemEn, 
 					  node2_instrIn, node2_dmemDataIn, node2_instrAddr, node2_dmemDataout, node2_dmemAddr,node2_dmemWrEn, node2_dmemEn,
