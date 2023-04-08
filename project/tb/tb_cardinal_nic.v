@@ -1,22 +1,27 @@
+`timescale 1ns/1ps
 module tb_nic;
-    // Define parameters for packet size, clock cycles, and number of packets
-    parameter PACKET_SIZE = 64;
+    parameter DATA_WIDTH = 64;
     parameter CLK_CYCLE = 4;
-    parameter NUM_OF_PAC = 10000;
+    parameter NUM_OF_PAC = 10000; // how many packets will be sent
 
-    // Define register and wire signals for test bench
-    reg clk, reset, nicEn, nicEnWr, net_ro, net_polarity, net_si;
-    reg [0:1] addr; 
-    reg [0:PACKET_SIZE - 1] d_in, net_di;
-    wire [0:PACKET_SIZE - 1] d_out, net_do; 
+    reg clk, reset; // sync high active reset
+    // Ports from router side
+    reg net_ro, net_polarity, net_si;
+    reg [0:DATA_WIDTH - 1] net_di;
     wire net_so, net_ri;
-	
-    // Define integer variables for keeping track of data received by processor and router
-    integer Processor_data, Router_data;
-    integer i;
+    wire [0:DATA_WIDTH - 1] net_do;
 
-    // Create instance of Cardinal NIC module
-    cardinal_nic nic_design_dut
+    // Ports from router side
+    reg [0:1] addr;
+    reg [0:DATA_WIDTH - 1] d_in;
+    reg nicEn, nicEnWr;
+    wire [0:DATA_WIDTH - 1] d_out;
+
+    // Instantiation of DUT
+    cardinal_nic #(
+        .PACKET_SIZE(DATA_WIDTH)
+    )
+    nic_dut
     (
         .clk(clk),
         .reset(reset),
@@ -34,41 +39,46 @@ module tb_nic;
         .nicEnWr(nicEnWr)
     );
 
-    // Toggle clock signal every 0.5 clock cycle
+    // Generates clock signal
     always #(0.5 * CLK_CYCLE) clk = ~ clk;
-    
-    // Invert net_polarity signal every rising edge of clock signal after reset
+
+    // Generates polarity signal
     always @(posedge clk)
     begin
         if(reset) net_polarity <= 0;
         else net_polarity <= ~ net_polarity;
     end
-    
-    // Open files for storing data received by processor and router
+
+
+    integer data_received_pe, data_received_router;
+
     initial
     begin
-        Processor_data = $fopen("Processor_data.out", "w");
-        Router_data = $fopen("Router_data.out", "w");
+        data_received_pe = $fopen("data_received_pe.res", "w"); // report data received in processor side
+        data_received_router = $fopen("data_received_router.res", "w"); // report data received in router side
     end
 
-    // Set initial values for signals and wait for clock signal to stabilize
+    // a flag used to indicate if data sending from router finished
+    // if send_finish == 1, data sending from processor started
     reg send_finish; 
-    initial
-    begin		
+    initial 
+    begin : test
+        integer i;
         clk = 1;
         reset = 1;
 
-        nicEn = 1; 
+        nicEn = 1; // always reading
         nicEnWr = 0;
 
         net_ro = 0;
         net_si = 0;
 
         send_finish = 0;
-        #(5 * CLK_CYCLE);
+
+        #(3.5 * CLK_CYCLE) 
         reset = 0;
 
-        //--------------------- Send data from router to NIC-----------------------------
+        // sending data from router side
         for(i = 0; i < NUM_OF_PAC; i = i + 1)
         begin
             wait(net_ri == 1)
@@ -79,40 +89,36 @@ module tb_nic;
             net_si = 0;
         end
 
-        // Set flag to indicate data sending from router is finished
         #(10 * CLK_CYCLE);
-        send_finish = 1;
+        send_finish = 1; // change flag
         #(10 * CLK_CYCLE);
 
-        // Check status register of output buffer and send data to NIC
-	    i = 0;
+        // sending data from processor side
+        i = 0;
         while(i < NUM_OF_PAC)
         begin
-            #(0.1 * CLK_CYCLE);
+            #(0.1 * CLK_CYCLE)
             addr = 2'b11;
-            #(0.1 * CLK_CYCLE);
+            #(0.1 * CLK_CYCLE)
 
-            if(d_out[63] == 0)
+            if(d_out[63] == 0) // checking status reg of output buffer
             begin
                 addr = 2'b10;
                 nicEnWr = 1;
                 d_in = i;
-                d_in[0] = i % 2; // Change the VC bit to test conditional sending to router
+                d_in[0] = i % 2; // change the vc bit to test conditional sending to router
                 i = i + 1;
             end
             #(0.8 * CLK_CYCLE)
             nicEnWr = 0;
         end
-
-        // Close files for storing data received by processor and router        
-		#(10 * CLK_CYCLE)
-        $fclose(Processor_data | Router_data);
-
-	#20;
+        
+        #(10 * CLK_CYCLE)
+        $fclose(data_received_pe | data_received_router);
         $finish;
-	end
+    end
 
-    //------------------- Reveiving data at processor side-------------------------
+    // Reveiving data at processor side
     initial 
     begin : loop_1
         #(3.5 * CLK_CYCLE)
@@ -129,7 +135,7 @@ module tb_nic;
             begin
                 addr = 2'b00;
                 #(0.1 * CLK_CYCLE)
-                $fdisplay(Processor_data, "%1d", d_out[32:63]);
+                $fdisplay(data_received_pe, "%1d", d_out[32:63]);
             end
             else #(0.1 * CLK_CYCLE);
 
@@ -137,19 +143,17 @@ module tb_nic;
         end
     end
 
-    //---------------------------------Receiving data from router side-----------------------
-
+    //Receiving data from router side
     initial
     begin
-        #(3.5 * CLK_CYCLE);
-        net_ro = 0;
-        #100;
+        #(3.5 * CLK_CYCLE)
         forever @(posedge clk)
         begin
             net_ro = 1;
             #(0.1 * CLK_CYCLE)
-            if(net_so == 1) $fdisplay(Router_data, "%1d", net_do[32:63]);
+            if(net_so == 1)
+                $fdisplay(data_received_router, "%1d", net_do[32:63]);
         end
     end
 
-endmodule
+ endmodule

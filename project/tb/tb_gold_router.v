@@ -77,7 +77,7 @@ module tb_gold_router;
     
     initial begin : test 
         
-        initialize();
+        initialize;
 
         //Test for no contention
         //Test 1 clockwise and counter clockwise

@@ -1,3 +1,6 @@
+`include "./design/cardinal_nic.v"
+`include "./design/cpu.v"
+`include "./design/cardinal_ring.v"
 module cardinal_cmp #(
     parameter INST_WIDTH =  32,
     parameter DATA_WIDTH =  64,
@@ -13,14 +16,14 @@ module cardinal_cmp #(
     output node0_memWrEn, node1_memWrEn, node2_memWrEn, node3_memWrEn
  );
 
-    // Connection between NIC and processor
+    // Connections between NIC and processor
     wire nic_En_0, nic_En_1, nic_EN_2, nic_En_3;
     wire nic_WrEn_0, nic_WrEn_1, nic_WrEn_2, nic_WrEn_3;
     wire [0:1] nic_addr_0, nic_addr_1, nic_addr_2, nic_addr_3;
     wire [0:DATA_WIDTH - 1] nic_di_0, nic_di_1, nic_di_2, nic_di_3;
     wire [0:DATA_WIDTH - 1] nic_do_0, nic_do_1, nic_do_2, nic_do_3;  
 
-    // Conniection between NIC and Ring NoC
+    // Connections between NIC and Ring NoC
     wire net_si_0, net_si_1, net_si_2, net_si_3;
     wire net_ri_0, net_ri_1, net_ri_2, net_ri_3;
     wire [0:DATA_WIDTH - 1] net_di_0, net_di_1, net_di_2, net_di_3;
@@ -115,7 +118,7 @@ module cardinal_cmp #(
     );
 
     // Instantiation of 4 processor cores
-    cardinal_cpu cpu0
+    cpu cpu0
     (
         .clk(clk),
         .reset(reset),
@@ -136,7 +139,7 @@ module cardinal_cmp #(
         .nicWrEn(nic_WrEn_0)
     );
 
-    cardinal_cpu cpu1
+    cpu cpu1
     (
         .clk(clk),
         .reset(reset),
@@ -157,7 +160,7 @@ module cardinal_cmp #(
         .nicWrEn(nic_WrEn_1) 
     );
 
-    cardinal_cpu cpu2
+    cpu cpu2
     (
         .clk(clk),
         .reset(reset),
@@ -178,7 +181,7 @@ module cardinal_cmp #(
         .nicWrEn(nic_WrEn_2) 
     ); 
 
-    cardinal_cpu cpu3
+    cpu cpu3
     (
         .clk(clk),
         .reset(reset),
@@ -200,41 +203,41 @@ module cardinal_cmp #(
     );   
 
     // Instantiation of Ring NoC:
-    gold_ring ring_0
+    cardinal_ring ring_0
     (
         .clk(clk),
         .reset(reset),
 
-        .node0_pesi(net_so_0),
-        .node0_peri(net_ro_0),
-        .node0_pedi(net_do_0),
-        .node0_peso(net_si_0),
-        .node0_pero(net_ri_0),
-        .node0_pedo(net_di_0),
-        .node0_polarity(net_polarity_0),
+        .node0Pesi(net_so_0),
+        .node0Peri(net_ro_0),
+        .node0Pedi(net_do_0),
+        .node0Peso(net_si_0),
+        .node0Pero(net_ri_0),
+        .node0Pedo(net_di_0),
+        .node0Polarity(net_polarity_0),
 
-        .node1_pesi(net_so_1),
-        .node1_peri(net_ro_1),
-        .node1_pedi(net_do_1),
-        .node1_peso(net_si_1),
-        .node1_pero(net_ri_1),
-        .node1_pedo(net_di_1),
-        .node1_polarity(net_polarity_1),  
+        .node1Pesi(net_so_1),
+        .node1Peri(net_ro_1),
+        .node1Pedi(net_do_1),
+        .node1Peso(net_si_1),
+        .node1Pero(net_ri_1),
+        .node1Pedo(net_di_1),
+        .node1Polarity(net_polarity_1),  
 
-        .node2_pesi(net_so_2),
-        .node2_peri(net_ro_2),
-        .node2_pedi(net_do_2),
-        .node2_peso(net_si_2),
-        .node2_pero(net_ri_2),
-        .node2_pedo(net_di_2),
-        .node2_polarity(net_polarity_2),    
+        .node2Pesi(net_so_2),
+        .node2Peri(net_ro_2),
+        .node2Pedi(net_do_2),
+        .node2Peso(net_si_2),
+        .node2Pero(net_ri_2),
+        .node2Pedo(net_di_2),
+        .node2Polarity(net_polarity_2),    
 
-        .node3_pesi(net_so_3),
-        .node3_peri(net_ro_3),
-        .node3_pedi(net_do_3),
-        .node3_peso(net_si_3),
-        .node3_pero(net_ri_3),
-        .node3_pedo(net_di_3),
-        .node3_polarity(net_polarity_3)
+        .node3Pesi(net_so_3),
+        .node3Peri(net_ro_3),
+        .node3Pedi(net_do_3),
+        .node3Peso(net_si_3),
+        .node3Pero(net_ri_3),
+        .node3Pedo(net_di_3),
+        .node3Polarity(net_polarity_3)
     );
 endmodule

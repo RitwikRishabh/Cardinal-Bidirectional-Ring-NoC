@@ -43,7 +43,7 @@
 # top level module
 TOP = tb_cpu
 TOP_SYN = tb_cpu_syn
-DESIGN_NAME = cpu
+DESIGN_NAME = cardinal_cmp
 
 # List of the design files
 DESIGN_FILES = ./design/*.v

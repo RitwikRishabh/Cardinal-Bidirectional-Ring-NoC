@@ -2,6 +2,10 @@
 `include "./design/REGFILE32x64.v"
 `include "./design/alu.v"
 
+`include "./include/sim_ver/DW02_mult.v"
+`include "./include/sim_ver/DW_div.v"
+`include "./include/sim_ver/DW_sqrt.v"
+
 module cpu #(
     parameter ADDR_WIDTH = 32,
     parameter DATA_WIDTH = 64,

@@ -1,5 +1,3 @@
-/*
-*/
 module bufferDepth1 #(
     parameter WIDTH = 64
 ) (
