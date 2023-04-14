@@ -1,128 +1,139 @@
-`include "./design/cardinal_nic_buffer.v"
-module cardinal_nic #( 
-	parameter PACKET_SIZE = 64
-)(
-    input clk, reset, nicEn, nicWrEn, net_ro, net_polarity, net_si,
-    input [1:0] addr,
-    input [PACKET_SIZE-1:0] net_di, d_in,
-    output reg [PACKET_SIZE-1:0] d_out, net_do,
-    output reg net_so, net_ri
+`include "./design/buffer.v"
+
+module cardinal_nic
+#(
+    parameter PACKET_SIZE = 64
+)
+(
+    input clk, reset, // sync hign active reset
+    
+    //Ports with processor
+    input [0:1] addr, //Specify the memory address mapped registers in the NIC
+    input [0:PACKET_SIZE - 1] d_in, //Input packet from the PE to be injected into the network
+    output reg [0:PACKET_SIZE - 1] d_out, //Content of the register specified by addr[1:0]
+    input nicEn, //Enable signal to the NIC. If not asserted, d_out port assumes 64’h0000_0000.
+    input nicEnWr, //Write enable signal to the NIC. If asserted along with nicEn , the data on the d_in port is written into the network output channel
+
+    //Ports with router interconnect
+    input net_si, //Send handshaking signal for the network input channel
+    output reg net_ri, //Ready handshaking signal for the network input channel
+    input [0:PACKET_SIZE - 1] net_di, //Packet data for the network input channel
+
+    output reg net_so, //Send handshaking signal for the network output channel
+    input net_ro, //Ready handshaking signal for the network output channel
+    output reg [0:PACKET_SIZE - 1] net_do, //Packet data for the network output channel
+    input net_polarity //Polarity input from the router connected to the NIC
 );
+    //Signals needed by two buffer
+    reg [0:PACKET_SIZE - 1] in_buf_di, out_buf_di; //data input of input and output channel buffer
+    wire [0:PACKET_SIZE - 1] in_buf_do, out_buf_do; //data output of input and output channel buffer   
+    wire in_buf_status, out_buf_status; //the value of status register of input channel buffer and output channel buffer
+    reg in_buf_re, out_buf_re; //read enable for input channel buffer and output channel buffer
+    reg in_buf_we, out_buf_we; //write enable for input channel buffer and output channel buffer 
 
-//------Buffer Variables---------
+//-----------------------------------------------------------------------------------------------------------------------
+    //Instantiate two 1 location buffer for both input and output channel buffer
+    // the buffer of network input channel
+    bufferDepth1 inBuf 
+    (
+        .clk(clk),
+        .reset(reset),
+        .dataIn(in_buf_di),
+        .dataOut(in_buf_do),
+        .rdEnable(in_buf_re),
+        .wrEnable(in_buf_we),
+        .full(in_buf_status), //the value of status signal is equal to full signal
+        .empty() 
+    );
 
-//----Output channel Buffer-----
-reg [PACKET_SIZE-1:0] buffer_d_in; //Buffer data input
-wire [PACKET_SIZE-1:0] buffer_net_do; // Buffer data output
-reg outp_buffer_write_en;
-wire outp_status_reg;
-reg outp_buffer_read_en;
+    // the buffer of network output channel
+    bufferDepth1 outBuf 
+    (
+        .clk(clk),
+        .reset(reset),
+        .dataIn(out_buf_di),
+        .dataOut(out_buf_do),
+        .rdEnable(out_buf_re),
+        .wrEnable(out_buf_we),
+        .full(out_buf_status), //the value of status signal is equal to full signal
+        .empty() 
+    );
+//-----------------------------------------------------------------------------------------------------------------------
 
-//----Input channel Buffer-----
-reg [PACKET_SIZE-1:0] buffer_net_di; //Buffer data input
-wire [PACKET_SIZE-1:0] buffer_d_out; // Buffer data output
-reg inp_buffer_write_en;
-wire inp_status_reg;
-reg inp_buffer_read_en;
+//-----------------------------------------------------------------------------------------------------------------------
+    //Processor reading and writing logic
+    always @(*)
+    begin
+        //initial value to avoid latch
+        out_buf_we = 0;
+        in_buf_re = 0;
+        d_out = 0; //If not asserted, d_out port assumes 64’h0000_0000.
 
-cardinal_nic_buffer input_channel_buffer(
-    .clk(clk), .reset(reset), .write_en(inp_buffer_write_en), .read_en(inp_buffer_read_en),
-    .data_in(buffer_net_di), .data_out(buffer_d_out), .status_reg(inp_status_reg)
-);
-cardinal_nic_buffer output_channel_buffer(
-    .clk(clk), .reset(reset), .write_en(outp_buffer_write_en),.read_en(outp_buffer_read_en),
-    .data_in(buffer_d_in), .data_out(buffer_net_do), .status_reg(outp_status_reg)
-);
+        out_buf_di = d_in;
 
-//------Communication between Processor and NIC--------
-
-always@(*)
-begin
-	
-  	d_out = 0;
-   	buffer_d_in = d_in;
-	//inp_buffer_write_en =0;
-	outp_buffer_write_en = 0;
-	inp_buffer_read_en = 0;
-	
-	if( nicEn == 1 )
+        if(nicEn == 1)
         begin
-            if( nicWrEn == 1 ) begin
-			
-                if( addr == 2'b10 )outp_buffer_write_en = 1; 
-                else outp_buffer_write_en = 0;
-				
+            if(nicEnWr == 1) // nicEnWr == 1, nicEn == 1, writing output buffer
+            begin
+                if(addr == 2'b10)
+                    //when buffer is full, this writing won't destroy the data inside buffer 
+                    //even if write enable is 1, because logic inside the buffer will check the 
+                    //value of full and avoid an ilegal writing
+                    out_buf_we = 1; 
             end
-            else begin
-			
-				if( addr==2'b00 ) begin
-                        inp_buffer_read_en = 1;
-                        d_out = buffer_d_out;
-                end
-				
-				else if( addr==2'b01 ) d_out[63] = inp_status_reg;
-				
-				else if( addr==2'b11 )  d_out[63] = outp_status_reg;
-				
-				else d_out[63] = 1'b0;
-				  
+            else //nicEnWr == 0, nicEn == 1, reading operation based on addr
+            begin
+                case(addr)
+                    2'b00 : // read input channel buffer
+                    begin
+                        in_buf_re = 1;
+                        d_out = in_buf_do;
+                    end
+                    2'b01 : // read input channel status register
+                        d_out[63] = in_buf_status;
+                    2'b11 : // read output channel status register
+                        d_out[63] = out_buf_status;
+                endcase
             end
         end
+        
     end
+//-----------------------------------------------------------------------------------------------------------------------
 
-
-//-------NIC to Router-------
-
- always @(*)
+//-----------------------------------------------------------------------------------------------------------------------
+    // Receiving data from router
+    always @(*)
     begin
-	
-		net_do = 0;
+        in_buf_di = net_di;
+
+        if(in_buf_status == 0)  net_ri = 1;
+        else net_ri = 0;
+
+        if((in_buf_status == 0) && (net_si == 1)) in_buf_we = 1;
+        else in_buf_we = 0;
+    end
+//-----------------------------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------------------------
+    // Sending data from NiC to router
+    always @(*)
+    begin
+        net_do = out_buf_do;
         net_so = 0;
-		outp_buffer_read_en = 0;
-		
-        if(reset)
-		begin
-			net_so = 1'b0;
-		end
-		else 
-		begin
-			if( outp_status_reg == 1 && net_ro == 1 ) 
-				begin
-					
-					if( net_polarity == 1 && buffer_net_do[0] == 0 ) net_so = 1;
-					else if(net_polarity == 0 && buffer_net_do[0] == 1) net_so = 1;
-					else net_so = 0;
-					
-				end
-			
-			if( net_so == 1 && net_ro == 1 )
-				begin
-					outp_buffer_read_en = 0;
-					net_do = buffer_net_do;
-				end
-		
-		end
-	end
-//------Router to NIC -------
- always @(*)
-    begin
-        buffer_net_di = net_di; 
-		net_ri = 1;
-		
-		if(reset) begin 
-			inp_buffer_write_en =0;
-			net_ri = 1;
+
+        if((out_buf_status == 1) && (net_ro == 1))
+        begin
+            // when polarity == 1, even virtual channel is used externally
+            // only packet with vc = 0 can enter virtual channel 0, vice versa
+            if((net_polarity == 1)  && (out_buf_do[0] == 0)) // note: bit 0 is VC bit
+                net_so = 1;
+            if((net_polarity == 0) && (out_buf_do[0] == 1))
+                net_so = 1;
         end
-		else begin
-        if(inp_status_reg == 1'b1) net_ri = 1'b0;      
-        else net_ri = 1'b1;        
 
-        if(inp_status_reg == 0 && net_si == 1 && net_ri == 1 ) inp_buffer_write_en = 1;
-        else inp_buffer_write_en = 0;
-	  end
-		
+        if((net_so == 1) && ( net_ro == 1)) out_buf_re = 1;
+        else out_buf_re = 0;
     end
-	
-//-----------------------
-endmodule
+//-----------------------------------------------------------------------------------------------------------------------
 
+endmodule

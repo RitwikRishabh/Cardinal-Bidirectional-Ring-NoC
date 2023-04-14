@@ -2,9 +2,9 @@
 `include "./design/REGFILE32x64.v"
 `include "./design/alu.v"
 
-`include "./include/sim_ver/DW02_mult.v"
-`include "./include/sim_ver/DW_div.v"
-`include "./include/sim_ver/DW_sqrt.v"
+// `include "./include/sim_ver/DW02_mult.v"
+// `include "./include/sim_ver/DW_div.v"
+// `include "./include/sim_ver/DW_sqrt.v"
 
 module cpu #(
     parameter ADDR_WIDTH = 32,
@@ -70,7 +70,8 @@ module cpu #(
     // If a stall occurs then the clock will not update otherwise it will
     // behave like a normal clock
     reg latchEn;
-    always @(!clk) begin
+    wire negclk = !clk;
+    always @(negclk) begin
         latchEn = !stall;
     end
 

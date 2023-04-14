@@ -41,8 +41,8 @@
 
 
 # top level module
-TOP = tb_cpu
-TOP_SYN = tb_cpu_syn
+TOP = tb_cmp
+TOP_SYN = tb_cmp_syn
 DESIGN_NAME = cardinal_cmp
 
 # List of the design files
@@ -53,6 +53,7 @@ NETLIST_FILES = ./netlist/*.v
 TB_FILES = ./tb/*.v
 
 INCLUDE_DIRECTORY = ./include
+INCLUDE_DW_DIR = /usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver
 
 # INCLUDE_DW_DIR = ./include/sim_ver
 

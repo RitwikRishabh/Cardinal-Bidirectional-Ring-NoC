@@ -2,6 +2,10 @@
 `include "./design/REGFILE32x64.v"
 `include "./design/alu.v"
 
+// `include "./include/sim_ver/DW02_mult.v"
+// `include "./include/sim_ver/DW_div.v"
+// `include "./include/sim_ver/DW_sqrt.v"
+
 module cpu #(
     parameter ADDR_WIDTH = 32,
     parameter DATA_WIDTH = 64,
@@ -27,7 +31,6 @@ module cpu #(
     wire stall;
     reg branch;
     reg [0:ADDR_WIDTH-1] branchAddr;
-    // reg gClock; // Gated clock
     // Opcodes
     localparam RTYPE_ALU     = 6'b101010; // ALU operations
     localparam RTYPE_BEZ     = 6'b100010; // Branch equal zero
@@ -66,9 +69,15 @@ module cpu #(
     // To save power a gated clock is used for all stage registers
     // If a stall occurs then the clock will not update otherwise it will
     // behave like a normal clock
-    // always @(*) begin
-    //     gClock = stall | clk;
-    // end
+    reg latchEn;
+    wire negclk = !clk;
+    always @(negclk) begin
+        latchEn = !stall;
+    end
+
+    wire gClk;
+    assign gClk = latchEn & clk;
+
 
     always @(posedge clk) begin
         if (reset) begin
@@ -89,7 +98,7 @@ module cpu #(
 
     // Stage Register update
     reg [0:INSTR_WIDTH-1] regIF_ID;
-    always @(posedge clk) begin
+    always @(posedge gClk) begin
         if (reset) begin
             regIF_ID <= 0;
         end
@@ -318,7 +327,7 @@ module cpu #(
     // ID/EX Stage Register
     reg [0:156] regID_EX;
 
-    always @(posedge clk) begin
+    always @(posedge gClk) begin
         if (reset) begin
             regID_EX <= 0;
         end
@@ -478,7 +487,7 @@ module cpu #(
     end
 
     reg [0:72] regEX_WB;
-    always @(posedge clk) begin
+    always @(posedge gClk) begin
         if (reset) begin
             regEX_WB <= 0;
         end

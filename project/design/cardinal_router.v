@@ -1,4 +1,4 @@
-`include "./design/buffer.v"
+// `include "./design/buffer.v"
 `include "./design/rotating_prioritizer.v"
 
 module cardinal_router 

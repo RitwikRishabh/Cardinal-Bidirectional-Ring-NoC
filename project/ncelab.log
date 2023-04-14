@@ -1,5 +1,5 @@
 ncelab(64): 15.20-s079: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
-TOOL:	ncelab(64)	15.20-s079: Started on Apr 07, 2023 at 19:16:13 PDT
+TOOL:	ncelab(64)	15.20-s079: Started on Apr 12, 2023 at 14:35:02 PDT
 ncelab
     -ACCESS +rwc
     -NCFATAL INVSUP
@@ -54,168 +54,26 @@ Resolving design unit 'alu' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>
 	library: 'work' views: 'module' -> found
 Resolved design unit 'alu' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU' to 'work.alu:module'.
 Resolving design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.multByte0'.
-	library: 'work' views: 'module' -> found
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.multByte0' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.multByte1' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.multByte2' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.multByte3' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.multHalfWord0' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.multHalfWord1' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.multWord' to 'work.DW02_mult:module'.
+    multByte0(
+            |
+ncelab: *E,CUVMUR (./design/alu.v,57|12): instance 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.multByte0' of design unit 'DW02_mult' is unresolved in 'work.alu:module'.
 Resolving design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB0'.
-	library: 'work' views: 'module' -> found
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB2' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB3' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB4' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB5' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB6' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB7' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divH0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divH1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divH2' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divH3' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divW0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divW1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divD0' to 'work.DW_div:module'.
+    divB0(
+        |
+ncelab: *E,CUVMUR (./design/alu.v,238|8): instance 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.divB0' of design unit 'DW_div' is unresolved in 'work.alu:module'.
 Resolving design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB0'.
-	library: 'work' views: 'module' -> found
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB2' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB3' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB4' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB5' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB6' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB7' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtH0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtH1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtH2' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtH3' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtW0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtW1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtD0' to 'work.DW_sqrt:module'.
+    sqrtB0(
+         |
+ncelab: *E,CUVMUR (./design/alu.v,476|9): instance 'tb_cmp.CMP@cardinal_cmp<module>.cpu0@cpu<module>.cardinalALU@alu<module>.sqrtB0' of design unit 'DW_sqrt' is unresolved in 'work.alu:module'.
 Resolved design unit 'cpu' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1' to 'work.cpu:module'.
 Resolved design unit 'REGFILE32x64' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.regFile' to 'work.REGFILE32x64:module'.
 Resolved design unit 'alu' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU' to 'work.alu:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.multByte0' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.multByte1' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.multByte2' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.multByte3' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.multHalfWord0' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.multHalfWord1' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.multWord' to 'work.DW02_mult:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divB0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divB1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divB2' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divB3' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divB4' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divB5' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divB6' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divB7' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divH0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divH1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divH2' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divH3' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divW0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divW1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.divD0' to 'work.DW_div:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtB0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtB1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtB2' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtB3' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtB4' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtB5' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtB6' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtB7' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtH0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtH1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtH2' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtH3' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtW0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtW1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu1@cpu<module>.cardinalALU@alu<module>.sqrtD0' to 'work.DW_sqrt:module'.
 Resolved design unit 'cpu' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2' to 'work.cpu:module'.
 Resolved design unit 'REGFILE32x64' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.regFile' to 'work.REGFILE32x64:module'.
 Resolved design unit 'alu' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU' to 'work.alu:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.multByte0' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.multByte1' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.multByte2' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.multByte3' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.multHalfWord0' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.multHalfWord1' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.multWord' to 'work.DW02_mult:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divB0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divB1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divB2' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divB3' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divB4' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divB5' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divB6' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divB7' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divH0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divH1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divH2' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divH3' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divW0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divW1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.divD0' to 'work.DW_div:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtB0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtB1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtB2' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtB3' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtB4' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtB5' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtB6' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtB7' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtH0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtH1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtH2' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtH3' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtW0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtW1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu2@cpu<module>.cardinalALU@alu<module>.sqrtD0' to 'work.DW_sqrt:module'.
 Resolved design unit 'cpu' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3' to 'work.cpu:module'.
 Resolved design unit 'REGFILE32x64' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.regFile' to 'work.REGFILE32x64:module'.
 Resolved design unit 'alu' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU' to 'work.alu:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.multByte0' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.multByte1' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.multByte2' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.multByte3' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.multHalfWord0' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.multHalfWord1' to 'work.DW02_mult:module'.
-Resolved design unit 'DW02_mult' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.multWord' to 'work.DW02_mult:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divB0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divB1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divB2' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divB3' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divB4' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divB5' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divB6' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divB7' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divH0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divH1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divH2' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divH3' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divW0' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divW1' to 'work.DW_div:module'.
-Resolved design unit 'DW_div' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.divD0' to 'work.DW_div:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtB0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtB1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtB2' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtB3' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtB4' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtB5' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtB6' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtB7' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtH0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtH1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtH2' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtH3' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtW0' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtW1' to 'work.DW_sqrt:module'.
-Resolved design unit 'DW_sqrt' at 'tb_cmp.CMP@cardinal_cmp<module>.cpu3@cpu<module>.cardinalALU@alu<module>.sqrtD0' to 'work.DW_sqrt:module'.
 Resolving design unit 'cardinal_ring' at 'tb_cmp.CMP@cardinal_cmp<module>.ring_0'.
 	library: 'work' views: 'module' -> found
 Resolved design unit 'cardinal_ring' at 'tb_cmp.CMP@cardinal_cmp<module>.ring_0' to 'work.cardinal_ring:module'.
@@ -287,65 +145,4 @@ Resolved design unit 'bufferDepth1' at 'tb_cmp.CMP@cardinal_cmp<module>.ring_0@c
 Resolved design unit 'rotating_prioritizer' at 'tb_cmp.CMP@cardinal_cmp<module>.ring_0@cardinal_ring<module>.router_3@cardinal_router<module>.arbiterCwo' to 'work.rotating_prioritizer:module'.
 Resolved design unit 'rotating_prioritizer' at 'tb_cmp.CMP@cardinal_cmp<module>.ring_0@cardinal_ring<module>.router_3@cardinal_router<module>.arbiterCcwo' to 'work.rotating_prioritizer:module'.
 Resolved design unit 'rotating_prioritizer' at 'tb_cmp.CMP@cardinal_cmp<module>.ring_0@cardinal_ring<module>.router_3@cardinal_router<module>.arbiterPeo' to 'work.rotating_prioritizer:module'.
-	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		work.DW02_mult:module <0x268a1a76>
-			streams:   6, words:  2678
-		work.DW02_mult:module <0x4622f04b>
-			streams:   6, words:  2681
-		work.DW02_mult:module <0x6ff8ca9f>
-			streams:   6, words:  2981
-		work.DW_div:module <0x0620fede>
-			streams:   8, words: 19613
-		work.DW_div:module <0x26dcbf4b>
-			streams:   8, words: 13590
-		work.DW_div:module <0x5abe73d9>
-			streams:   8, words: 13894
-		work.DW_div:module <0x790aecbc>
-			streams:   8, words: 13678
-		work.DW_sqrt:module <0x240a7d98>
-			streams:   4, words:  4020
-		work.DW_sqrt:module <0x5bae6f60>
-			streams:   4, words:  3425
-		work.DW_sqrt:module <0x6b70c0e1>
-			streams:   4, words:  3273
-		work.DW_sqrt:module <0x6f41a493>
-			streams:   4, words:  3220
-		work.REGFILE32x64:module <0x2334cbe0>
-			streams:   8, words: 21608
-		work.alu:module <0x7830e429>
-			streams:  63, words: 60375
-		work.bufferDepth1:module <0x49203f9a>
-			streams:   4, words:  1141
-		work.cardinal_nic:module <0x2bac3e61>
-			streams:   9, words:  4776
-		work.cardinal_ring:module <0x5a0ae019>
-			streams:   2, words:   636
-		work.cardinal_router:module <0x777db64f>
-			streams:  47, words: 31168
-		work.cpu:module <0x60d7db4d>
-			streams:  68, words: 39427
-		work.dmem:module <0x26c41311>
-			streams:   5, words:  2190
-		work.imem:module <0x0d44267c>
-			streams:   1, words:   191
-		work.rotating_prioritizer:module <0x079caf3b>
-			streams:   5, words:  4349
-		work.tb_cmp:module <0x637c4fe0>
-			streams:  17, words: 13555
-	Building instance specific data structures.
-	Loading native compiled code:     .................... Done
-	Design hierarchy summary:
-		                  Instances  Unique
-		Modules:                247      15
-		Registers:             4285     162
-		Scalar wires:           483       -
-		Expanded wires:        3072     256
-		Vectored wires:         600       -
-		Always blocks:          279      39
-		Initial blocks:         150       5
-		Cont. assignments:      372      92
-		Pseudo assignments:     394     106
-		Simulation timescale:  10ps
-	Writing initial simulation snapshot: work.tb_cmp:module
-TOOL:	ncelab(64)	15.20-s079: Exiting on Apr 07, 2023 at 19:16:14 PDT  (total: 00:00:01)
+TOOL:	ncelab(64)	15.20-s079: Exiting on Apr 12, 2023 at 14:35:02 PDT  (total: 00:00:00)

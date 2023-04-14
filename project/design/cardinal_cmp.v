@@ -17,7 +17,7 @@ module cardinal_cmp #(
  );
 
     // Connections between NIC and processor
-    wire nic_En_0, nic_En_1, nic_EN_2, nic_En_3;
+    wire nic_En_0, nic_En_1, nic_En_2, nic_En_3;
     wire nic_WrEn_0, nic_WrEn_1, nic_WrEn_2, nic_WrEn_3;
     wire [0:1] nic_addr_0, nic_addr_1, nic_addr_2, nic_addr_3;
     wire [0:DATA_WIDTH - 1] nic_di_0, nic_di_1, nic_di_2, nic_di_3;
